@@ -1,0 +1,95 @@
+<div class="btn-filtro-mobile">
+    <i class="medium material-icons">filter_list</i>
+</div>
+
+<form ng-submit="filtrar()">
+    <div class="col s12 m2 filtro">
+        <div class="title-filtro">Filtros</div>
+        <div style="margin-top:20px;">
+            <label>Nome:</label>
+            <input type="text" ng-model="pet.nome" placeholder="Digite o nome do animal">
+        </div>
+        <div>
+            <label>Especie:</label>
+            <p>
+                <input name="group1" type="radio" id="test4" />
+                <label for="test4">Todos</label>
+            </p>
+            <p>
+                <input name="group1" type="radio" id="test2" />
+                <label for="test2">Cão</label>
+            </p>
+            <p>
+                <input name="group1" type="radio" id="test3" />
+                <label for="test3">Gato</label>
+            </p>
+        </div>
+        <div>
+            <div class="input-field col s12">
+                <select>
+                              <option value="" selected>Todos</option>
+                              <option value="1">MG</option>
+                              <option value="2">SP</option>
+                              <option value="3">RJ</option>
+                            </select>
+                <label>Estado (UF):</label>
+            </div>
+        </div>
+        <div>
+            <div class="input-field col s12">
+                <select>
+                              <option value="" selected>Todos</option>
+                              <option value="1">Belo Horizonte</option>
+                              <option value="2">São Paulo</option>
+                              <option value="3">Rio de Janeiro</option>
+                            </select>
+                <label>Cidade:</label>
+            </div>
+            <div>
+                <label>Porte</label>
+                <p>
+                    <input type="checkbox" id="pequeno" />
+                    <label for="pequeno">Pequeno</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="medio" />
+                    <label for="medio">Médio</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="grande" />
+                    <label for="grande">Grande</label>
+                </p>
+            </div>
+            <div>
+                <label>Sexo:</label>
+                <p>
+                    <input name="group2" type="radio" id="test1" />
+                    <label for="test1">Todos</label>
+                </p>
+                <p>
+                    <input name="group2" type="radio" id="test4" />
+                    <label for="test4">Macho</label>
+                </p>
+                <p>
+                    <input name="group2" type="radio" id="test5" />
+                    <label for="test5">Fêmea</label>
+                </p>
+            </div>
+            <div>
+                <div class="input-field col s12">
+                    <select>
+                              <option value="" selected>Todos</option>
+                              <option value="1">Até 1 ano (Filhote)</option>
+                              <option value="2">1 a 8 anos (Adulto)</option>
+                              <option value="3">Acima de 8 anos (Idoso)</option>
+                            </select>
+                    <label>Idade:</label>
+                </div>
+            </div>
+            <div>
+                <button class="btn black" type="submit">Aplicar</button>
+            </div>
+            <div class="divisao"></div>
+        </div>
+    </div>
+</form>
