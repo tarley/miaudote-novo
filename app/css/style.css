@@ -1,0 +1,436 @@
+a {
+    color: #FFF;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("../img/patas.jpg"); /*É PATAS SEUS VIADOS*/
+    background-size: 40%;
+    background-attachment: fixed;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+
+#topo {
+    height: 40px;
+    line-height: 40px;
+}
+
+.tab {
+    width: 20%;
+}
+
+
+.parallax-container {
+    padding-top: 40px;
+    height: 370px;
+    z-index: -100;
+    box-shadow: 1px 2px 3px #999;
+}
+
+.tabs.tabs-transparent .indicator {
+    background-color: #e1df0f;
+}
+
+#logo {
+    width: 90px;
+    height: 95px;
+    background-image: url("../../app/img/logomiaudote.png");
+    background-size: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    margin-left: 5%;
+    z-index: 100;
+    position: fixed;
+    margin-top: 5px;
+    background-position: 10px 0px;
+}
+
+.fixo {
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+}
+
+
+.divisao {
+    margin: 30px;
+}
+
+.option-animal {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #FFF;
+    height: 320px;
+    border-radius: 2px;
+    background-color: #000;
+}
+
+
+#principal {
+    width: 98%;
+    margin: auto;
+}
+
+.menu {
+    float: right;
+    width: 60%;
+}
+
+.copy {
+    width: 100%;
+    padding-left: 18%;
+}
+
+.nao-compre-adote {
+    background-image: url("../img/nao-compre.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 190px;
+    border-right: 5px solid #e1df0f;
+    border-radius: 10px 0px 0px 10px;
+    background-position: center;
+}
+
+.section-adote {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 2px #DFDFDF;
+    background-color: #FFF;
+}
+
+.title {
+    font-size: 17pt;
+    /*background-color:rgba(255, 223, 15, 0.8);*/
+    /*border:1px solid #99980A; */
+    background-color: #FFF;
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 20px;
+    border-radius: 5px;
+    margin-top: -28px;
+    float: left;
+}
+
+.title-filtro {
+    font-size: 15pt;
+    /*background-color:rgba(255, 223, 15, 0.8);*/
+    /*border:1px solid #99980A; */
+    background-color: #FFF;
+    display: inline;
+    padding-left: 0px;
+    padding-right: 15px;
+    margin-left: 20px;
+    border-radius: 5px;
+    margin-top: -15px;
+    float: left;
+}
+
+.adote {
+    margin-top: 13px;
+
+}
+
+.img-animal {
+    width: 150px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#btn-filtrar {
+    display: inline;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-top: -30px;
+    float: right;
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/icon-filter.png");
+    background-size: 100%;
+    background-color: #FFF;
+
+}
+
+.filtro {
+    border-left: 5px solid #000;
+    box-shadow: 1px 1px 3px 2px #DFDFDF;
+    z-index: -150;
+    background-color: #FFF;
+}
+
+
+[type="radio"]:checked+label::after,
+.with-gap[type="radio"]:checked+label::after {
+    background-color: #080808;
+}
+
+[type="radio"]:checked+label::after,
+.with-gap[type="radio"]:checked+label::before,
+.with-gap[type="radio"]:checked+label::after {
+    border: 2px solid #000;
+}
+
+[type="checkbox"]:checked+label::before {
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #000;
+}
+
+input:focus:not([type]):not([readonly]),
+input[type="text"]:focus:not(.browser-default):not([readonly]),
+input[type="password"]:focus:not(.browser-default):not([readonly]),
+input[type="email"]:focus:not(.browser-default):not([readonly]),
+input[type="url"]:focus:not(.browser-default):not([readonly]),
+input[type="time"]:focus:not(.browser-default):not([readonly]),
+input[type="date"]:focus:not(.browser-default):not([readonly]),
+input[type="datetime"]:focus:not(.browser-default):not([readonly]),
+input[type="datetime-local"]:focus:not(.browser-default):not([readonly]),
+input[type="tel"]:focus:not(.browser-default):not([readonly]),
+input[type="number"]:focus:not(.browser-default):not([readonly]),
+input[type="search"]:focus:not(.browser-default):not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #000;
+    -webkit-box-shadow: 0 1px 0 0 #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+.btn:focus, .btn-large:focus, .btn-floating:focus {
+    background-color: #FF0D86;
+}
+
+.nome-animal {
+    width: 100%;
+    margin: auto;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    border-top: 0px;
+    font-size: 15pt;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.btn-adotar {
+    margin: auto;
+    margin-top: 230px;
+    background-color: rgba(0, 0, 0, 1);
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-size: 15pt;
+    padding-top: 9px;
+    border-radius: 10px;
+    color: #FFF
+}
+
+.informacoes-animal {
+    margin-left: -10px;
+    width: 100%;
+    opacity: 0;
+    /*background-color:#999999;*/
+    height: 100%;
+    /*background-color:rgba(0, 0, 0, 0.3);*/
+}
+
+.descricao-animal {
+    margin-top: 20px;
+}
+
+.option-animal:hover .informacoes-animal {
+    animation-name: option-anima;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes option-anima {
+    from {}
+
+    to {
+        opacity: 1;
+    }
+}
+
+.parallax-text {
+    color: #FFF;
+    text-shadow: 2px 3px 2px #000;
+}
+
+#icon-filter {
+    width: 35px;
+    height: 35px;
+}
+
+.title-como-adotar {
+    font-size: 12pt;
+    background-color: #FF0D86;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-top: -32px;
+    width: 150px;
+    float: right;
+}
+
+.title-como-adotar:hover {
+    background-color: #D90B72;
+}
+
+.btn-floating:hover {
+    background-color: #FF0D73;
+}
+
+
+.pagination {
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+}
+
+.pagination li.active {
+    background-color: #000;
+}
+
+.modal-content {
+    background-image: url("../img/patas.jpg");
+    /*background-image: url("../img/patinhas.png");*/
+    height: 80%;
+
+}
+
+.btn-flat {
+    font-size: 15px;
+}
+
+.icon-filtro {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+}
+
+.btn-filtro-mobile {
+    margin: auto;
+    display: none;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #999;
+    background-color: #FFF;
+    text-align: center;
+    height: 58px;
+    margin-bottom: 10px;
+    font-size: 15pt;
+}
+
+
+@media screen and (max-width: 600px) {
+    .section-adote {
+        margin-top: 30px;
+    }
+
+    .filtro {
+        display: none;
+    }
+
+    .parallax-container {
+        height: 430px;
+    }
+
+    .btn-filtro-mobile {
+        display: inherit;
+    }
+
+    .informacoes-animal {
+        opacity: 0.5;
+    }
+
+}
+
+.btn-filtro-mobile:hover .filtro {
+    display: block;
+}
+
+.parceiros {
+    margin: auto;
+    padding-top: 50px;
+    width: 95%;
+    height: 160px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+.logo-parceiros {
+    width: 20px;
+    height: 20px;
+}
+
+#title-parceiros{
+    margin-left:5%;
+}
+
+.btn-inicio {
+    margin: auto;
+    margin-top: 230px;
+    background-color: rgba(0, 0, 0, 1);
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    font-size: 15pt;
+    padding-top: 9px;
+    border-radius: 10px;
+    color: #FFF
+}
+
+.slide {
+    background-size: 40%;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 170px;
+}
+
+.div-foto-animal {
+    /*box-shadow: 2px 2px 2px #bdbdbd;*/
+    border-left: 2px solid #bdbdbd;
+    border-top: 2px solid #bdbdbd;
+    border-right: 2px solid #bdbdbd;
+    border-bottom: 2px solid #bdbdbd;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 15px;
+}
+
+.foto {
+    margin-top: auto;
+}
+
+.div-info-animal {
+    border-left: 2px solid #bdbdbd;
+    border-top: 2px solid #bdbdbd;
+    border-right: 2px solid #bdbdbd;
+    border-bottom: 2px solid #bdbdbd;
+    width: 50%;
+    border-radius: 10px;
+
+}

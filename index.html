@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Miaudote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="app/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/jquery.bxslider.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <nav class="nav-extended black fixo">
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent menu">
+                <li class="tab"><a class="active" href="/">Inicio</a></li>
+                <li class="tab"><a class="active modal-trigger" href="#modal2">Quem Somos</a></li>
+                <li class="tab"><a class="active" href="">Busca</a></li>
+                <li class="tab"><a class="active modal-trigger" href="#modal1">Como Adotar</a></li>
+                <li class="tab"><a class="active" href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="logo"></div>
+    <main>
+        <div class="parallax-container">
+            <!--<div class="parallax"><img src="https://t1.uc.ltmcdn.com/images/0/4/0/img_cuanto_debe_comer_mi_cachorro_labrador_31040_orig.jpg"></div>-->
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://petboxbrasil.com.br/wp-content/uploads/2016/01/lar_temporario_cao_gato1.jpg">
+                        <!-- random image -->
+                        <div class="caption center-align">
+                            <h3 class="parallax-text">"Não importa que sejam poucas as suas posses e o seu dinheiro. Ter um cão torna-o rico." </h3>
+                            <h5 class="parallax-text">- Louis Sabin</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://dc.rbsdirect.com.br/imagesrc/23719832.jpg?w=900">
+                        <!-- random image -->
+                        <div class="caption left-align">
+                            <h3 class="parallax-text">"Só os meus cães nunca me trairão."</h3>
+                            <h5 class="parallax-text">- Maria Callas</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://portalvidanocampo.com.br/wp-content/uploads/2017/08/gato.jpg">
+                        <!-- random image -->
+                        <div class="caption right-align">
+                            <h3 class="parallax-text">Adote, porque o amor não tem preço nem raça.</h3>
+                            <h5 class="parallax-text">- Priscilla Oshiro Capitelli</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/01/Gato-bengal-grandes-factos-que-desconhece.jpg?fit=1920%2C1080">
+                        <!-- random image -->
+                        <div class="caption center-align">
+                            <h3 class="parallax-text">"Um miau massageia o coração."</h3>
+                            <h5 class="parallax-text">- Stuart McMillan</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="divisao"></div>
+        <div id="principal">
+            <div class="row">
+                <div class="btn-filtro-mobile">
+                    <i class="medium material-icons">filter_list</i>
+                </div>
+                <div class="col s12 m2 filtro">
+                    <div class="title-filtro">Filtros</div>
+                    <div style="margin-top:20px;">
+                        <label>Nome:</label>
+                        <input type="text" name="nome" placeholder="Digite o nome do animal">
+                    </div>
+                    <div>
+                        <label>Especie:</label>
+                        <p>
+                            <input name="group1" type="radio" id="test4" />
+                            <label for="test4">Todos</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="test2" />
+                            <label for="test2">Cão</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="test3" />
+                            <label for="test3">Gato</label>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" selected>Todos</option>
+                              <option value="1">MG</option>
+                              <option value="2">SP</option>
+                              <option value="3">RJ</option>
+                            </select>
+                            <label>Estado (UF):</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" selected>Todos</option>
+                              <option value="1">Belo Horizonte</option>
+                              <option value="2">São Paulo</option>
+                              <option value="3">Rio de Janeiro</option>
+                            </select>
+                            <label>Cidade:</label>
+                        </div>
+                        <div>
+                            <label>Porte</label>
+                            <p>
+                                <input type="checkbox" id="pequeno" />
+                                <label for="pequeno">Pequeno</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="medio" />
+                                <label for="medio">Médio</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="grande" />
+                                <label for="grande">Grande</label>
+                            </p>
+                        </div>
+                        <div>
+                            <label>Sexo:</label>
+                            <p>
+                                <input name="group2" type="radio" id="test1" />
+                                <label for="test1">Todos</label>
+                            </p>
+                            <p>
+                                <input name="group2" type="radio" id="test4" />
+                                <label for="test4">Macho</label>
+                            </p>
+                            <p>
+                                <input name="group2" type="radio" id="test5" />
+                                <label for="test5">Fêmea</label>
+                            </p>
+                        </div>
+                        <div>
+                            <div class="input-field col s12">
+                                <select>
+                              <option value="" selected>Todos</option>
+                              <option value="1">Até 1 ano (Filhote)</option>
+                              <option value="2">1 a 8 anos (Adulto)</option>
+                              <option value="3">Acima de 8 anos (Idoso)</option>
+                            </select>
+                                <label>Idade:</label>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn black" type="submit" name="action">Aplicar</button>
+                        </div>
+                        <div class="divisao"></div>
+                    </div>
+                </div>
+
+                <div class="col s12 m10">
+                    <div class="section-adote">
+                        <div class="title">Adote!</div>
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn modal-trigger title-como-adotar" href="#modal1">Como Adotar</a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <font size="2">
+                                    <h4>COMO ADOTAR</h4>
+                                    <p>
+                                        Quem não deseja ser muito amado todos os dias?
+                                    </p>
+                                    <p>Nossos amigos de quatro patas estão esperando por você, adote!</p>
+                                    <h5>Recomendações ao adotante:</h5>
+                                    <p>
+                                        -Ao adotar um animal você será responsável por ele durante toda a vida.
+                                    </p>
+                                    <p>
+                                        -Se comprometa com os gastos do seu bichinho como ração, vacinas, vermífugos e consultas ao veterinário.</font>
+                                </p>
+                                <p>
+                                    -Dê preferência a animais castrados ou se comprometa a castrá-lo
+                                </p>
+                                <p>
+                                    -Nunca abandone seu animal, pois ele se apega aos amigos humanos e podem ter depressão profunda por causa do abandono. Além disso, na rua seu cão ou gato está exposto a doenças e acidentes.</font>
+                                </p>
+                                <h5>Requisitos para adoção:</h5>
+                                <li>
+                                    Essas informações dependem da ONG
+                                </li>
+                                <p>
+                                    -Ser maior de 18 anos ou estar acompanhado por um responsável.
+                                </p>
+                                <p>
+                                    -Identidade e CPF(original e cópia)
+                                </p>
+                                <p>
+                                    -Comprovante de Residência
+                                </p>
+                                </font>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Entendi</a>
+                            </div>
+                        </div>
+
+                        <!-- Modal Structure -->
+                        <div id="modal2" class="modal">
+                            <div class="modal-content">
+                                <h4>Quem Somos</h4>
+                                <font size="4">
+                                    <p>
+                                        O Miaudote é um site criado com a finalidade de promover a adoção de cães e gatos que foram abandonados, informando, também, sobre guarda responsável e suas implicaçõ
+                                        <es class=""></es>
+                                    </p>
+                                    <p>
+                                        O idealizador do site é o professor Leonardo Rago e os criadores da página são os alunos do projeto de extensão InformaCão, do curso de Medicina Veterinaria, em conjunto com os alunos do curso de Sistemas de Informação, orientados pelo professor Tarley
+                                        Lana.
+                                    </p>
+                                </font>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">ENTENDI</a>
+                            </div>
+                        </div>
+
+                        <div class="row adote">
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/belinho.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Belinho</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/menina.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Menina</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/piscuila.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Piscuila</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/rosinha.jpeg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Rosinha</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/frida.jpeg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Frida</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/felix.jpeg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Félix</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/animais/panda.jpeg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Panda</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/8.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Nome</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/9.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Nome</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('app/img/3.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Nome</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('https://i2.wp.com/www.novaeconomia.inf.br/wp-content/uploads/2016/10/cachorro-de-estima%C3%A7%C3%A3o.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Nome</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+                            <div class="col m3 s12 option-animal" style="background-image:url('http://portaldodog.com.br/cachorros/wp-content/uploads/2014/07/cachorros-quase-dormindo-5.jpg');">
+                                <div class="informacoes-animal">
+                                    <div class="nome-animal">Nome</div>
+                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col m10 s12 offset-m2">
+                <div class="center">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="parceiros">
+            <div id="title-parceiros">
+                Parceiros
+            </div>
+            <div class="slider1">
+                <div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6f/HP_logo_630x630.png');"></div>
+                <div class="slide" style="background-image:url('https://logodownload.org/wp-content/uploads/2014/09/counter-strike-global-offensive-cs-go-logo.png');"></div>
+                <div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/3000px-Dell_Logo.svg.png');"></div>
+                <div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6f/HP_logo_630x630.png');"></div>
+                <div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6f/HP_logo_630x630.png');"></div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="page-footer black ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Sobre</h5>
+                    <p class="grey-text text-lighten-4">Esse site foi desenvolvido pelo alunos dos cursos de Sistemas de Informação e Medicina Veterinária do Centro Universitário Newton Paiva</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Contato</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">TARLEY.LANA@GMAIL.COM</a></li>
+                    </ul>
+                    <ul>
+                        <li><img src="app/img/facebook.png"><img src="app/img/instagram.png"><img src="app/img/twitter.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-4">
+            <div class="container">
+                © 2017 Copyright Miaudote
+            </div>
+        </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="app/js/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" href="app/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Importação Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="app/js/index.js"></script>
+
+
+
+</body>
+
+</html>
