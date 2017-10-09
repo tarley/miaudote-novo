@@ -28,12 +28,18 @@
                     <div class="section-adote">
                         <div ng-include="'/app/pages/_modal-como-adotar.html'" onload="configModal()"></div>
                         <div ng-include="'/app/pages/_modal-quem-somos.html'" onload="configModal()"></div>
+                        <div ng-include="'/app/pages/_modal-detalhes.html'" onload="configModal()"></div>
 
                         <div class="row adote">
+                            <div ng-show="listaPets.length == 0" class="col s12">
+                                <h3>Ops! Não contramos nenhum Pet que se enquadra no perfil informado.</h3>
+                            </div>
                             <div ng-repeat="p in listaPets" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
                                 <div class="informacoes-animal">
                                     <div class="nome-animal">{{p.nome}}</div>
-                                    <div class="btn-adotar"><a href="app/pages/infoAdotar.html">ADOTAR</a></div>
+                                    <div class="btn-adotar">
+                                        <a ng-click="detalhes(p)">Como Adotar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
