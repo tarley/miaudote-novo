@@ -35,7 +35,7 @@ angular.module("miaudote", [])
                 
             value = $scope.filtro.cidade;
             
-            if(value && value != 'Todas')
+            if(value && value != 'Todos')
                 listaPets = listaPets.filter(function(pet) {
                     return pet.cidade == value;
                 });
@@ -86,10 +86,8 @@ angular.module("miaudote", [])
         }
         
         $scope.isCastrado = function(pet) {
-            if(pet.castrado == undefined)
-                return "";
-            
-            var sufixo = 'o';
+            if(pet.castrado == 'M')
+                sufixo = 'o';
             
             if(pet.genero == 'F') {
                 sufixo = 'a';
@@ -171,7 +169,9 @@ angular.module("miaudote", [])
                     genero: 'F',
                     idadeEmMeses: 9,
                     porte: 'médio',
+                    especie: 'Cão',
                     castrado: true,
+                    uf: 'MG',
                     local: 'Está no CCZ Contagem',
                     medicamento: '1 dose de anti-rábica e 1 dose de vermífugo'
                 },
@@ -181,9 +181,10 @@ angular.module("miaudote", [])
                     imagem: '/app/img/animais/piscuila.jpg',
                     ong: 'Proteger',
                     descricao: 'Muito dócil, hiper sociável sociável com outros animais e com pessoas. Foi resgatado na desocupação Willian Rosa perto do CEASA.',
-                    genero: 'M',
+                    genero: 'F',
                     idadeEmMeses: 30,
                     porte: 'pequeno',
+                    especie: 'Cão',
                     castrado: true,
                     local: 'Está no CCZ Contagem',
                     medicamento: '1 dose de anti-rábica e 1 dose de vermífugo'
@@ -192,51 +193,116 @@ angular.module("miaudote", [])
                     id: 4,
                     nome: 'Rosinha',
                     imagem: '/app/img/animais/rosinha.jpeg',
-                },
-                {
-                    id: 5,
-                    nome: 'Menina',
-                    imagem: '/app/img/animais/menina.jpg',
+                    descricao: 'Muito carinhosa, meiga e tímida. Bem sociável com outros animais para brincar. Foi resgatada pelo CCZ Contagem junto com outros cães na desocupação Willian Rosa, perto do CEASA.',
+                    castrado: true,
+                    especie: 'Cão',
+                    genero: 'F',
+                    local: 'Esta no CCZ Contagem',
+                    idadeEmMeses: 9,
+                    porte: 'medio',
+                    
                 },
                 {
                     id: 6,
                     nome: 'Frida',
                     imagem: '/app/img/animais/frida.jpeg',
+                    especie: 'Gato',
+                    descricao: 'A Frida é carinhosa e cuida do seu irmão Félix, adora dar lambeijos para limpar a pelagem linda dele.',
+                    castrado: true,
+                    idadeEmMeses: 12,
+                    medicamento: 'Vacinada',
+                    genero: 'F',
                 },
                 {
                     id: 7,
                     nome: 'Félix',
                     imagem: '/app/img/animais/felix.jpeg',
+                    especie: 'Gato',
+                    descricao: 'O Félix é tímido e assustado, mas muito carente. Não desgruda da sua irmã Frida, sua fiel Companheira',
+                    idadeEmMeses: 12,
+                    medicamento: 'Vacinado',
+                    genero: 'M',
                 },
                 {
                     id: 8,
                     nome: 'Panda',
                     imagem: '/app/img/animais/panda.jpeg',
+                    descricao: 'O Panda é um gatinho muito carinhoso, manhoso e brincalhão. Adora subir em árvores e brincar de esconder com outros gatinhos.',
+                    idadeEmMeses: 7,
+                    medicamento: 'Vacinado',
+                    especie: 'Gato',
+                    genero: 'F',
                 },
+                {
+                    id: 5,
+                    nome: 'Max',
+                    imagem: '/app/img/animais/max.jpg',
+                    especie: 'Cão',
+                    descricao: 'Muito sociável e brincalhão.',
+                    genero: 'M',
+                    idadeEmMeses: 8,
+                    porte: 'pequeno',
+                    castrado: true,
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
+                    uf: 'MG',
+                    cidade: 'Belo Horizonte',
+                 },
                 {
                     id: 9,
-                    nome: 'Nome',
-                    imagem: '/app/img/8.jpg',
+                    nome: 'Nina',
+                    imagem: '/app/img/animais/nina.jpg',
+                    especie: 'Gato',
+                    descricao: 'Meiga e carinhosa.',
+                    genero: 'F',
+                    idadeEmMeses: 6,
+                    porte: 'pequeno',
+                    castrado: true,
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
+                    uf: 'MG',
+                    cidade: 'Belo Horizonte',
                 },
+
                 {
                     id: 10,
-                    nome: 'Nome',
-                    imagem: '/app/img/9.jpg',
+                    nome: 'Carlinhos',
+                    imagem: '/app/img/3.jpg',
+                    especie: 'Cão',
+                    descricao: 'Muito sociável e brincalhão.',
+                    genero: 'M',
+                    idadeEmMeses: 40,
+                    porte: 'grande',
+                    castrado: true,
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
+                    uf: 'MG',
+                    cidade: 'Belo Horizonte',
                 },
                 {
                     id: 11,
-                    nome: 'Nome',
-                    imagem: '/app/img/3.jpg',
+                    nome: 'Pituca',
+                    imagem: '/app/img/10.jpg',
+                    especie: 'Cão',
+                    descricao: 'Carinhosa e brincalhona.',
+                    genero: 'F',
+                    idadeEmMeses: 18,
+                    porte: 'médio',
+                    castrado: true,
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
+                    uf: 'MG',
+                    cidade: 'Belo Horizonte',
                 },
                 {
                     id: 12,
-                    nome: 'Nome',
-                    imagem: '/app/img/10.jpg',
-                },
-                {
-                    id: 13,
-                    nome: 'Nome',
-                    imagem: '/app/img/11.jpg',
+                    nome: 'Bruce',
+                    imagem: '/app/img/animais/bruce.jpg',
+                    especie: 'Cão',
+                    descricao: 'Muito imperativo e brincalhão.',
+                    genero: 'M',
+                    idadeEmMeses: 12,
+                    porte: 'pequeno',
+                    castrado: true,
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
+                    uf: 'MG',
+                    cidade: 'Belo Horizonte',
                 }
             ];
         }

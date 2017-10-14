@@ -314,9 +314,12 @@ textarea.materialize-textarea:focus:not([readonly]) {
     background-image: url("../img/patas.jpg");
     /*background-image: url("../img/patinhas.png");*/
     height: 80%;
-
 }
 
+#modal3 {
+    border-radius: 10px;
+    height: 80%;
+}
 .btn-flat {
     font-size: 15px;
 }
@@ -433,4 +436,13 @@ textarea.materialize-textarea:focus:not([readonly]) {
     width: 50%;
     border-radius: 10px;
 
+}
+
+.card,.horizonte{
+   box-shadow:1px 2px 3px #FFFFFF;
+}
+
+.modal-action{
+    background-color:rgba(60,94,58,1);
+    color:#FFFFFF;
 }
