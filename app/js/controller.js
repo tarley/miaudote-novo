@@ -8,7 +8,28 @@ angular.module("miaudote", [])
             
             $scope.listaPets = listarPets();
         }
-
+        
+        $scope.opcoesIdade = [
+            { name: 'Todas', value: 'Todas' },
+            { name: 'Até 1 ano (Filhote)', value: 'Filhote' },
+            { name: '1 a 8 anos (Adulto)', value: 'Adulto' },
+            { name: 'Acima de 8 anos (Idoso)', value: 'Idoso' }
+        ];
+        
+        $scope.opcoesUf = [
+            { name: 'Todos', value: 'Todos' },
+            { name: 'MG', value: 'MG' },
+            { name: 'SP', value: 'SP' },
+            { name: 'RJ', value: 'RJ' }
+        ];
+        
+        $scope.opcoesCidade = [
+            { name: 'Todas', value: 'Todas' },
+            { name: 'Belo Horizonte', value: 'Belo Horizonte' },
+            { name: 'São Paulo', value: 'São Paulo' },
+            { name: 'Rio de Janeiro', value: 'Rio de Janeiro' }
+        ];
+        
         $scope.filtrar = function() {
             var listaPets = listarPets();
             
@@ -35,7 +56,7 @@ angular.module("miaudote", [])
                 
             value = $scope.filtro.cidade;
             
-            if(value && value != 'Todos')
+            if(value && value != 'Todas')
                 listaPets = listaPets.filter(function(pet) {
                     return pet.cidade == value;
                 });
@@ -86,6 +107,8 @@ angular.module("miaudote", [])
         }
         
         $scope.isCastrado = function(pet) {
+            var sufixo;
+            
             if(pet.castrado == 'M')
                 sufixo = 'o';
             

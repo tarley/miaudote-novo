@@ -26,23 +26,19 @@
         </div>
         <div>
             <div class="input-field col s12">
-                <select ng-model="filtro.uf">
-                              <option value="Todos" selected>Todos</option>
-                              <option value="MG">MG</option>
-                              <option value="SP">SP</option>
-                              <option value="RJ">RJ</option>
-                            </select>
+                <select id="select-uf" name="uf" ng-model="filtro.uf">
+                    <option value disabled selected>Escolha o estado</option>
+                    <option ng-repeat="o in opcoesUf" value="{{o.value}}"}>{{o.name}}</option>
+                </select>
                 <label>Estado (UF):</label>
             </div>
         </div>
         <div>
             <div class="input-field col s12">
-                <select ng-model="filtro.cidade">
-                              <option value="Todas" selected>Todas</option>
-                              <option value="Belo Horizonte">Belo Horizonte</option>
-                              <option value="São Paulo">São Paulo</option>
-                              <option value="Rio de Janeiro">Rio de Janeiro</option>
-                            </select>
+                <select id="select-cidade" name="cidade" ng-model="filtro.cidade">
+                    <option value disabled selected>Escolha a cidade</option>
+                    <option ng-repeat="o in opcoesCidade" value="{{o.value}}"}>{{o.name}}</option>
+                </select>
                 <label>Cidade:</label>
             </div>
             <div>
@@ -77,12 +73,10 @@
             </div>
             <div>
                 <div class="input-field col s12">
-                    <select ng-model="filtro.idade">
-                              <option value="Todos" selected>Todas</option>
-                              <option value="Filhote">Até 1 ano (Filhote)</option>
-                              <option value="Adulto">1 a 8 anos (Adulto)</option>
-                              <option value="Idoso">Acima de 8 anos (Idoso)</option>
-                            </select>
+                    <select id="select-idade" name="idade" ng-model="filtro.idade">
+                        <option value disabled selected>Escolha a idade</option>
+                        <option ng-repeat="o in opcoesIdade" value="{{o.value}}"}>{{o.name}}</option>
+                    </select>
                     <label>Idade:</label>
                 </div>
             </div>
