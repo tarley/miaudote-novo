@@ -12,22 +12,22 @@
 </head>
 
 <body ng-app="miaudote" ng-init="init()">
-    <div ng-include="'/app/pages/_nav.html'"></div>
+    <div ng-include="'/app/pages/inicial/_nav.html'"></div>
     <div id="logo"></div>
 
     <main ng-controller="MainController" ng-init="init()">
-        <div ng-include="'/app/pages/_slides.html'" onload="configSlides()"></div>
+        <div ng-include="'/app/pages/inicial/_slides.html'" onload="configSlides()"></div>
         
         <div class="divisao"></div>
         <div id="principal">
             <div class="row">
-                <div ng-include="'/app/pages/_filtro.html'" onload="configFiltro()"></div>
+                <div ng-include="'/app/pages/inicial/_filtro.html'" onload="configFiltro()"></div>
 
                 <div class="col s12 m10">
                     <div class="section-adote">
-                        <div ng-include="'/app/pages/_modal-como-adotar.html'" onload="configModal()"></div>
-                        <div ng-include="'/app/pages/_modal-quem-somos.html'" onload="configModal()"></div>
-                        <div ng-include="'/app/pages/_modal-detalhes.html'" onload="configModal()"></div>
+                        <div ng-include="'/app/pages/inicial/_modal-como-adotar.html'" onload="configModal()"></div>
+                        <div ng-include="'/app/pages/inicial/_modal-quem-somos.html'" onload="configModal()"></div>
+                        <div ng-include="'/app/pages/inicial/_modal-detalhes.html'" onload="configModal()"></div>
 
                         <div class="row adote">
                             <div ng-show="listaPets.length == 0" class="col s12">
@@ -62,9 +62,9 @@
             </div>
         </div>
 
-        <div ng-include="'/app/pages/_parceiros.html'" onload="configParceiros()"></div>
+        <div ng-include="'/app/pages/inicial/_parceiros.html'" onload="configParceiros()"></div>
     </main>
-    <div ng-include="'/app/pages/_footer.html'"></div>
+    <div ng-include="'/app/pages/inicial/_footer.html'"></div>
 
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
