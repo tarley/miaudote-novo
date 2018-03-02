@@ -11,7 +11,7 @@
     define("SUCESSO_USUARIO_CRIADO", "Usuário criado com sucesso.");
     define("ERRO_EMAIL_EXISTE", "O e-mail digitado já está associado a uma conta.");
 
-    
+    ?>   
     
     
     
