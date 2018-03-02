@@ -1,0 +1,385 @@
+[01-Mar-2018 22:45:49 UTC] PHP Parse error:  syntax error, unexpected '{', expecting identifier (T_STRING) in /home/ubuntu/workspace/controller/Usuario.php on line 3
+[01-Mar-2018 22:45:59 UTC] PHP Parse error:  syntax error, unexpected '{', expecting identifier (T_STRING) in /home/ubuntu/workspace/controller/Usuario.php on line 3
+[01-Mar-2018 22:47:15 UTC] PHP Warning:  require_once(/home/ubuntu/workspace/controller): failed to open stream: Operation now in progress in /home/ubuntu/workspace/controller/Usuario.php on line 2
+[01-Mar-2018 22:47:15 UTC] PHP Stack trace:
+[01-Mar-2018 22:47:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/controller/Usuario.php:0
+[01-Mar-2018 22:47:15 UTC] PHP Fatal error:  require_once(): Failed opening required '' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/controller/Usuario.php on line 2
+[01-Mar-2018 22:47:15 UTC] PHP Stack trace:
+[01-Mar-2018 22:47:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/controller/Usuario.php:0
+[01-Mar-2018 22:50:13 UTC] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting function (T_FUNCTION) in /home/ubuntu/workspace/controller/Usuario.php on line 25
+[01-Mar-2018 22:50:34 UTC] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting function (T_FUNCTION) in /home/ubuntu/workspace/controller/Usuario.php on line 25
+[01-Mar-2018 22:50:44 UTC] PHP Parse error:  syntax error, unexpected '@', expecting function (T_FUNCTION) in /home/ubuntu/workspace/controller/Usuario.php on line 25
+[01-Mar-2018 23:35:14 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/controller/Usuario.php on line 3
+[01-Mar-2018 23:35:14 UTC] PHP Stack trace:
+[01-Mar-2018 23:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:35:45 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/controller/Usuario.php on line 3
+[01-Mar-2018 23:35:45 UTC] PHP Stack trace:
+[01-Mar-2018 23:35:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:35:47 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/controller/Usuario.php on line 3
+[01-Mar-2018 23:35:47 UTC] PHP Stack trace:
+[01-Mar-2018 23:35:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:35:58 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/controller/Usuario.php on line 3
+[01-Mar-2018 23:35:58 UTC] PHP Stack trace:
+[01-Mar-2018 23:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:36:05 UTC] PHP Fatal error:  Class 'Usuario' not found in /home/ubuntu/workspace/api/Usuario.php on line 5
+[01-Mar-2018 23:36:05 UTC] PHP Stack trace:
+[01-Mar-2018 23:36:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:36:31 UTC] PHP Parse error:  syntax error, unexpected 'sha1' (T_STRING) in /home/ubuntu/workspace/controller/Usuario.php on line 32
+[01-Mar-2018 23:36:31 UTC] PHP Stack trace:
+[01-Mar-2018 23:36:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:37:54 UTC] PHP Parse error:  syntax error, unexpected 'sha1' (T_STRING) in /home/ubuntu/workspace/controller/Usuario.php on line 32
+[01-Mar-2018 23:37:54 UTC] PHP Stack trace:
+[01-Mar-2018 23:37:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:37:55 UTC] PHP Parse error:  syntax error, unexpected 'sha1' (T_STRING) in /home/ubuntu/workspace/controller/Usuario.php on line 32
+[01-Mar-2018 23:37:55 UTC] PHP Stack trace:
+[01-Mar-2018 23:37:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:38:21 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 22
+[01-Mar-2018 23:38:21 UTC] PHP Stack trace:
+[01-Mar-2018 23:38:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:38:21 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:38:41 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 22
+[01-Mar-2018 23:38:41 UTC] PHP Stack trace:
+[01-Mar-2018 23:38:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:38:41 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:39:03 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:39:03 UTC] PHP Stack trace:
+[01-Mar-2018 23:39:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:39:03 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:39:45 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:39:45 UTC] PHP Stack trace:
+[01-Mar-2018 23:39:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:39:45 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:00 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:40:00 UTC] PHP Stack trace:
+[01-Mar-2018 23:40:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:40:00 UTC] PHP   2. require_once() /home/ubuntu/workspace/api/Usuario.php:2
+[01-Mar-2018 23:40:00 UTC] PHP   3. include() /home/ubuntu/workspace/controller/Usuario.php:4
+[01-Mar-2018 23:40:00 UTC] PHP   4. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP Fatal error:  Maximum function nesting level of '256' reached, aborting! in /home/ubuntu/workspace/api/Usuario.php on line 2
+[01-Mar-2018 23:40:07 UTC] PHP Stack trace:
+[01-Mar-2018 23:40:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:40:07 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP   3. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP   4. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP   5. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP   6. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP   7. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP   8. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP   9. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  10. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  11. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  12. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  13. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  14. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  15. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  16. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  17. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  18. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  19. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  20. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  21. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  22. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  23. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  24. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  25. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  26. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  27. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  28. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  29. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  30. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  31. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  32. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  33. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  34. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  35. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  36. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  37. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  38. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  39. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  40. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  41. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  42. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  43. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  44. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  45. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  46. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  47. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  48. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  49. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  50. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  51. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  52. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  53. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  54. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  55. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  56. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  57. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  58. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  59. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  60. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  61. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  62. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  63. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  64. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  65. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  66. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  67. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  68. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  69. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  70. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  71. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  72. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  73. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  74. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  75. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  76. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  77. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  78. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  79. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  80. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  81. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  82. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  83. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  84. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  85. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  86. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  87. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  88. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  89. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  90. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  91. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  92. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  93. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  94. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  95. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  96. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  97. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP  98. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP  99. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 100. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 101. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 102. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 103. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 104. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 105. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 106. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 107. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 108. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 109. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 110. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 111. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 112. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 113. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 114. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 115. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 116. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 117. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 118. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 119. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 120. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 121. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 122. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 123. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 124. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 125. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 126. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 127. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 128. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 129. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 130. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 131. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 132. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 133. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 134. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 135. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 136. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 137. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 138. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 139. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 140. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 141. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 142. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 143. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 144. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 145. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 146. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 147. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 148. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 149. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 150. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 151. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 152. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 153. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 154. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 155. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 156. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 157. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 158. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 159. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 160. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 161. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 162. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 163. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 164. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 165. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 166. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 167. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 168. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 169. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 170. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 171. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 172. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 173. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 174. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 175. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 176. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 177. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 178. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 179. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 180. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 181. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 182. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 183. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 184. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 185. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 186. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 187. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 188. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 189. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 190. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 191. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 192. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 193. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 194. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 195. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 196. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 197. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 198. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 199. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 200. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 201. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 202. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 203. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 204. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 205. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 206. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 207. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 208. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 209. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 210. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 211. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 212. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 213. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 214. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 215. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 216. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 217. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 218. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 219. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 220. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 221. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 222. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 223. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 224. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 225. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 226. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 227. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 228. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 229. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 230. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 231. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 232. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 233. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 234. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 235. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 236. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 237. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 238. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 239. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 240. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 241. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 242. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 243. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 244. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 245. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 246. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 247. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 248. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 249. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 250. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 251. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 252. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 253. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 254. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:07 UTC] PHP 255. include() /home/ubuntu/workspace/controller/Usuario.php:8
+[01-Mar-2018 23:40:07 UTC] PHP 256. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:40:23 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:40:23 UTC] PHP Stack trace:
+[01-Mar-2018 23:40:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:40:23 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:41:16 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:41:16 UTC] PHP Stack trace:
+[01-Mar-2018 23:41:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:41:16 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:42:16 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:42:16 UTC] PHP Stack trace:
+[01-Mar-2018 23:42:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:42:16 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:42:57 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Usuario.php on line 37
+[01-Mar-2018 23:42:57 UTC] PHP Stack trace:
+[01-Mar-2018 23:42:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:42:57 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:43:55 UTC] PHP Parse error:  syntax error, unexpected '$conn' (T_VARIABLE), expecting function (T_FUNCTION) in /home/ubuntu/workspace/controller/Usuario.php on line 76
+[01-Mar-2018 23:43:55 UTC] PHP Stack trace:
+[01-Mar-2018 23:43:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:44:28 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:44:28 UTC] PHP Stack trace:
+[01-Mar-2018 23:44:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:44:28 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:44:45 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:44:45 UTC] PHP Stack trace:
+[01-Mar-2018 23:44:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:44:45 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:45:28 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:45:28 UTC] PHP Stack trace:
+[01-Mar-2018 23:45:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:45:28 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:45:39 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:45:39 UTC] PHP Stack trace:
+[01-Mar-2018 23:45:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:45:39 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:45:56 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Usuario.php on line 33
+[01-Mar-2018 23:45:56 UTC] PHP Stack trace:
+[01-Mar-2018 23:45:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:45:56 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:46:09 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 23
+[01-Mar-2018 23:46:09 UTC] PHP Stack trace:
+[01-Mar-2018 23:46:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:46:09 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:46:41 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 22
+[01-Mar-2018 23:46:41 UTC] PHP Stack trace:
+[01-Mar-2018 23:46:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:46:41 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:47:43 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Usuario.php on line 62
+[01-Mar-2018 23:47:43 UTC] PHP Stack trace:
+[01-Mar-2018 23:47:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:47:43 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:47:43 UTC] PHP   3. Usuario->VerificarEmail() /home/ubuntu/workspace/controller/Usuario.php:26
+[01-Mar-2018 23:48:16 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Usuario.php on line 37
+[01-Mar-2018 23:48:16 UTC] PHP Stack trace:
+[01-Mar-2018 23:48:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:48:16 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:48:52 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Usuario.php on line 66
+[01-Mar-2018 23:48:52 UTC] PHP Stack trace:
+[01-Mar-2018 23:48:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:48:52 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:48:52 UTC] PHP   3. Usuario->VerificarEmail() /home/ubuntu/workspace/controller/Usuario.php:26
+[01-Mar-2018 23:49:04 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Usuario.php on line 66
+[01-Mar-2018 23:49:04 UTC] PHP Stack trace:
+[01-Mar-2018 23:49:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:49:04 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[01-Mar-2018 23:49:04 UTC] PHP   3. Usuario->VerificarEmail() /home/ubuntu/workspace/controller/Usuario.php:26
+[01-Mar-2018 23:54:41 UTC] PHP Fatal error:  Call to undefined function VerificarEmail() in /home/ubuntu/workspace/controller/Usuario.php on line 40
+[01-Mar-2018 23:54:41 UTC] PHP Stack trace:
+[01-Mar-2018 23:54:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[01-Mar-2018 23:54:41 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
