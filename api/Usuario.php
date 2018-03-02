@@ -6,8 +6,8 @@ $Usuario = new Usuario();
 
 $acao = $_GET["acao"];
 if($acao == "CriarUsuario"){
-    $NomeUsuario = "Nixon Andre Aquino Sette";
-    $Email = "nixon72@gmail.com";
+    $NomeUsuario = "Daniel Torres";
+    $Email = "daniel@gmail.com";
     $Senha = "123";
     $SenhaRepetida = "123";
     $TipoUsuario = "A";
