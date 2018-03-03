@@ -10,6 +10,7 @@
     define("ERRO_USUARIO_CRIADO", "O usuário não foi criado");
     define("SUCESSO_USUARIO_CRIADO", "Usuário criado com sucesso.");
     define("ERRO_EMAIL_EXISTE", "O e-mail digitado já está associado a uma conta.");
+    define("ERRO_NENHUM_USUARIO", "Nenhum usuário foi encontrado.");
 
     ?>   
     

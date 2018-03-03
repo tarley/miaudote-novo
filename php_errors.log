@@ -383,3 +383,33 @@
 [01-Mar-2018 23:54:41 UTC] PHP Stack trace:
 [01-Mar-2018 23:54:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
 [01-Mar-2018 23:54:41 UTC] PHP   2. Usuario->CriarUsuario() /home/ubuntu/workspace/api/Usuario.php:15
+[02-Mar-2018 01:32:28 UTC] PHP Fatal error:  Call to a member function ChecarSessao() on a non-object in /home/ubuntu/workspace/api/Auth.php on line 9
+[02-Mar-2018 01:32:28 UTC] PHP Stack trace:
+[02-Mar-2018 01:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[03-Mar-2018 11:47:23 UTC] PHP Parse error:  syntax error, unexpected '"data"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/ubuntu/workspace/controller/Usuario.php on line 116
+[03-Mar-2018 11:47:23 UTC] PHP Stack trace:
+[03-Mar-2018 11:47:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[03-Mar-2018 11:57:59 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/controller/Usuario.php on line 97
+[03-Mar-2018 11:57:59 UTC] PHP Stack trace:
+[03-Mar-2018 11:57:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[03-Mar-2018 11:57:59 UTC] PHP   2. Usuario->GetUsuarios() /home/ubuntu/workspace/api/Usuario.php:20
+[03-Mar-2018 11:58:00 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/controller/Usuario.php on line 97
+[03-Mar-2018 11:58:00 UTC] PHP Stack trace:
+[03-Mar-2018 11:58:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[03-Mar-2018 11:58:00 UTC] PHP   2. Usuario->GetUsuarios() /home/ubuntu/workspace/api/Usuario.php:20
+[03-Mar-2018 11:58:01 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/controller/Usuario.php on line 97
+[03-Mar-2018 11:58:01 UTC] PHP Stack trace:
+[03-Mar-2018 11:58:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
+[03-Mar-2018 11:58:01 UTC] PHP   2. Usuario->GetUsuarios() /home/ubuntu/workspace/api/Usuario.php:20
+[03-Mar-2018 12:11:33 UTC] PHP Warning:  include(Connect.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/controller/Auth.php on line 6
+[03-Mar-2018 12:11:33 UTC] PHP Stack trace:
+[03-Mar-2018 12:11:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[03-Mar-2018 12:11:33 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[03-Mar-2018 12:11:33 UTC] PHP Warning:  include(): Failed opening 'Connect.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/controller/Auth.php on line 6
+[03-Mar-2018 12:11:33 UTC] PHP Stack trace:
+[03-Mar-2018 12:11:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[03-Mar-2018 12:11:33 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[03-Mar-2018 12:11:33 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 9
+[03-Mar-2018 12:11:33 UTC] PHP Stack trace:
+[03-Mar-2018 12:11:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[03-Mar-2018 12:11:33 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
