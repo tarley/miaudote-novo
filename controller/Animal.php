@@ -5,6 +5,7 @@ class Animal {
     public function cadastrarAnimal() {
        require_once "Conexao.php";
        
+       $sql = "";
        
        $conn->close();
     }
@@ -45,6 +46,14 @@ class Animal {
             return array("mensagem" => ERRO_ANIMAL_ADOTADO."Erro:".$conn->error,
                         "sucesso" => false);
         }
+        
+        $conn->close();
+    }
+    
+    public function editarAnimal($id) {
+        require_once "Conexao.php";
+        
+        
         
         $conn->close();
     }
