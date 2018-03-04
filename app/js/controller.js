@@ -7,6 +7,7 @@ angular.module("miaudote", [])
             $scope.pet = {};
             
             $scope.listaPets = listarPets();
+            $scope.listaPets1 = listarPets1();
         }
         
         $scope.opcoesIdade = [
@@ -329,4 +330,66 @@ angular.module("miaudote", [])
                 }
             ];
         }
+        
+        function listarPets1(){
+            return [{
+                    id: 1,
+                    nome: 'Belinho',
+                    imagem: '/app/img/animais/belinho.jpg',
+                    ong: 'Proteger',
+                    descricao: 'Muito sociável e brincalhão.',
+                    genero: 'M',
+                    idadeEmMeses: 24,
+                    porte: 'pequeno',
+                    castrado: true,
+                    local: 'Está no CCZ Contagem',
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
+                    especie: 'Cão',
+                    uf: 'MG',
+                    cidade: 'Belo Horizonte',
+                },
+                {
+                    id: 2,
+                    nome: 'Menina',
+                    imagem: '/app/img/animais/menina.jpg',
+                    ong: 'Proteger',
+                    descricao: 'Precisa de espaço, extremamente brincalhona e carinhosa. Foi resgatado no parque gentil Diniz em Contagem.',
+                    genero: 'F',
+                    idadeEmMeses: 9,
+                    porte: 'médio',
+                    especie: 'Cão',
+                    castrado: true,
+                    uf: 'MG',
+                    local: 'Está no CCZ Contagem',
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo'
+                },
+                {
+                    id: 3,
+                    nome: 'Piscuila',
+                    imagem: '/app/img/animais/piscuila.jpg',
+                    ong: 'Proteger',
+                    descricao: 'Muito dócil, hiper sociável sociável com outros animais e com pessoas. Foi resgatado na desocupação Willian Rosa perto do CEASA.',
+                    genero: 'F',
+                    idadeEmMeses: 30,
+                    porte: 'pequeno',
+                    especie: 'Cão',
+                    castrado: true,
+                    local: 'Está no CCZ Contagem',
+                    medicamento: '1 dose de anti-rábica e 1 dose de vermífugo'
+                },
+                {
+                    id: 4,
+                    nome: 'Rosinha',
+                    imagem: '/app/img/animais/rosinha.jpeg',
+                    descricao: 'Muito carinhosa, meiga e tímida. Bem sociável com outros animais para brincar. Foi resgatada pelo CCZ Contagem junto com outros cães na desocupação Willian Rosa, perto do CEASA.',
+                    castrado: true,
+                    especie: 'Cão',
+                    genero: 'F',
+                    local: 'Esta no CCZ Contagem',
+                    idadeEmMeses: 9,
+                    porte: 'medio',
+                    
+                }]
+        }
+        
     });
