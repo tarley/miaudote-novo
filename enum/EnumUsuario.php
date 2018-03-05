@@ -3,6 +3,9 @@
     define("Administrador", "A");
     define("UsuarioComum", "C");
     
+    define("UsuarioExcluido", "S");
+    define("UsuarioNaoExcluido", "N");
+    
     define("ERRO_NOME_OBRIGATORIO", "O nome do usuário é de preenchimento obrigatório.");
     define("ERRO_EMAIL_OBRIGATORIO", "O e-mail é um campo obrigatório");
     define("ERRO_SENHA_OBRIGATORIA", "A senha é de preenchimento obrigatório");
