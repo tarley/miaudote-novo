@@ -7,7 +7,7 @@ angular.module("miaudote", [])
             $scope.pet = {};
             
             $scope.listaPets = listarPets();
-            $scope.listaPets1 = listarPets1();
+            $scope.listaPetsAleatorios = listarPetsAleatorios();
         }
         
         $scope.opcoesIdade = [
@@ -30,6 +30,7 @@ angular.module("miaudote", [])
             { name: 'São Paulo', value: 'São Paulo' },
             { name: 'Rio de Janeiro', value: 'Rio de Janeiro' }
         ];
+
         
         $scope.filtrar = function() {
             var listaPets = listarPets();
@@ -331,7 +332,7 @@ angular.module("miaudote", [])
             ];
         }
         
-        function listarPets1(){
+        function listarPetsAleatorios(){
             return [{
                     id: 1,
                     nome: 'Belinho',
