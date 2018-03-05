@@ -1,0 +1,47 @@
+<div class="nav-wrapper">
+    <a id="button-menu" class="btn waves-effect black" data-activates="slide-out">
+       <i btn >menu</i>
+    </a>
+</div>
+<ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <a>
+                    <div id="logo"></div>
+                </a>
+        </li>
+        <div class="divisao_logo"></div>
+    <li>
+        <div class="divider"></div>
+    </li>
+
+    <li><a class="subheader">MiAuDote</a></li>
+    <li><a class="waves-effect" href="/app/pages/gerencial/_cadastro-animal.html">Cadastrar animal</a></li>
+    <li><a class="waves-effect" href="#!/Fundadores">Cadastrar ONG's/Protetor</a></li>
+    <li><a class="waves-effect" href="#!/Fundadores">Cadastrar usuário</a></li>
+
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a class="subheader">CONTATO E SUPORTE</a></li>
+    <li><a class="waves-effect" href="#!/Fundadores">Fale Conosco</a></li>
+
+    <li>
+        <a href="\" class="waves-effect">
+                <i class="material-icons left">close</i>Voltar a página inicial
+            </a>
+    </li>
+</ul>
+
+<script>
+    $(document).ready(function() {
+        $('#button-menu').sideNav({
+            menuWidth: 300,
+            edge: 'left',
+            closeOnClick: true,
+            draggable: true,
+            onOpen: function(el) {},
+            onClose: function(el) {},
+        });
+    });
+</script>

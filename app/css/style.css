@@ -6,7 +6,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url("../img/patas.jpg"); /*É PATAS SEUS VIADOS*/
+    background-image: url("../img/patas.jpg");
+    /*É PATAS SEUS VIADOS*/
     background-size: 40%;
     background-attachment: fixed;
 }
@@ -58,6 +59,9 @@ main {
     z-index: 100;
 }
 
+.divisao_admin {
+    margin: 60px;
+}
 
 .divisao {
     margin: 30px;
@@ -207,7 +211,9 @@ textarea.materialize-textarea:focus:not([readonly]) {
     box-shadow: 0 1px 0 0 #000;
 }
 
-.btn:focus, .btn-large:focus, .btn-floating:focus {
+.btn:focus,
+.btn-large:focus,
+.btn-floating:focus {
     background-color: #FF0D86;
 }
 
@@ -320,6 +326,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     border-radius: 10px;
     height: 80%;
 }
+
 .btn-flat {
     font-size: 15px;
 }
@@ -387,8 +394,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
     height: 20px;
 }
 
-#title-parceiros{
-    margin-left:5%;
+#title-parceiros {
+    margin-left: 5%;
 }
 
 .btn-inicio {
@@ -438,35 +445,42 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 }
 
-.card,.horizonte{
-   box-shadow:1px 2px 3px #FFFFFF;
+.card,
+.horizonte {
+    box-shadow: 1px 2px 3px #FFFFFF;
 }
 
-.modal-action{
-    background-color:rgba(60,94,58,1);
-    color:#FFFFFF;
+.modal-action {
+    background-color: rgba(60, 94, 58, 1);
+    color: #FFFFFF;
 }
 
 /* fallback */
+
 @font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/plugins/materializeicons/fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/plugins/materializeicons/fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: 'liga';
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.divisao_logo{
+    margin: 100px;
 }
