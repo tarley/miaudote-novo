@@ -21,26 +21,17 @@
         <div class="divisao"></div>
         <div id="principal">
             <div class="row">
-<<<<<<< HEAD
                 <div ng-include="'/app/pages/inicial/_filtro.html'" onload="configFiltro()"></div>
-
-                <div class="col s12 m10">
-                    <div class="section-adote">
-                        <div ng-include="'/app/pages/inicial/_modal-como-adotar.html'" onload="configModal()"></div>
-                        <div ng-include="'/app/pages/inicial/_modal-quem-somos.html'" onload="configModal()"></div>
-                        <div ng-include="'/app/pages/inicial/_modal-detalhes.html'" onload="configModal()"></div>
-=======
-                <div ng-include="'/app/pages/_filtro.html'" onload="configFiltro()"></div>
                 
                 <!--Animais em Destaque - Aleatórios-->
                 
                 <div class="col s12 m10">
                     <div class="section-adote">
-                        <div ng-include="'/app/pages/_modal-como-adotar.html'" onload="configModal()"></div>
+                        <div ng-include="'/app/pages/inicial/_modal-como-adotar.html'" onload="configModal()"></div>
                         
                         <div class="row adote">
                             
-                            <div ng-repeat="p in listaPets1" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
+                            <div ng-repeat="p in listaPetsAleatorios" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
                                 <div class="informacoes-animal">
                                     <div class="nome-animal">{{p.nome}}</div>
                                     <div class="btn-adotar">
@@ -58,9 +49,8 @@
                 <div class="col s12 m10">
                     <div class="section-adote">
                         <div class="title">Animais!</div>
-                        <div ng-include="'/app/pages/_modal-quem-somos.html'" onload="configModal()"></div>
-                        <div ng-include="'/app/pages/_modal-detalhes.html'" onload="configModal()"></div>
->>>>>>> 050a0ede6bd2e2fb512c0ce8a7fe65f5eb89a465
+                        <div ng-include="'/app/pages/inicial/_modal-quem-somos.html'" onload="configModal()"></div>
+                        <div ng-include="'/app/pages/inicial/_modal-detalhes.html'" onload="configModal()"></div>
 
                         <div class="row adote">
                             <div ng-show="listaPets.length == 0" class="col s12">
@@ -98,21 +88,10 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
 
         <div ng-include="'/app/pages/inicial/_parceiros.html'" onload="configParceiros()"></div>
     </main>
     <div ng-include="'/app/pages/inicial/_footer.html'"></div>
-=======
-        <!-- Fim da Paginação-->
-        
-        <!-- Inicio Parceiros-->
-        <div ng-include="'/app/pages/_parceiros.html'" onload="configParceiros()"></div>
-        <!-- Inicio Parceiros-->
-    </main>
-    <!--Footer-->
-    <div ng-include="'/app/pages/_footer.html'"></div>
->>>>>>> 050a0ede6bd2e2fb512c0ce8a7fe65f5eb89a465
 
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
