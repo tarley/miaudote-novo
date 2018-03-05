@@ -79,7 +79,23 @@ class Auth{
                     "mensagem"=>SUCESSO_ENCERRAR_SESSAO);
     }
     
+<<<<<<< HEAD
     public function ChecarPermissao($p_Tipo){
         
+=======
+    public function ChecarPermissao($p_PermissaoNecessaria){
+        require_once "Auth.php";
+        $Auth = new Auth();
+        
+        $sessao = $Auth->ChecarSessao();
+        if(!$sessao["sucesso"]){
+            return $sessao;
+        }
+        
+        if($sessao["data"]["tipo"] !== $p_PermissaoNecessaria){
+            return array("sucesso"=>false,
+                        "mensagem"=>ERRO_NAO_POSSUI_PERMISSAO);
+        }
+>>>>>>> 050a0ede6bd2e2fb512c0ce8a7fe65f5eb89a465
     }
 }

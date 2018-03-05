@@ -35,7 +35,12 @@ class Animal {
         
         $sql ="
                 UPDATE ANIMAL
+<<<<<<< HEAD
                 SET ADOTADO = 'T'
+=======
+                SET ADOTADO = 'T',
+                    DAT_ADOCAO = NOW()
+>>>>>>> 050a0ede6bd2e2fb512c0ce8a7fe65f5eb89a465
                 WHERE COD_ANIMAL = '$id'
         ";
         
