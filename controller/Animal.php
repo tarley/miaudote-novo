@@ -1,9 +1,47 @@
 <?php
-
+require_once "../enum/EnumAnimal.php";
 class Animal {
 
-    public function cadastrarAnimal($p_) {
+    public function cadastrarAnimal($p_NomeAnimal, $p_DesAnimal, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Adotado, $p_Excluido, $p_DatAdocao, $p_Local, $p_Medicamento, $p_Cidade, $p_Instituicao, $p_Especie ) {
        require_once "Conexao.php";
+       
+       $Animal = new Usuario();
+       
+       $erro = false;
+       $mensagem = null;
+       
+       if(empty($p_NomeAnimal)) {
+           $erro = true;
+           $mensagem = ERRO_NOME_OBRIGATORIO;
+       }
+       elseif(empty($p_IdadeAnimal)) {
+           $erro = true;
+           $mensagem = ERRO_IDADE_OBRIGATORIO;
+       }
+       elseif(empty($p_PorteAnimal)) {
+           $erro = true;
+           $mensagem = ERRO_PORTE_OBRIGATORIO;
+       }
+       elseif(empty($p_Sexo)) {
+           $erro = true;
+           $mensagem = ERRO_SEXO_OBRIGATORIO;
+       }
+       elseif(empty($p_Local)) {
+           $erro = true;
+           $mensagem = ERRO_LOCAL_OBRIGATORIO;
+       }
+       elseif(empty($p_Cidade)) {
+           $erro = true;
+           $mensagem = ERRO_CIDADE_OBRIGATORIO;
+       }
+       elseif(empty($p_Instituicao)) {
+           $erro = true;
+           $mensagem = ERRO_INSTITUICAO_OBRIGATORIO;
+       }
+       elseif(empty($p_Especie)) {
+           $erro = true;
+           $mensagem = ERRO_ESPECIE_OBRIGATORIO;
+       }
        
        $sql = "";
        
