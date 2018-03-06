@@ -32,8 +32,9 @@ class Usuario{
             "mensagem"=>$mensagem);
         }
         
+        $Excluido = UsuarioNaoExcluido;
         $senha = sha1($p_DesSenha);
-        $sql = "INSERT INTO `USUARIO`(`DES_EMAIL`, `DES_SENHA`, `DES_TIPO_USUARIO`, `NOM_USUARIO`) VALUES ('$p_EmailUsuario','$senha','$p_TipoUsuario','$p_NomeUsuario')";
+        $sql = "INSERT INTO `USUARIO`(`DES_EMAIL`, `DES_SENHA`, `DES_TIPO_USUARIO`, `NOM_USUARIO`, `IND_EXCLUIDO`) VALUES ('$p_EmailUsuario','$senha','$p_TipoUsuario','$p_NomeUsuario', '$Excluido')";
         if ($conn->query($sql) === true) {
             return array("mensagem" => SUCESSO_USUARIO_CRIADO,
                         "sucesso" => true);
@@ -65,8 +66,8 @@ class Usuario{
         $Num_Paginas = ceil($QTD_Usuario/$QTD_Exibida); 
         
         $inicio = ($QTD_Exibida*$p_Pagina)-$QTD_Exibida; 
-       
-        $sql = "SELECT NOM_USUARIO, DES_EMAIL FROM USUARIO ORDER BY COD_USUARIO DESC LIMIT $inicio,  $QTD_Exibida";
+        $excluido = UsuarioNaoExcluido;
+        $sql = "SELECT NOM_USUARIO, DES_EMAIL FROM USUARIO WHERE IND_EXCLUIDO='$excluido' ORDER BY COD_USUARIO DESC LIMIT $inicio,  $QTD_Exibida";
         $resultado = $conn->query($sql);
         $usuarios = array();
         
@@ -91,24 +92,35 @@ class Usuario{
     public function VerificarEmail($p_EmailUsuario){
         include "Conexao.php";
         
-        $sql = "SELECT COUNT(COD_USUARIO) AS QTD_EMAIL FROM USUARIO WHERE DES_EMAIL='$p_EmailUsuario'";
+        $sql = "SELECT COUNT(COD_USUARIO) AS QTD_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL='$p_EmailUsuario'";
         $resultado = $conn->query($sql);
          if ($resultado->num_rows > 0) {
             while ($row = $resultado->fetch_assoc()) {
                 $QTD_Email = $row["QTD_EMAIL"];
+                $Excluido = $row["IND_EXCLUIDO"];
             }
         }
-        
+            
         if($QTD_Email > 0)
             return true;
-        else
+         else
             return false;
-
+        
          $conn->close();
     }
     
-    public function DeletarUsuario(){
+    public function DeletarUsuario($p_UsuarioPK){
+        include "Conexao.php";
         
+        $sql = "UPDATE `miaudote`.`USUARIO` SET `IND_EXCLUIDO` = 'S' WHERE `USUARIO`.`COD_USUARIO` = '$p_UsuarioPK'";
+        if($conn->query($sql) == true){
+            return array("sucesso"=>true,
+                        "mensagem"=>SUCESSO_USUARIO_EXCLUIDO);
+        }else{
+            return array("sucesso"=>false,
+                        "mensagem"=>ERRO_USUARIO_EXCLUIDO);
+        }
+        $conn->close();
     }
     
     public function AlterarDadosUsuario(){

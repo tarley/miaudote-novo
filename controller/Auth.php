@@ -1,5 +1,7 @@
 <?php
 require_once "../enum/EnumAuth.php";
+require_once "../enum/EnumUsuario.php";
+
 class Auth{
    
  public function CriarSessao($p_Email, $p_Senha) {
@@ -43,7 +45,7 @@ class Auth{
                         "mensagem"=>SESSAO_INVALIDA);
         }
 
-        $sql = "SELECT DES_SENHA, DES_TIPO_USUARIO, NOM_USUARIO, DES_EMAIL FROM USUARIO WHERE DES_EMAIL = '$email'";
+        $sql = "SELECT DES_SENHA, DES_TIPO_USUARIO, NOM_USUARIO, DES_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL = '$email'";
         $resultado = $conn->query($sql);
  
         if ($resultado->num_rows > 0) {
@@ -52,10 +54,11 @@ class Auth{
                 $tipo = $row["DES_TIPO_USUARIO"];
                 $email = $row["DES_EMAIL"];
                 $nome = $row["NOM_USUARIO"];
+                $excluido = $row["IND_EXCLUIDO"];
             }
         }
 
-        if($senha !== $SenhaCorreta){
+        if($senha !== $SenhaCorreta || $excluido == UsuarioExcluido){
             return array("sucesso"=>false,
                         "mensagem"=>SESSAO_INVALIDA);
         }
@@ -79,10 +82,7 @@ class Auth{
                     "mensagem"=>SUCESSO_ENCERRAR_SESSAO);
     }
     
-<<<<<<< HEAD
-    public function ChecarPermissao($p_Tipo){
-        
-=======
+
     public function ChecarPermissao($p_PermissaoNecessaria){
         require_once "Auth.php";
         $Auth = new Auth();
@@ -96,6 +96,6 @@ class Auth{
             return array("sucesso"=>false,
                         "mensagem"=>ERRO_NAO_POSSUI_PERMISSAO);
         }
->>>>>>> 050a0ede6bd2e2fb512c0ce8a7fe65f5eb89a465
+
     }
 }
