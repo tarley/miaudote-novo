@@ -167,7 +167,7 @@ class Animal {
             return array("mensagem" => ERRO_ANIMAL_ALTERADO."Erro:".$conn->error,
                         "sucesso" => false);
         }
-        
+         
         $conn->close();
     }
     
