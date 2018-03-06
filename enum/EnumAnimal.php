@@ -12,5 +12,11 @@
     define("ERRO_CIDADE_OBRIGATORIO", "A cidade do animal deve ser informada.");
     define("ERRO_INSTITUICAO_OBRIGATORIO", "A instituição deve ser informada.");
     define("ERRO_ESPECIE_OBRIGATORIO", "A espécie do animal deve ser informada.");
+    
+    define("SUCESSO_ANIMAL_CRIADO", "Animal cadastrado com sucesso.");
+    define("ERRO_ANIMAL_CRIADO", "Erro no cadastro de animal.");
+    
+    define("SUCESSO_ANIMAL_ALTERADO", "As alterações foram concluídas com sucesso.");
+    define("ERRO_ANIMAL_ALTERADO", "Erro ao salvar as alterações.");
 
 ?>
