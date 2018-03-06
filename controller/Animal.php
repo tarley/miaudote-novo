@@ -2,7 +2,7 @@
 
 class Animal {
 
-    public function cadastrarAnimal() {
+    public function cadastrarAnimal($p_) {
        require_once "Conexao.php";
        
        $sql = "";
