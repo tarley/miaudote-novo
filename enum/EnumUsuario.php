@@ -14,7 +14,8 @@
     define("SUCESSO_USUARIO_CRIADO", "Usuário criado com sucesso.");
     define("ERRO_EMAIL_EXISTE", "O e-mail digitado já está associado a uma conta.");
     define("ERRO_NENHUM_USUARIO", "Nenhum usuário foi encontrado.");
-
+    define("SUCESSO_USUARIO_EXCLUIDO", "O usuário foi excluído com sucesso.");
+    define("ERRO_USUARIO_EXCLUIDO", "O usuário não foi excluído.");
     ?>   
     
     

@@ -92,7 +92,7 @@ class Usuario{
     public function VerificarEmail($p_EmailUsuario){
         include "Conexao.php";
         
-        $sql = "SELECT COUNT(COD_USUARIO), IND_EXCLUIDO AS QTD_EMAIL FROM USUARIO WHERE DES_EMAIL='$p_EmailUsuario'";
+        $sql = "SELECT COUNT(COD_USUARIO) AS QTD_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL='$p_EmailUsuario'";
         $resultado = $conn->query($sql);
          if ($resultado->num_rows > 0) {
             while ($row = $resultado->fetch_assoc()) {
@@ -100,21 +100,27 @@ class Usuario{
                 $Excluido = $row["IND_EXCLUIDO"];
             }
         }
-        
-        if($Excluido !== UsuarioExcluido){
-            if($QTD_Email > 0)
-                return true;
-            else
-                return false;
-        }else{
+            
+        if($QTD_Email > 0)
+            return true;
+         else
             return false;
-        }
-
+        
          $conn->close();
     }
     
-    public function DeletarUsuario(){
+    public function DeletarUsuario($p_UsuarioPK){
+        include "Conexao.php";
         
+        $sql = "UPDATE `miaudote`.`USUARIO` SET `IND_EXCLUIDO` = 'S' WHERE `USUARIO`.`COD_USUARIO` = '$p_UsuarioPK'";
+        if($conn->query($sql) == true){
+            return array("sucesso"=>true,
+                        "mensagem"=>SUCESSO_USUARIO_EXCLUIDO);
+        }else{
+            return array("sucesso"=>false,
+                        "mensagem"=>ERRO_USUARIO_EXCLUIDO);
+        }
+        $conn->close();
     }
     
     public function AlterarDadosUsuario(){
