@@ -11,86 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
 </head>
 
-<body ng-app="miaudote" ng-init="init()">
+<body ng-app="miaudote_js">
     <div ng-include="'/app/pages/inicial/_nav.html'"></div>
+
     <div id="logo"></div>
 
-    <main ng-controller="MainController" ng-init="init()">
-        <div ng-include="'/app/pages/inicial/_slides.html'" onload="configSlides()"></div>
-        
-        <div class="divisao"></div>
-        <div id="principal">
-            <div class="row">
-                <div ng-include="'/app/pages/inicial/_filtro.html'" onload="configFiltro()"></div>
-                
-                <!--Animais em Destaque - Aleatórios-->
-                
-                <div class="col s12 m10">
-                    <div class="section-adote">
-                        <div ng-include="'/app/pages/inicial/_modal-como-adotar.html'" onload="configModal()"></div>
-                        
-                        <div class="row adote">
-                            
-                            <div ng-repeat="p in listaPetsAleatorios" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
-                                <div class="informacoes-animal">
-                                    <div class="nome-animal">{{p.nome}}</div>
-                                    <div class="btn-adotar">
-                                        <a ng-click="detalhes(p)">Adotar</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Fim Animais em Destaque - Aleatórios-->
-                
-                <!--Demais Animais-->
-                <div class="col s12 m10">
-                    <div class="section-adote">
-                        <div class="title">Animais!</div>
-                        <div ng-include="'/app/pages/inicial/_modal-quem-somos.html'" onload="configModal()"></div>
-                        <div ng-include="'/app/pages/inicial/_modal-detalhes.html'" onload="configModal()"></div>
-
-                        <div class="row adote">
-                            <div ng-show="listaPets.length == 0" class="col s12">
-                                <h3>Ops! Não contramos nenhum Pet que se enquadra no perfil informado.</h3>
-                            </div>
-                            <div ng-repeat="p in listaPets" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
-                                <div class="informacoes-animal">
-                                    <div class="nome-animal">{{p.nome}}</div>
-                                    <div class="btn-adotar">
-                                        <a ng-click="detalhes(p)">Adotar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Demais Animais-->
-                
-            </div>
-        </div>
-        
-        <!-- Inicio da Paginação-->
-        <div class="row">
-            <div class="col m10 s12 offset-m2">
-                <div class="center">
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                        <li class="active"><a href="#!">1</a></li>
-                        <!--<li class="waves-effect"><a href="#!">2</a></li>-->
-                        <!--<li class="waves-effect"><a href="#!">3</a></li>-->
-                        <!--<li class="waves-effect"><a href="#!">4</a></li>-->
-                        <!--<li class="waves-effect"><a href="#!">5</a></li>-->
-                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div ng-include="'/app/pages/inicial/_parceiros.html'" onload="configParceiros()"></div>
+    <main>
+        <ng-view></ng-view>
     </main>
+
     <div ng-include="'/app/pages/inicial/_footer.html'"></div>
 
     <!-- Compiled and minified JavaScript -->
@@ -98,10 +27,10 @@
     <script type="text/javascript" src="plugins/bxslider/js/bxslider/jquery.bxslider.js"></script>
 
     <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
-    
-     <!-- Angular JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
     <!-- Meus JS -->
     <script type="text/javascript" src="app/js/app.js"></script>

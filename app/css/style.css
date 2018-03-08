@@ -515,3 +515,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 .li{
 list-style-type: none;
 }
+
+#teste{
+    height: 50px;
+    height: 200px;
+}
