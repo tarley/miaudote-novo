@@ -394,4 +394,9 @@ var app = angular.module('miaudote.controller', [])
             ]
         }
 
+    })
+    
+    .controller('AdminController', function AdminController($scope){
+        
     });
+    

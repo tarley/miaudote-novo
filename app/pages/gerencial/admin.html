@@ -1,52 +1,24 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
+<div class="divisao_logo"></div>
 
-<!--<head>-->
-<!--    <title>Miaudote Administração</title>-->
-
-<!--    <link rel="stylesheet" href="plugins/materialize/css/materialize.min.css">-->
-<!--    <link rel="stylesheet" href="app/css/style.css">-->
-<!--    <link rel="stylesheet" href="plugins/bxslider/css/jquery.bxslider.css">-->
-
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />-->
-<!--</head>-->
-
-<!--<body ng-app="miaudote" ng-init="init()">-->
-
-<!--    <div ng-include="'/app/pages/inicial/_nav.html'"></div>-->
-<!--    <main ng-controller="MainController" ng-init="init()">-->
-        <div class="divisao_admin"></div>
-
-        <div id="principal">
-            <div class="row">
-
-                <div ng-include="'/app/pages/gerencial/_manager.html'"></div>
-                <ng-view></ng-view>
-
+<div id="principal">
+    <div class="row">
+        <div class="row">
+            <div class="col s10 push-s2">
+                <li class="li">
+                    <img id="fundo_admin" src="/app/img/fundo_admin.png"></img>
+                </li>
+            </div>
+            <div class="col s2 pull-s10">
+                <div class="collection">
+                    <li class="li">
+                        <a id="color_op" class="collection-item ">MiAuDote - Administração</a>
+                        <a href="/app/pages/gerencial/_cadastro-animal.html" id="color_op" class="collection-item">Cadastrar animal</a>
+                        <a href="#!" id="color_op" class="collection-item ">Cadastprar ONG's/Protetor</a>
+                        <a href="#!" id="color_op" class="collection-item ">Cadastrar usuário</a>
+                        <a href="/" id="color_op" class="collection-item ">Voltar à página inicial</a>
+                    </li>
+                </div>
             </div>
         </div>
-<!--    </main>-->
-<!--    <div ng-include="'/app/pages/inicial/_footer.html'"></div>-->
-
-
-    <!--Import jQuery before materialize.js-->
-<!--    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-
-    <!--Compiled and minified JavaScript -->
-<!--    <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>-->
-<!--    <script type="text/javascript" src="plugins/bxslider/js/bxslider/jquery.bxslider.js"></script>-->
-<!--    <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>-->
-
-    <!--Importação Angular JS -->
-<!--    <script type="text/javascript" src="plugins/angular/angular.min.js"></script>-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>-->
-
-    <!--Meus JS -->
-<!--    <script type="text/javascript" src="/app/js/app.js"></script>-->
-<!--    <script type="text/javascript" src="/app/js/controller.js"></script>-->
-
-
-
-<!--</body>-->
-
-<!--</html>-->
+    </div>
+</div>

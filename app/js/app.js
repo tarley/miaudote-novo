@@ -6,7 +6,8 @@ var app = angular.module("miaudote_js", ['ngRoute', 'miaudote.controller']);
                     controller: 'MainController'
                 })
                 .when('/admin', {
-                  templateUrl: 'app/pages/gerencial/admin.html'
+                  templateUrl: 'app/pages/gerencial/admin.html',
+                  controller: 'AdminController'
                 })
                 .otherwise({
                  redirectTo: '/'
