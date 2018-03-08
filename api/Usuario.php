@@ -24,3 +24,13 @@ if($acao == "GetUsuarioPorPK"){
     $usuarioPK = $_GET["COD_USUARIO"];
     echo json_encode($Usuario->GetUsuarioPorPK($usuarioPK));
 }
+
+if($acao == "DeletarUsuario"){
+    $usuarioPK = $_GET["COD_USUARIO"];
+    echo json_encode($Usuario->DeletarUsuario($usuarioPK));
+}
+
+if($acao == "DeletarUsuario"){
+    $usuarioPK = $_GET["COD_USUARIO"];
+    echo json_encode($Usuario->DeletarUsuario($usuarioPK));
+}
