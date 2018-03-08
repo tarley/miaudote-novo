@@ -413,3 +413,7 @@
 [03-Mar-2018 12:11:33 UTC] PHP Stack trace:
 [03-Mar-2018 12:11:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
 [03-Mar-2018 12:11:33 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[06-Mar-2018 00:56:59 UTC] PHP Fatal error:  Class 'Usuario' not found in /home/ubuntu/workspace/controller/Animal.php on line 8
+[06-Mar-2018 00:56:59 UTC] PHP Stack trace:
+[06-Mar-2018 00:56:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[06-Mar-2018 00:56:59 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:23

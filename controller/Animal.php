@@ -2,10 +2,10 @@
 require_once "../enum/EnumAnimal.php";
 class Animal {
 
-    public function cadastrarAnimal($p_NomeAnimal, $p_DesAnimal, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Adotado, $p_Excluido, $p_DatAdocao, $p_Local, $p_Medicamento, $p_Cidade, $p_Instituicao, $p_Especie ) {
+    public function cadastrarAnimal($p_NomeAnimal, $p_DesAnimal, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Adotado, $p_Excluido, $p_Local, $p_Medicamento, $p_Cidade, $p_Instituicao, $p_Especie ) {
        require_once "Conexao.php";
        
-       $Animal = new Usuario();
+       $Animal = new Animal();
        
        $erro = false;
        $mensagem = null;
@@ -47,24 +47,33 @@ class Animal {
             return array("sucesso"=>false,
             "mensagem"=>$mensagem);
         }
-    
-       $sql = "
-            INSERT INTO `ANIMAL`(`NOM_ANIMAL`, `DES_ANIMAL`, `DES_IDADE`, `IND_PORTE_ANIMAL`, 
-            `IND_SEXO_ANIMAL`, `IND_ADOTADO`, `IND_EXCLUIDO`, `DAT_ADOCAO`, `DES_LOCAL`, `DES_MEDICAMENTO`, 
+        
+        
+        $stmt = $conn->prepare("INSERT INTO `ANIMAL`(`NOM_ANIMAL`, `DES_ANIMAL`, `DES_IDADE`, `IND_PORTE_ANIMAL`, 
+            `IND_SEXO_ANIMAL`, `DES_LOCAL`, `DES_MEDICAMENTO`, 
             `CIDADE_COD_CIDADE`, `INSTITUICAO_COD_INSTITUICAO`, `ESPECIE_COD_ESPECIE`) 
-            VALUES ($p_NomeAnimal,$p_DesAnimal,$p_IdadeAnimal,$p_PorteAnimal,$p_Sexo,$p_Adotado,$p_Excluido,$p_,$p_DatAdocao,$p_Local,
-            $p_Medicamento,$p_Cidade,$p_Instituicao,$p_Especie)
-        ";
-            
-        if ($conn->query($sql) === true) {
-            return array("mensagem" => SUCESSO_ANIMAL_CRIADO,
-                        "sucesso" => true);
-        } else {
-             return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error,
+            VALUES (:nom_animal, :des_animal, :des_idade, :ind_porte_animal, :ind_sexo_animal, :des_local, :des_medicamento, 
+            :cod_cidade, :cod_instituicao, cod_especie");
+        
+        try {
+        $stmt->bindParam (':nom_animal', $p_NomeAnimal);
+        $stmt->bindParam (':des_animal', $p_DesAnimal);
+        $stmt->bindParam (':des_idade', $p_IdadeAnimal);
+        $stmt->bindParam (':ind_porte_animal', $p_PorteAnimal);
+        $stmt->bindParam (':ind_sexo_animal', $p_Sexo);
+        $stmt->bindParam (':des_local', $p_Local);
+        $stmt->bindParam (':des_medicamento', $p_Medicamento);
+        $stmt->bindParam (':cod_cidade', $p_Cidade);
+        $stmt->bindParam (':cod_instituicao', $p_Instituicao);
+        $stmt->bindParam (':cod_especie', $p_Especie);
+        
+        $stmt->execute();
+        } catch (Exception $e) {
+                return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error,
                           "sucesso" => false);
         }
        
-       $conn->close();
+       $conn = null;
     }
     
     public function excluirAnimal($id) {
@@ -170,6 +179,19 @@ class Animal {
          
         $conn->close();
     }
+    
+    public function BuscarTodos() {
+        
+    }
+    
+    public function BuscarPorId($id) {
+        
+    }
+    
+    public function BuscarAdotados() {
+        
+    }
+    
     
     
 }
