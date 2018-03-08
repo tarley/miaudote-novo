@@ -45,12 +45,13 @@ class Auth{
                         "mensagem"=>SESSAO_INVALIDA);
         }
 
-        $sql = "SELECT DES_SENHA, DES_TIPO_USUARIO, NOM_USUARIO, DES_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL = '$email'";
+        $sql = "SELECT DES_SENHA, COD_USUARIO, DES_TIPO_USUARIO, NOM_USUARIO, DES_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL = '$email'";
         $resultado = $conn->query($sql);
  
         if ($resultado->num_rows > 0) {
             while ($row = $resultado->fetch_assoc()) {
                 $SenhaCorreta = $row["DES_SENHA"];
+                $CodigoUsuario = $row["COD_USUARIO"];
                 $tipo = $row["DES_TIPO_USUARIO"];
                 $email = $row["DES_EMAIL"];
                 $nome = $row["NOM_USUARIO"];
@@ -67,7 +68,8 @@ class Auth{
                     "data"=>array(
                             "NOM_USUARIO"=>$nome,
                             "DES_EMAIL"=>$email,
-                            "TIPO"=>$tipo
+                            "TIPO"=>$tipo,
+                            "CODIGO_USUARIO"=>$CodigoUsuario
                         ));
         $conn->close();
     }

@@ -16,6 +16,9 @@
     define("ERRO_NENHUM_USUARIO", "Nenhum usuário foi encontrado.");
     define("SUCESSO_USUARIO_EXCLUIDO", "O usuário foi excluído com sucesso.");
     define("ERRO_USUARIO_EXCLUIDO", "O usuário não foi excluído.");
+    define("SUCESSO_ALTERAR_USUARIO", "Alterações realizadas com sucesso.");
+    define("ERRO_ALTERAR_USUARIO", "Não foi possível alterar os dados do usuário.");
+    
     ?>   
     
     
