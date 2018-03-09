@@ -527,6 +527,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     line-height: 100%;
 }
 
+<<<<<<< HEAD
 .nav_teste {
     text-align: center;
     line-height: 72px;
@@ -535,3 +536,5 @@ textarea.materialize-textarea:focus:not([readonly]) {
     margin: -16px;
     text-transform: uppercase;
 }
+=======
+>>>>>>> 7c1288ab11e6ef6ed2d44e6c026fcc38c70391e4
