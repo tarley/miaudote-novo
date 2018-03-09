@@ -526,3 +526,12 @@ textarea.materialize-textarea:focus:not([readonly]) {
     font-size: 1.64rem;
     line-height: 100%;
 }
+
+.nav_teste {
+    text-align: center;
+    line-height: 72px;
+    height: 70px;
+    padding: 5px;
+    margin: -16px;
+    text-transform: uppercase;
+}

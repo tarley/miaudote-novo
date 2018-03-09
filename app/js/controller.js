@@ -93,7 +93,19 @@ var app = angular.module('miaudote.controller', [])
             $scope.listaPets = listaPets;
         }
 
-        $scope.detalhes = function(pet) {
+        //Aplicando os Modais
+        $scope.modal = function() {
+            $(document).ready(function() {
+                $('#modal1').modal('open');
+            });
+        }
+        
+         $scope.modal = function() {
+            $(document).ready(function() {
+                $('#modal1').modal('open');
+            });
+        }
+        $scope.modal = function(pet) {
             $scope.pet = pet;
 
             $(document).ready(function() {
