@@ -34,16 +34,23 @@ class Usuario{
         
         $Excluido = UsuarioNaoExcluido;
         $senha = sha1($p_DesSenha);
-        $sql = "INSERT INTO `USUARIO`(`DES_EMAIL`, `DES_SENHA`, `DES_TIPO_USUARIO`, `NOM_USUARIO`, `IND_EXCLUIDO`) VALUES ('$p_EmailUsuario','$senha','$p_TipoUsuario','$p_NomeUsuario', '$Excluido')";
-        if ($conn->query($sql) === true) {
+        try{
+            $stmt = $conn->prepare("INSERT INTO `USUARIO`(`DES_EMAIL`, `DES_SENHA`, `DES_TIPO_USUARIO`, `NOM_USUARIO`, `IND_EXCLUIDO`) VALUES (:email, :senha, :tipoUsuario, :nomeusuario, :excluido)");
+            $stmt->bindParam(':email', $p_EmailUsuario);
+            $stmt->bindParam(':senha', $senha);
+            $stmt->bindParam(':tipoUsuario', $p_TipoUsuario);
+            $stmt->bindParam(':nomeusuario', $p_NomeUsuario);
+            $stmt->bindParam(':excluido', $Excluido);
+            $stmt->execute();
+            
             return array("mensagem" => SUCESSO_USUARIO_CRIADO,
                         "sucesso" => true);
-        } else {
-             return array("mensagem" => ERRO_USUARIO_CRIADO."Erro:".$conn->error,
+        }catch(Exception $ex){
+            return array("mensagem" => ERRO_USUARIO_CRIADO."Erro:".$ex,
                           "sucesso" => false);
         }
-        
-        $conn->close();
+
+        $conn = null;
     }
     
     public function GetUsuarios($p_Pagina){
@@ -54,29 +61,29 @@ class Usuario{
             $p_Pagina = 1;
         }
         
-        $sql = "SELECT COUNT(COD_USUARIO) AS QTD_USUARIO FROM USUARIO";
-        $resultado = $conn->query($sql);
         
-        if($resultado->num_rows > 0){
-            while($row = $resultado->fetch_assoc()){
-                $QTD_Usuario = $row["QTD_USUARIO"];
-            }
-        }
+        $stmt = $conn->prepare("SELECT COUNT(COD_USUARIO) AS QTD_USUARIO FROM USUARIO"); 
+        $stmt->execute();
         
+       while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+           $QTD_Usuario = $row->QTD_USUARIO;
+       }
+       
         $Num_Paginas = ceil($QTD_Usuario/$QTD_Exibida); 
         
         $inicio = ($QTD_Exibida*$p_Pagina)-$QTD_Exibida; 
         $excluido = UsuarioNaoExcluido;
-        $sql = "SELECT NOM_USUARIO, DES_EMAIL FROM USUARIO WHERE IND_EXCLUIDO='$excluido' ORDER BY COD_USUARIO DESC LIMIT $inicio,  $QTD_Exibida";
-        $resultado = $conn->query($sql);
+        $stmt = $conn->prepare("SELECT NOM_USUARIO, DES_EMAIL FROM USUARIO WHERE IND_EXCLUIDO=:excluido ORDER BY COD_USUARIO DESC LIMIT :inicio, :QtdExibida"); 
+        $stmt->bindParam(':excluido', $excluido);
+        $stmt->bindValue(':inicio', (int) $inicio, PDO::PARAM_INT);
+        $stmt->bindValue(':QtdExibida', (int) $QTD_Exibida, PDO::PARAM_INT);
+        $stmt->execute();
+        
         $usuarios = array();
-        
-        if($resultado->num_rows > 0){
-            while($row = $resultado->fetch_assoc()){
-                $usuarios[] = $row;
-            }
-        }
-        
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+             $usuarios[] = $row;
+       }
+
         if(empty($usuarios)){
             return array("sucesso"=>false,
             "mensagem"=>ERRO_NENHUM_USUARIO);
@@ -86,19 +93,21 @@ class Usuario{
                     "TotalRegistros"=>(int)$QTD_Usuario,
                     "QuantidadePaginas"=>$Num_Paginas, 
                     "data"=>$usuarios);
-        $conn->close();
+                    
+        $conn = null;
     }
     
     public function VerificarEmail($p_EmailUsuario){
         include "Conexao.php";
         
-        $sql = "SELECT COUNT(COD_USUARIO) AS QTD_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL='$p_EmailUsuario'";
-        $resultado = $conn->query($sql);
-         if ($resultado->num_rows > 0) {
-            while ($row = $resultado->fetch_assoc()) {
-                $QTD_Email = $row["QTD_EMAIL"];
-                $Excluido = $row["IND_EXCLUIDO"];
-            }
+        $stmt = $conn->prepare("SELECT COUNT(COD_USUARIO) AS QTD_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL=:email"); 
+        $stmt->bindParam(':email', $p_EmailUsuario);
+        $stmt->execute();
+        
+
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+            $QTD_Email = $row->QTD_EMAIL;
+            $Excluido = $row->IND_EXCLUIDO;
         }
             
         if($QTD_Email > 0)
@@ -106,28 +115,57 @@ class Usuario{
          else
             return false;
         
-         $conn->close();
+         $conn = null;
     }
     
     public function DeletarUsuario($p_UsuarioPK){
         include "Conexao.php";
         
-        $sql = "UPDATE `miaudote`.`USUARIO` SET `IND_EXCLUIDO` = 'S' WHERE `USUARIO`.`COD_USUARIO` = '$p_UsuarioPK'";
-        if($conn->query($sql) == true){
+        try{
+            $stmt = $conn->prepare("UPDATE `miaudote`.`USUARIO` SET `IND_EXCLUIDO` = 'S' WHERE `USUARIO`.`COD_USUARIO` = :codUsuario");
+            $stmt->bindValue(':codUsuario', (int)$p_UsuarioPK, PDO::PARAM_INT);
+            $stmt->execute();
+            
             return array("sucesso"=>true,
                         "mensagem"=>SUCESSO_USUARIO_EXCLUIDO);
-        }else{
+        }catch(Exception $ex){
             return array("sucesso"=>false,
                         "mensagem"=>ERRO_USUARIO_EXCLUIDO);
+        }
+        $conn = null;
+    }
+    
+    public function AlterarDadosUsuario($p_UsuarioPK, $p_NomeUsuario, $p_EmailUsuario){
+        include "Conexao.php";
+        
+        $sql = "UPDATE `miaudote`.`USUARIO` SET `NOM_USUARIO` = '$p_NomeUsuario', `DES_EMAIL` = '$p_EmailUsuario' WHERE `USUARIO`.`COD_USUARIO` = '$p_UsuarioPK'";
+        if($conn->query($sql) == true){
+            return array("sucesso"=>true,
+                        "mensagem"=>SUCESSO_ALTERAR_USUARIO);
+        }else{
+            return array("sucesso"=>false,
+                        "mensagem"=>ERRO_ALTERAR_USUARIO);
         }
         $conn->close();
     }
     
-    public function AlterarDadosUsuario(){
+    public function AlterarSenhaUsuario($p_UsuarioPK, $p_Senha, $p_SenhaRepetida){
+        include "Conexao.php";
+        include "Auth.php";
         
-    }
-    
-    public function AlterarSenhaUsuario(){
+        $Auth = new Auth();
         
+        
+        if($p_UsuarioPK == null){
+            
+        }
+        if($conn->query($sql) == true){
+            return array("sucesso"=>true,
+                        "mensagem"=>SUCESSO_ALTERAR_USUARIO);
+        }else{
+            return array("sucesso"=>false,
+                        "mensagem"=>ERRO_ALTERAR_USUARIO);
+        }
+        $conn->close();
     }
 }

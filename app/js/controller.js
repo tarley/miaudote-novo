@@ -1,29 +1,29 @@
-angular.module("miaudote", [])
+var app = angular.module('miaudote.controller', [])
 
     .controller('MainController', function MainController($scope) {
-        
+
         $scope.init = function() {
             $scope.filtro = {};
             $scope.pet = {};
-            
+
             $scope.listaPets = listarPets();
             $scope.listaPetsAleatorios = listarPetsAleatorios();
         }
-        
+
         $scope.opcoesIdade = [
             { name: 'Todas', value: 'Todas' },
             { name: 'Até 1 ano (Filhote)', value: 'Filhote' },
             { name: '1 a 8 anos (Adulto)', value: 'Adulto' },
             { name: 'Acima de 8 anos (Idoso)', value: 'Idoso' }
         ];
-        
+
         $scope.opcoesUf = [
             { name: 'Todos', value: 'Todos' },
             { name: 'MG', value: 'MG' },
             { name: 'SP', value: 'SP' },
             { name: 'RJ', value: 'RJ' }
         ];
-        
+
         $scope.opcoesCidade = [
             { name: 'Todas', value: 'Todas' },
             { name: 'Belo Horizonte', value: 'Belo Horizonte' },
@@ -31,113 +31,113 @@ angular.module("miaudote", [])
             { name: 'Rio de Janeiro', value: 'Rio de Janeiro' }
         ];
 
-        
+
         $scope.filtrar = function() {
             var listaPets = listarPets();
-            
+
             var value = $scope.filtro.nome;
-            
-            if(value && value.trim().length > 0)
+
+            if (value && value.trim().length > 0)
                 listaPets = listaPets.filter(function(pet) {
                     return pet.nome.toUpperCase().indexOf(value.toUpperCase()) !== -1;
                 });
-            
+
             value = $scope.filtro.especie;
-            
-            if(value && value != 'Todos')
+
+            if (value && value != 'Todos')
                 listaPets = listaPets.filter(function(pet) {
                     return pet.especie == value;
                 });
-                
+
             value = $scope.filtro.uf;
-            
-            if(value && value != 'Todos')
+
+            if (value && value != 'Todos')
                 listaPets = listaPets.filter(function(pet) {
                     return pet.uf == value;
                 });
-                
+
             value = $scope.filtro.cidade;
-            
-            if(value && value != 'Todas')
+
+            if (value && value != 'Todas')
                 listaPets = listaPets.filter(function(pet) {
                     return pet.cidade == value;
                 });
-                
-            
-            if($scope.filtro.porteP || $scope.filtro.porteM  || $scope.filtro.porteG )
+
+
+            if ($scope.filtro.porteP || $scope.filtro.porteM || $scope.filtro.porteG)
                 listaPets = listaPets.filter(function(pet) {
-                    return  ($scope.filtro.porteP && pet.porte == 'pequeno') ||
-                            ($scope.filtro.porteM && pet.porte == 'médio') ||
-                            ($scope.filtro.porteG && pet.porte == 'grande');
+                    return ($scope.filtro.porteP && pet.porte == 'pequeno') ||
+                        ($scope.filtro.porteM && pet.porte == 'médio') ||
+                        ($scope.filtro.porteG && pet.porte == 'grande');
                 });
-                
+
             value = $scope.filtro.genero;
-            
-            if(value && value != 'Todos')
+
+            if (value && value != 'Todos')
                 listaPets = listaPets.filter(function(pet) {
                     return pet.genero == value;
                 });
-                
+
             value = $scope.filtro.idade;
-            
-            if(value && value != 'Todas')
+
+            if (value && value != 'Todas')
                 listaPets = listaPets.filter(function(pet) {
-                    if(value == 'Filhote')
+                    if (value == 'Filhote')
                         return pet.idadeEmMeses <= 12;
-                    else if(value == 'Adulto')
-                        return pet.idadeEmMeses > 12 && pet.idadeEmMeses <= 96 ;
+                    else if (value == 'Adulto')
+                        return pet.idadeEmMeses > 12 && pet.idadeEmMeses <= 96;
                     else
                         return pet.idadeEmMeses > 96;
                 });
-                
+
             $scope.listaPets = listaPets;
         }
 
         $scope.detalhes = function(pet) {
             $scope.pet = pet;
-            
-             $(document).ready(function() {
+
+            $(document).ready(function() {
                 $('#modal3').modal('open');
             });
         }
-        
+
         $scope.getGenero = function(pet) {
-            if(pet.genero == undefined)
+            if (pet.genero == undefined)
                 return "";
-                
+
             return pet.genero == 'M' ? 'Macho' : 'Femea';
         }
-        
+
         $scope.isCastrado = function(pet) {
             var sufixo;
-            
-            if(pet.castrado == 'M')
+
+            if (pet.castrado == 'M')
                 sufixo = 'o';
-            
-            if(pet.genero == 'F') {
+
+            if (pet.genero == 'F') {
                 sufixo = 'a';
             }
-            
-            return (pet.castrado ? 'castrad' : 'não castrad') + sufixo; 
-        } 
-        
+
+            return (pet.castrado ? 'castrad' : 'não castrad') + sufixo;
+        }
+
         $scope.getIdade = function(pet) {
-            if(pet.idadeEmMeses == undefined || pet.idadeEmMeses == null || pet.idadeEmMeses == 0)
+            if (pet.idadeEmMeses == undefined || pet.idadeEmMeses == null || pet.idadeEmMeses == 0)
                 return "";
-            
+
             var anos = Math.floor(pet.idadeEmMeses / 12);
             var meses = pet.idadeEmMeses % 12;
-            
+
             var retorno = "";
-            
-            if(anos >= 1)
-                retorno += anos + " ano" + (anos > 1 ? 's': '');
-            if(meses >= 1)
-                retorno += (retorno != '' ? ' e ' : '') + meses + " mes" + (meses > 1 ? 'es': '');
-            
+
+            if (anos >= 1)
+                retorno += anos + " ano" + (anos > 1 ? 's' : '');
+            if (meses >= 1)
+                retorno += (retorno != '' ? ' e ' : '') + meses + " mes" + (meses > 1 ? 'es' : '');
+
             return retorno;
-        } 
-        
+        }
+
         $scope.configSlides = function() {
             $(document).ready(function() {
                 $('.parallax').parallax();
@@ -167,7 +167,7 @@ angular.module("miaudote", [])
                 $('.modal').modal();
             });
         }
-        
+
         function listarPets() {
             return [{
                     id: 1,
@@ -225,7 +225,7 @@ angular.module("miaudote", [])
                     local: 'Esta no CCZ Contagem',
                     idadeEmMeses: 9,
                     porte: 'medio',
-                    
+
                 },
                 {
                     id: 6,
@@ -271,7 +271,7 @@ angular.module("miaudote", [])
                     medicamento: '1 dose de anti-rábica e 1 dose de vermífugo',
                     uf: 'MG',
                     cidade: 'Belo Horizonte',
-                 },
+                },
                 {
                     id: 9,
                     nome: 'Nina',
@@ -331,8 +331,8 @@ angular.module("miaudote", [])
                 }
             ];
         }
-        
-        function listarPetsAleatorios(){
+
+        function listarPetsAleatorios() {
             return [{
                     id: 1,
                     nome: 'Belinho',
@@ -389,8 +389,14 @@ angular.module("miaudote", [])
                     local: 'Esta no CCZ Contagem',
                     idadeEmMeses: 9,
                     porte: 'medio',
-                    
-                }]
+
+                }
+            ]
         }
+
+    })
+    
+    .controller('AdminController', function AdminController($scope){
         
     });
+    

@@ -502,7 +502,21 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 
 #fundo_admin{
-  margin-left: 400px;
+  margin-left: 15%;
+  padding: 47px;
+
 }
 
+#color_op{
+  background-color: #090909;
+  color: #eafaf9;
+}
 
+.li{
+list-style-type: none;
+}
+
+#teste{
+    height: 50px;
+    height: 200px;
+}

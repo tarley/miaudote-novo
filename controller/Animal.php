@@ -1,8 +1,11 @@
 <?php
 require_once "../enum/EnumAnimal.php";
+header("Content-type: application/json");
+
+
 class Animal {
 
-    public function cadastrarAnimal($p_NomeAnimal, $p_DesAnimal, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Adotado, $p_Excluido, $p_Local, $p_Medicamento, $p_Cidade, $p_Instituicao, $p_Especie ) {
+    public function cadastrarAnimal($p_NomeAnimal, $p_DesAnimal, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Local, $p_Medicamento, $p_Cidade, $p_Instituicao, $p_Especie ) {
        require_once "Conexao.php";
        
        $Animal = new Animal();
@@ -49,13 +52,14 @@ class Animal {
         }
         
         
-        $stmt = $conn->prepare("INSERT INTO `ANIMAL`(`NOM_ANIMAL`, `DES_ANIMAL`, `DES_IDADE`, `IND_PORTE_ANIMAL`, 
-            `IND_SEXO_ANIMAL`, `DES_LOCAL`, `DES_MEDICAMENTO`, 
-            `CIDADE_COD_CIDADE`, `INSTITUICAO_COD_INSTITUICAO`, `ESPECIE_COD_ESPECIE`) 
-            VALUES (:nom_animal, :des_animal, :des_idade, :ind_porte_animal, :ind_sexo_animal, :des_local, :des_medicamento, 
-            :cod_cidade, :cod_instituicao, cod_especie");
-        
         try {
+            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_ANIMAL, DES_IDADE, IND_PORTE_ANIMAL, 
+            IND_SEXO_ANIMAL, DES_LOCAL, DES_MEDICAMENTO, 
+            CIDADE_COD_CIDADE, INSTITUICAO_COD_INSTITUICAO, ESPECIE_COD_ESPECIE) 
+            VALUES (:nom_animal, :des_animal, :des_idade, :ind_porte_animal, :ind_sexo_animal, :des_local, :des_medicamento, 
+            :cod_cidade, :cod_instituicao, :cod_especie)");
+        
+        
         $stmt->bindParam (':nom_animal', $p_NomeAnimal);
         $stmt->bindParam (':des_animal', $p_DesAnimal);
         $stmt->bindParam (':des_idade', $p_IdadeAnimal);
@@ -68,8 +72,12 @@ class Animal {
         $stmt->bindParam (':cod_especie', $p_Especie);
         
         $stmt->execute();
-        } catch (Exception $e) {
-                return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error,
+        
+            return array("mensagem" => SUCESSO_ANIMAL_CRIADO,
+                        "sucesso" => true);
+        
+        } catch(PDOException $e){
+                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error,
                           "sucesso" => false);
         }
        
@@ -79,21 +87,30 @@ class Animal {
     public function excluirAnimal($id) {
         require_once "Conexao.php";
         
-        $sql = "
-                UPDATE ANIMAL
-                SET EXCLUIDO = 'T'
-                WHERE COD_ANIMAL = '$id'
-        ";
+        $erro = false;
+        $mensagem = null;
+       
+        try{
+        $stmt = $conn->prepare("UPDATE ANIMAL
+                SET IND_EXCLUIDO = 'T'
+                WHERE COD_ANIMAL = :id");
         
-        if ($conn->query($sql) === true) {
+        $stmt->bindParam(':id', $id);
+        
+        $stmt->execute();
+        
+        
             return array("mensagem" => SUCESSO_ANIMAL_EXCLUIDO,
                         "sucesso" => true);
-        } else {
+                        
+        } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            
              return array("mensagem" => ERRO_ANIMAL_EXCLUIDO."Erro:".$conn->error,
                           "sucesso" => false);
         }
         
-        $conn->close();
+        $conn = null;
     }
     
     public function adotarAnimal($id) {
