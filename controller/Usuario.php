@@ -138,34 +138,49 @@ class Usuario{
     public function AlterarDadosUsuario($p_UsuarioPK, $p_NomeUsuario, $p_EmailUsuario){
         include "Conexao.php";
         
-        $sql = "UPDATE `miaudote`.`USUARIO` SET `NOM_USUARIO` = '$p_NomeUsuario', `DES_EMAIL` = '$p_EmailUsuario' WHERE `USUARIO`.`COD_USUARIO` = '$p_UsuarioPK'";
-        if($conn->query($sql) == true){
+        try{
+            $stmt = $conn->prepare("UPDATE `miaudote`.`USUARIO` SET `NOM_USUARIO` = :NomeUsuario, `DES_EMAIL` = :Email WHERE `USUARIO`.`COD_USUARIO` = :codUsuario");
+            $stmt->bindParam(':NomeUsuario', $p_NomeUsuario);
+            $stmt->bindParam(':Email', $p_EmailUsuario);
+            $stmt->bindValue(':codUsuario', (int)$p_UsuarioPK, PDO::PARAM_INT);
+            $stmt->execute();
+
             return array("sucesso"=>true,
                         "mensagem"=>SUCESSO_ALTERAR_USUARIO);
-        }else{
+        }catch(Exception $ex){
             return array("sucesso"=>false,
-                        "mensagem"=>ERRO_ALTERAR_USUARIO);
+                       "mensagem"=>ERRO_ALTERAR_USUARIO);
         }
-        $conn->close();
+       
+        $conn = null;
     }
     
-    public function AlterarSenhaUsuario($p_UsuarioPK, $p_Senha, $p_SenhaRepetida){
+    public function AlterarSenhaUsuario($p_UsuarioPK, $p_SenhaAntiga, $p_Senha, $p_SenhaRepetida){
         include "Conexao.php";
         include "Auth.php";
-        
         $Auth = new Auth();
         
-        
-        if($p_UsuarioPK == null){
-            
+        if($p_Senha !== $p_SenhaRepetida){
+            return array("sucesso"=>true,
+                        "mensagem"=>ERRO_REPETIR_SENHA);
         }
-        if($conn->query($sql) == true){
+        
+        $senha = sha1($p_Senha);
+        try{
+            $stmt = $conn->prepare("UPDATE  `miaudote`.`USUARIO` SET  `DES_SENHA` = :Senha WHERE  `USUARIO`.`COD_USUARIO` = :CodUsuario");
+            $stmt->bindValue(':CodUsuario', (int) $p_UsuarioPK, PDO::PARAM_INT);
+            $stmt->bindParam(':Email', $p_EmailUsuario);
+            $stmt->bindParam(':Senha', $senha);
+            $stmt->execute();
+            
             return array("sucesso"=>true,
                         "mensagem"=>SUCESSO_ALTERAR_USUARIO);
-        }else{
+                        
+        }catch(Exception $ex){
             return array("sucesso"=>false,
                         "mensagem"=>ERRO_ALTERAR_USUARIO);
         }
-        $conn->close();
+        
+        $conn = null;
     }
 }

@@ -6,7 +6,7 @@ $Auth = new Auth();
 
 $acao = $_GET["acao"];
 if($acao == "CriarSessao"){
-    $email = "oi@gmail.com";
+    $email = "henrique@gmail.com";
     $senha = "123";
     
     echo json_encode($Auth->CriarSessao($email, $senha));
