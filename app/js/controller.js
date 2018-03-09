@@ -395,8 +395,15 @@ var app = angular.module('miaudote.controller', [])
         }
 
     })
+
+    .controller('AdminController', function AdminController($scope) {
+
+    })
+
+    .controller('CadAnimalController', function CadAnimalController($scope) {
+
+    })
     
-    .controller('AdminController', function AdminController($scope){
-        
+    .controller('LoginController', function LoginController($scope) {
+
     });
-    

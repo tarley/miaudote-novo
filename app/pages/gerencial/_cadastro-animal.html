@@ -1,74 +1,74 @@
-<!DOCTYPE html>
-<html>
+<div class="divisao_logo"></div>
 
-<head>
-    <title>Miaudote Administração</title>
+<div id="principal" class="section-adote">
+    <h1 id="titulo_cad_pag">Cadastro de animal - MiAuDote</h1>
 
-    <link rel="stylesheet" href="plugins/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="app/css/style.css">
-    <link rel="stylesheet" href="plugins/bxslider/css/jquery.bxslider.css">
+    <div class="container">
+        <p id="titulo_cad">Informe os dados do Animal</p>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
-</head>
+        <div class="row">
 
-<body ng-app="miaudote" ng-init="init()">
-    
-    <div ng-include="'/app/pages/inicial/_nav.html'"></div>
-  
-    <main ng-controller="MainController" ng-init="init()">
-        <h1>teste</h1>
-        
-            <div class="container">
-            <!-- CORPO -->
+            <form id="formAnimal" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Nome (Obrigatório)</label>
+                    </div>
 
-            <h5>Bem vindo ao Siex Newton</h5>
-            <p>Informe o e-mail e a senha de acesso</p>
-            <form id="formLogin">
-                
-                <div class="input-field">
-                    <i class="material-icons prefix">perm_identity</i>
-                    <input id="input-usuario" type="email" name="email" />
-                    <label for="input-usuario">e-mail (Obrigatório)</label>
-                </div>
-                
-                <div class="input-field">
-                    <i class="material-icons prefix">visibility</i>
-                    <input id="input-password" type="password" name="senha" />
-                    <label for="input-password">Senha (Obrigatório)</label>
-                </div>
-                
-                <div id="div-botoes" class="row">
-                    <button class="btn waves-effect waves-light" type="reset">
-                        Limpar<i class="material-icons right">clear_all</i>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Sexo (Obrigatório)</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Castrado (Obrigatório)</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Tamanho (Obrigatório)</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Idade (Obrigatório)</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Temperamento (Obrigatório)</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Vacinas e vermífugos (Obrigatório)</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">border_color</i>
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="last_name">Observações (Obrigatório)</label>
+                    </div>
+
+                    <div id="div-botoes" class="row">
+                        <button class="btn black" type="reset">
+                        Limpar<i class="material-icons right">delete_sweep</i>
                     </button>
-                    <button class="btn waves-effect waves-light" type="submit">
-                        Enviar<i class="material-icons right">send</i>
+
+                        <button class="btn black" type="submit">
+                        Concluir<i class="material-icons right">insert_comment</i>
                     </button>
+                    </div>
                 </div>
-                
             </form>
-
         </div>
-    </main>
-    <div ng-include="'/app/pages/inicial/_footer.html'"></div>
-
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-    <!--Compiled and minified JavaScript -->
-    <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="plugins/bxslider/js/bxslider/jquery.bxslider.js"></script>
-    <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
-
-    <!--Importação Angular JS -->
-    <script type="text/javascript" src="plugins/angular/angular.min.js"></script>
-
-
-    <!--Meus JS -->
-    <script type="text/javascript" src="app/js/app.js"></script>
-    <script type="text/javascript" src="app/js/controller.js"></script>
-
-</body>
-
-</html>
+    </div>
+</div>
