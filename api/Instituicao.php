@@ -17,6 +17,19 @@ if($acao == "CriarInstituicao"){
 
 if($acao == "ExcluirInstituicao"){
    $InstituicaoPK = 3;
-   
     echo json_encode($Instituicao->ExcluirInstituicao($InstituicaoPK));
+}
+
+if($acao == "AlterarInstituicao"){
+   $InstituicaoPK = 3;
+   $NomeInstituicao =  "Teste Protetor";
+   $Telefone = "(31)5555-5555";
+   $Email = "fdsfsldfdfdf@gmail.com";
+   $TipoInstituicao = "P"; 
+    echo json_encode($Instituicao->AlterarInstituicao($InstituicaoPK, $NomeInstituicao, $Telefone, $Email, $TipoInstituicao));
+}
+
+if($acao == "GetInstituicao"){
+    $pagina = $_GET["Pagina"];
+    echo json_encode($Instituicao->GetInstituicao($pagina));
 }
