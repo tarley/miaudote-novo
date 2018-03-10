@@ -5,7 +5,7 @@ header("Content-type: application/json");
 
 class Animal {
 
-    public function cadastrarAnimal($p_NomeAnimal, $p_DesAnimal, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Local, $p_Medicamento, $p_Cidade, $p_Instituicao, $p_Especie ) {
+    public function cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie ) {
        require_once "Conexao.php";
        
        $Animal = new Animal();
@@ -29,14 +29,6 @@ class Animal {
            $erro = true;
            $mensagem = ERRO_SEXO_OBRIGATORIO;
        }
-       elseif(empty($p_Local)) {
-           $erro = true;
-           $mensagem = ERRO_LOCAL_OBRIGATORIO;
-       }
-       elseif(empty($p_Cidade)) {
-           $erro = true;
-           $mensagem = ERRO_CIDADE_OBRIGATORIO;
-       }
        elseif(empty($p_Instituicao)) {
            $erro = true;
            $mensagem = ERRO_INSTITUICAO_OBRIGATORIO;
@@ -53,21 +45,16 @@ class Animal {
         
         
         try {
-            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_ANIMAL, DES_IDADE, IND_PORTE_ANIMAL, 
-            IND_SEXO_ANIMAL, DES_LOCAL, DES_MEDICAMENTO, 
-            CIDADE_COD_CIDADE, INSTITUICAO_COD_INSTITUICAO, ESPECIE_COD_ESPECIE) 
-            VALUES (:nom_animal, :des_animal, :des_idade, :ind_porte_animal, :ind_sexo_animal, :des_local, :des_medicamento, 
-            :cod_cidade, :cod_instituicao, :cod_especie)");
+            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_OBSERVACAO, IND_PORTE_ANIMAL, 
+            IND_SEXO_ANIMAL, INSTITUICAO_COD_INSTITUICAO, ESPECIE_COD_ESPECIE, DAT_CADASTRO) 
+            VALUES (:nom_animal, :des_observacao, :des_idade, :ind_porte_animal, :ind_sexo_animal, :cod_instituicao, :cod_especie, now())");
         
         
         $stmt->bindParam (':nom_animal', $p_NomeAnimal);
-        $stmt->bindParam (':des_animal', $p_DesAnimal);
+        $stmt->bindParam (':des_observacao', $p_DesObservacao);
         $stmt->bindParam (':des_idade', $p_IdadeAnimal);
         $stmt->bindParam (':ind_porte_animal', $p_PorteAnimal);
         $stmt->bindParam (':ind_sexo_animal', $p_Sexo);
-        $stmt->bindParam (':des_local', $p_Local);
-        $stmt->bindParam (':des_medicamento', $p_Medicamento);
-        $stmt->bindParam (':cod_cidade', $p_Cidade);
         $stmt->bindParam (':cod_instituicao', $p_Instituicao);
         $stmt->bindParam (':cod_especie', $p_Especie);
         
