@@ -13,20 +13,35 @@ if($acao == "CadastrarAnimal") {
     $p_Sexo = "M";
     $p_Instituicao = "1";
     $p_Especie = "1";
+    $p_IndCastrado = "T";
     
-    echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie));
+    echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
 
 if($acao == "ExcluirAnimal") {
-    $id = "6";
+    $id = "2";
     
     echo json_encode($Animal->excluirAnimal($id));
 }
 
 if($acao == "AdotarAnimal") {
-    $id = "6";
+    $id = "1";
     
-    echo json_encode($Animal->excluirAnimal($id));
+    echo json_encode($Animal->AdotarAnimal($id));
+}
+
+if($acao == "EditarAnimal") {
+    $id = "1";
+    $p_NomeAnimal="Thais";
+    $p_Observacao="Nova observação";
+    $p_IdadeAnimal = "9";
+    $p_PorteAnimal = "2";
+    $p_Sexo = "F";
+    $p_Instituicao = "1";
+    $p_Especie = "1";
+    $p_IndCastrado = "F";
+    
+    echo json_encode($Animal->EditarAnimal($id, $p_NomeAnimal, $p_Observacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
 
 ?>

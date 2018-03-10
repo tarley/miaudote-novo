@@ -661,3 +661,15 @@ Stack trace:
 [10-Mar-2018 01:30:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
 [10-Mar-2018 01:30:34 UTC] PHP   2. Mensagem->EnviarMensagem() /home/ubuntu/workspace/api/Mensagem.php:13
 >>>>>>> 79c3537c5a42b84ab21e83e01f16de71c62c0856
+[10-Mar-2018 11:36:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ADOTADO' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(117): PDO->query('?              ...')
+#1 /home/ubuntu/workspace/api/Animal.php(30): Animal->adotarAnimal('2')
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 117
+[10-Mar-2018 11:37:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ADOTADO' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(117): PDO->query('?              ...')
+#1 /home/ubuntu/workspace/api/Animal.php(30): Animal->adotarAnimal('2')
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 117
