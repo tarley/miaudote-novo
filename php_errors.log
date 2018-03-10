@@ -572,3 +572,43 @@ Stack trace:
 [10-Mar-2018 00:45:27 UTC] PHP Stack trace:
 [10-Mar-2018 00:45:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
 [10-Mar-2018 00:45:27 UTC] PHP   2. Instituicao->GetInstituicao() /home/ubuntu/workspace/api/Instituicao.php:33
+[10-Mar-2018 01:14:20 UTC] PHP Fatal error:  Class 'Auth' not found in /home/ubuntu/workspace/api/Mensagem.php on line 5
+[10-Mar-2018 01:14:20 UTC] PHP Stack trace:
+[10-Mar-2018 01:14:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:15:04 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:15:04 UTC] PHP Stack trace:
+[10-Mar-2018 01:15:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:15:46 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:15:46 UTC] PHP Stack trace:
+[10-Mar-2018 01:15:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:17:12 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:17:12 UTC] PHP Stack trace:
+[10-Mar-2018 01:17:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:17:35 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:17:35 UTC] PHP Stack trace:
+[10-Mar-2018 01:17:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:19:52 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:19:52 UTC] PHP Stack trace:
+[10-Mar-2018 01:19:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:19:53 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:19:53 UTC] PHP Stack trace:
+[10-Mar-2018 01:19:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:23:13 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:23:13 UTC] PHP Stack trace:
+[10-Mar-2018 01:23:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:25:13 UTC] PHP Fatal error:  Call to a member function trtrt() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:25:13 UTC] PHP Stack trace:
+[10-Mar-2018 01:25:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:25:28 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:25:28 UTC] PHP Stack trace:
+[10-Mar-2018 01:25:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:26:12 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:26:12 UTC] PHP Stack trace:
+[10-Mar-2018 01:26:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:26:28 UTC] PHP Fatal error:  Call to a member function EnviarMensagem() on a non-object in /home/ubuntu/workspace/api/Mensagem.php on line 13
+[10-Mar-2018 01:26:28 UTC] PHP Stack trace:
+[10-Mar-2018 01:26:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:30:34 UTC] PHP Fatal error:  Cannot pass parameter 2 by reference in /home/ubuntu/workspace/controller/Mensagem.php on line 42
+[10-Mar-2018 01:30:34 UTC] PHP Stack trace:
+[10-Mar-2018 01:30:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Mensagem.php:0
+[10-Mar-2018 01:30:34 UTC] PHP   2. Mensagem->EnviarMensagem() /home/ubuntu/workspace/api/Mensagem.php:13
