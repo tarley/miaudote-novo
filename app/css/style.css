@@ -59,7 +59,7 @@ main {
     z-index: 100;
 }
 
-.divisao_admin {
+divisao_admin {
     margin: 60px;
 }
 
@@ -522,7 +522,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 #titulo_cad_pag {
     font-size: 2.64rem;
     line-height: 125%;
-    margin-left: 32%;
+    margin-left: 12%;
 }
 
 #titulo_cad {
@@ -537,4 +537,13 @@ textarea.materialize-textarea:focus:not([readonly]) {
     padding: 5px;
     margin: -16px;
     text-transform: uppercase;
+}
+
+#div-botoes {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 .75rem;
+    min-height: 1px;
+    width: 174%;
 }

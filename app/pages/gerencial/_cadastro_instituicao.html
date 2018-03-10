@@ -17,14 +17,14 @@
         <div class="col s10">
             <div id="principal" class="section-adote col s8">
 
-                <h1 id="titulo_cad_pag">Cadastro de animal - MiAuDote</h1>
+                <h1 id="titulo_cad_pag">Cadastro ONG/PROTETOR - MiAuDote</h1>
 
                 <div class="container">
-                    <p id="titulo_cad">Informe os dados do Animal</p>
+                    <p id="titulo_cad">Informe os dados da instituição</p>
 
                     <div class="row">
 
-                        <form id="formAnimal" class="col s12">
+                        <form id="formInstituicao" class="col s12">
                             <div class="row">
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix black-text">border_color</i>
@@ -35,45 +35,24 @@
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix black-text">border_color</i>
                                     <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Sexo</label>
+                                    <label for="last_name">E-mail (Obrigatório)</label>
                                 </div>
 
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix black-text">border_color</i>
                                     <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Castrado</label>
-                                </div>
-
-                                <div class="input-field col s3">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Tamanho</label>
-                                </div>
-
-                                <div class="input-field col s3">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Idade</label>
+                                    <label for="last_name">Telefone (Obrigatório)</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Temperamento</label>
+                                    <select class="browser-default">
+                                        <option value="1">Informe o tipo de Instituição</option>
+                                        <option value="2">ONG</option>
+                                        <option value="3">Protetor</option>
+                                    </select>
                                 </div>
-
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Vacinas e vermífugos (Obrigatório)</label>
-                                </div>
-
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
-                                    <label for="last_name">Observações</label>
-                                </div>
-
+                            </div>
+                            <div class="row">
                                 <div id="div-botoes" class="col 12">
                                     <button class="btn black" type="submit">
                                         Excluir<i class="material-icons right">delete_forever</i>
