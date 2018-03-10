@@ -482,41 +482,59 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 
-.divisao_logo{
+.divisao_logo {
     margin: 100px;
 }
 
-#logo_admin{
-        width: 50px;
-        height: 50px;
-        background-size: 80%;
-        border-radius: 0px;
-        padding: 10px;
-        background-repeat: no-repeat;
-        margin-left: -37px;
-        z-index: 100;
-        margin-top: -6px;
-        background-position: 10px 0px;
-        position: fixed;
-}
-
-
-#fundo_admin{
-  margin-left: 15%;
-  padding: 47px;
-
-}
-
-#color_op{
-  background-color: #090909;
-  color: #eafaf9;
-}
-
-.li{
-list-style-type: none;
-}
-
-#teste{
+#logo_admin {
+    width: 50px;
     height: 50px;
-    height: 200px;
+    background-size: 80%;
+    border-radius: 0px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    margin-left: -37px;
+    z-index: 100;
+    margin-top: -6px;
+    background-position: 10px 0px;
+    position: fixed;
+}
+
+
+#fundo_admin {
+    margin-left: 15%;
+    padding: 47px;
+
+}
+
+#color_op {
+    background-color: #090909;
+    color: #eafaf9;
+    height: 85px;
+    text-align: center;
+    padding: 27px;
+}
+
+.li {
+    list-style-type: none;
+}
+
+#titulo_cad_pag {
+    font-size: 2.64rem;
+    line-height: 125%;
+    margin-left: 32%;
+}
+
+#titulo_cad {
+    font-size: 1.64rem;
+    line-height: 100%;
+}
+
+.nav_teste {
+    text-align: center;
+    line-height: 72px;
+    height: 70px;
+    padding: 5px;
+    margin: -16px;
+    text-transform: uppercase;
 }

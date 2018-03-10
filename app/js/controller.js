@@ -93,7 +93,19 @@ var app = angular.module('miaudote.controller', [])
             $scope.listaPets = listaPets;
         }
 
-        $scope.detalhes = function(pet) {
+        //Aplicando os Modais
+        $scope.modal = function() {
+            $(document).ready(function() {
+                $('#modal1').modal('open');
+            });
+        }
+        
+         $scope.modal = function() {
+            $(document).ready(function() {
+                $('#modal1').modal('open');
+            });
+        }
+        $scope.modal = function(pet) {
             $scope.pet = pet;
 
             $(document).ready(function() {
@@ -395,8 +407,15 @@ var app = angular.module('miaudote.controller', [])
         }
 
     })
+
+    .controller('AdminController', function AdminController($scope) {
+
+    })
+
+    .controller('CadAnimalController', function CadAnimalController($scope) {
+
+    })
     
-    .controller('AdminController', function AdminController($scope){
-        
+    .controller('LoginController', function LoginController($scope) {
+
     });
-    

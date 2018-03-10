@@ -6,22 +6,21 @@ class Auth{
    
  public function CriarSessao($p_Email, $p_Senha) {
         include "Conexao.php";
-        $sql = "SELECT DES_SENHA, DES_TIPO_USUARIO FROM USUARIO WHERE DES_EMAIL='$p_Email'";
- 
-        $resultado = $conn->query($sql);
- 
-        if ($resultado->num_rows > 0) {
-            while ($row = $resultado->fetch_assoc()) {
-                $senha = $row["DES_SENHA"];
-                $tipo = $row["DES_TIPO_USUARIO"];
-            }
+        
+        $stmt = $conn->prepare("SELECT DES_SENHA, DES_TIPO_USUARIO FROM USUARIO WHERE DES_EMAIL= :Email");
+        $stmt->bindParam(':Email', $p_Email);
+        $stmt->execute();
+        
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+             $senha = $row->DES_SENHA;
+             $tipo = $row->DES_TIPO_USUARIO;
         }
         
         if ($senha == sha1($p_Senha)) {
             session_start();
             $_SESSION["email"] = $p_Email;
             $_SESSION["senha"] = $senha;
- 
+
             return array("mensagem" => SUCESSO_LOGIN,
                 "sucesso" => true,
                 "tipo"=>$tipo);
@@ -30,7 +29,7 @@ class Auth{
                 "sucesso" => false);
         }
         
-        $conn->close();
+        $conn = null;
     }
     
      public function ChecarSessao(){
@@ -44,21 +43,21 @@ class Auth{
             return array("sucesso"=>false,
                         "mensagem"=>SESSAO_INVALIDA);
         }
+        
+        $stmt = $conn->prepare("SELECT DES_SENHA, COD_USUARIO, DES_TIPO_USUARIO, NOM_USUARIO, DES_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL = :Email");
+        $stmt->bindParam(':Email', $email);
+        $stmt->execute();
 
-        $sql = "SELECT DES_SENHA, COD_USUARIO, DES_TIPO_USUARIO, NOM_USUARIO, DES_EMAIL, IND_EXCLUIDO FROM USUARIO WHERE DES_EMAIL = '$email'";
-        $resultado = $conn->query($sql);
- 
-        if ($resultado->num_rows > 0) {
-            while ($row = $resultado->fetch_assoc()) {
-                $SenhaCorreta = $row["DES_SENHA"];
-                $CodigoUsuario = $row["COD_USUARIO"];
-                $tipo = $row["DES_TIPO_USUARIO"];
-                $email = $row["DES_EMAIL"];
-                $nome = $row["NOM_USUARIO"];
-                $excluido = $row["IND_EXCLUIDO"];
-            }
-        }
+       while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+          $SenhaCorreta = $row->DES_SENHA;
+          $CodigoUsuario = $row->COD_USUARIO;
+          $tipo = $row->DES_TIPO_USUARIO;
+          $email = $row->DES_EMAIL;
+          $nome = $row->NOM_USUARIO;
+          $excluido = $row->IND_EXCLUIDO;
+       }
 
+    
         if($senha !== $SenhaCorreta || $excluido == UsuarioExcluido){
             return array("sucesso"=>false,
                         "mensagem"=>SESSAO_INVALIDA);

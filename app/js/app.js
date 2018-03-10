@@ -9,6 +9,14 @@ var app = angular.module("miaudote_js", ['ngRoute', 'miaudote.controller']);
                   templateUrl: 'app/pages/gerencial/admin.html',
                   controller: 'AdminController'
                 })
+                .when('/_cadastro-animal', {
+                    templateUrl: 'app/pages/gerencial/_cadastro-animal.html',
+                    controller: 'CadAnimalController'
+                })
+                .when('/_login', {
+                    templateUrl: 'app/pages/gerencial/_login.html',
+                    controller: 'LoginController'
+                })
                 .otherwise({
                  redirectTo: '/'
                 });

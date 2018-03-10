@@ -549,6 +549,7 @@ Stack trace:
 [08-Mar-2018 23:12:46 UTC] PHP Stack trace:
 [08-Mar-2018 23:12:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Usuario.php:0
 [08-Mar-2018 23:12:46 UTC] PHP   2. Usuario->GetUsuarios() /home/ubuntu/workspace/api/Usuario.php:20
+<<<<<<< HEAD
 >>>>>>> 187761d4570f0e60829d8c8b3927793143dea22a
 [08-Mar-2018 23:50:38 UTC] PHP Warning:  Missing argument 11 for Animal::cadastrarAnimal(), called in /home/ubuntu/workspace/api/Animal.php on line 20 and defined in /home/ubuntu/workspace/controller/Animal.php on line 8
 [08-Mar-2018 23:50:38 UTC] PHP Stack trace:
@@ -586,3 +587,26 @@ Stack trace:
 [09-Mar-2018 00:40:56 UTC] PHP Stack trace:
 [09-Mar-2018 00:40:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
 [09-Mar-2018 00:40:56 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:22
+=======
+[09-Mar-2018 01:14:04 UTC] PHP Warning:  require_once(../enum/Instituicao.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/api/Instituicao.php on line 3
+[09-Mar-2018 01:14:04 UTC] PHP Stack trace:
+[09-Mar-2018 01:14:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+[09-Mar-2018 01:14:04 UTC] PHP Fatal error:  require_once(): Failed opening required '../enum/Instituicao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/api/Instituicao.php on line 3
+[09-Mar-2018 01:14:04 UTC] PHP Stack trace:
+[09-Mar-2018 01:14:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+[09-Mar-2018 01:14:32 UTC] PHP Warning:  require_once(../controller/EnumInstituicao.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/api/Instituicao.php on line 2
+[09-Mar-2018 01:14:32 UTC] PHP Stack trace:
+[09-Mar-2018 01:14:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+[09-Mar-2018 01:14:32 UTC] PHP Fatal error:  require_once(): Failed opening required '../controller/EnumInstituicao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/api/Instituicao.php on line 2
+[09-Mar-2018 01:14:32 UTC] PHP Stack trace:
+[09-Mar-2018 01:14:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+[09-Mar-2018 01:14:50 UTC] PHP Warning:  require_once(../enum/Instituicao.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/api/Instituicao.php on line 3
+[09-Mar-2018 01:14:50 UTC] PHP Stack trace:
+[09-Mar-2018 01:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+[09-Mar-2018 01:14:50 UTC] PHP Fatal error:  require_once(): Failed opening required '../enum/Instituicao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/api/Instituicao.php on line 3
+[09-Mar-2018 01:14:50 UTC] PHP Stack trace:
+[09-Mar-2018 01:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+[09-Mar-2018 01:15:28 UTC] PHP Fatal error:  Call to a member function CriarInstituicao() on a non-object in /home/ubuntu/workspace/api/Instituicao.php on line 15
+[09-Mar-2018 01:15:28 UTC] PHP Stack trace:
+[09-Mar-2018 01:15:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Instituicao.php:0
+>>>>>>> d59b9f9c2400f3d75c26e460b9921c5a789b323b
