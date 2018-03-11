@@ -15,6 +15,8 @@
     define("SUCESSO_ANIMAL_CRIADO", "Animal cadastrado com sucesso.");
     define("ERRO_ANIMAL_CRIADO", "Erro no cadastro de animal.");
     
+    define("ERRO_NENHUM_ANIMAL", "Nenhum animal encontrado.");
+    
     define("ERRO_ANIMAL_ADOTADO", "Erro ao adotar animal.");
     define("SUCESSO_ANIMAL_ADOTADO","Animal adotado com sucesso.");
     

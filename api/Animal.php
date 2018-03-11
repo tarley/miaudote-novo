@@ -44,4 +44,19 @@ if($acao == "EditarAnimal") {
     echo json_encode($Animal->EditarAnimal($id, $p_NomeAnimal, $p_Observacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
 
+if($acao == "BuscarTodos") {
+    echo json_encode($Animal->BuscarTodos());
+}
+
+if($acao == "BuscarPorId") {
+    $id = $_GET["id"];
+ 
+    echo json_encode($Animal->BuscarPorId($id));
+}
+
+if($acao == "BuscarAdotados") {
+    
+    echo json_encode($Animal->BuscarAdotados());
+}
+
 ?>

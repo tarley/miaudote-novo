@@ -207,14 +207,155 @@ class Animal {
     }
     
     public function BuscarTodos() {
+        require_once "Conexao.php";
         
+        $sucesso=false;
+        $mensagem=null;
+        
+        $retornarImagem = $_GET['retornarImagem'];
+        
+        if($retornarImagem == 'T') {
+
+            $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.URL_IMAGEM, F.IND_FOTO_PRINCIPAL
+                FROM ANIMAL A
+				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
+                INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
+                INNER JOIN ESPECIE E ON (E.COD_ESPECIE = A.ESPECIE_COD_ESPECIE)
+                INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
+                WHERE A.IND_ADOTADO = 'F'
+                AND A.IND_EXCLUIDO = 'F'
+                ORDER BY A.NOM_ANIMAL");
+
+        }
+        else {
+                $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO
+                FROM ANIMAL A 
+                INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
+                INNER JOIN ESPECIE E ON (E.COD_ESPECIE = A.ESPECIE_COD_ESPECIE)
+                INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
+                WHERE A.IND_ADOTADO = 'F'
+                AND A.IND_EXCLUIDO = 'F'
+                ORDER BY A.NOM_ANIMAL");
+
+        }
+        $stmt->execute();
+        
+        $animais = array();
+        
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+             $animais[] = $row;
+      }
+
+        if(empty($animais)){
+            return array("sucesso"=>false,
+            "mensagem"=>ERRO_NENHUM_ANIMAL);
+        }
+        
+        return array("sucesso"=>true,
+                    "data"=>$animais);
+        
+        $conn = null;
     }
     
     public function BuscarPorId($id) {
         
+        require_once "Conexao.php";
+        
+        $sucesso=false;
+        $mensagem=null;
+        
+        $retornarImagem = $_GET['retornarImagem'];
+        
+        if($retornarImagem == 'T') {
+
+            $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.URL_IMAGEM, F.IND_FOTO_PRINCIPAL
+                FROM ANIMAL A
+				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
+                INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
+                INNER JOIN ESPECIE E ON (E.COD_ESPECIE = A.ESPECIE_COD_ESPECIE)
+                INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
+                WHERE A.IND_ADOTADO = 'F'
+                AND A.IND_EXCLUIDO = 'F'
+                AND A.COD_ANIMAL = :id
+                ORDER BY A.NOM_ANIMAL");
+                
+        }
+        else {
+                $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO
+                FROM ANIMAL A 
+                INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
+                INNER JOIN ESPECIE E ON (E.COD_ESPECIE = A.ESPECIE_COD_ESPECIE)
+                INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
+                WHERE A.IND_ADOTADO = 'F'
+                AND A.IND_EXCLUIDO = 'F'
+                AND A.COD_ANIMAL = :id
+                ORDER BY A.NOM_ANIMAL");
+
+        }
+        
+        $stmt->bindParam(':id',$id);
+        
+        $stmt->execute();
+        
+        $animais = array();
+        
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+             $animais[] = $row;
+      }
+
+        if(empty($animais)){
+            return array("sucesso"=>false,
+            "mensagem"=>ERRO_NENHUM_ANIMAL);
+        }
+        
+        return array("sucesso"=>true,
+                    "data"=>$animais);
+        
+        $conn = null;
+        
     }
     
     public function BuscarAdotados() {
+        require_once "Conexao.php";
+        
+        $sucesso=false;
+        $mensagem=null;
+        
+        $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO
+                FROM ANIMAL A 
+                INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
+                INNER JOIN ESPECIE E ON (E.COD_ESPECIE = A.ESPECIE_COD_ESPECIE)
+                INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
+                WHERE A.IND_ADOTADO = 'T'
+                ORDER BY A.NOM_ANIMAL");
+                
+        $stmt->execute();
+        
+        $animais = array();
+        
+        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+             $animais[] = $row;
+      }
+
+        if(empty($animais)){
+            return array("sucesso"=>false,
+            "mensagem"=>ERRO_NENHUM_ANIMAL);
+        }
+        
+        return array("sucesso"=>true,
+                    "data"=>$animais);
+        
+        $conn = null;
         
     }
     

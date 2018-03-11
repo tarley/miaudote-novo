@@ -673,3 +673,17 @@ Stack trace:
 #1 /home/ubuntu/workspace/api/Animal.php(30): Animal->adotarAnimal('2')
 #2 {main}
   thrown in /home/ubuntu/workspace/controller/Animal.php on line 117
+[10-Mar-2018 15:57:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN CIDADE C ON (I.CIDADE_COD_CIDADE = C.COD_CIDADE)
+                INNE' at line 6' in /home/ubuntu/workspace/controller/Animal.php:226
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(226): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(48): Animal->BuscarTodosSemImagem()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 226
+[10-Mar-2018 21:59:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'F.URL_FOTO' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:245
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(245): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(48): Animal->BuscarTodosSemImagem()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 245
+[10-Mar-2018 22:33:39 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/api/Animal.php on line 54
