@@ -24,7 +24,7 @@
                     <p class="titulo_cad">Informe os dados do Usuário</p>
 
                     <div class="row">
-                        <form class="col s12" method="post">
+                        <form class="col s12" method="post" action="api/Usuario.php?acao=CriarUsuario">
                             <div class='row'>
                                 <div class='input-field col s12'>
                                     <i class="material-icons prefix black-text">account_circle</i>
@@ -49,13 +49,21 @@
                                 </div>
                             </div>
 
+                            <!--<div class='row'>-->
+                            <!--    <div class='input-field col s12'>-->
+                            <!--        <i class="material-icons prefix black-text">lock</i>-->
+                            <!--        <input id="confirmacaoSenha" class='validate' type='password' name='confirmacaoSenha' />-->
+                            <!--        <label for='password'>Confirme a Senha</label>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+
                             <center>
 
                                 <div>
                                     <button type='reset' name='btn_reset' class='btn waves-effect waves-light black'>
                                         Limpar<i class="material-icons right">delete_sweep</i>
                                     </button>
-                                    
+
                                     <div class="col s1"></div>
                                     <button type='submit' name='btn_login' class='btn waves-effect waves-light black'>
                                         Salvar<i class="material-icons right">insert_comment</i>
