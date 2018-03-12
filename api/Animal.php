@@ -6,14 +6,23 @@ $Animal = new Animal();
 
 $acao = $_GET["acao"];
 if($acao == "CadastrarAnimal") {
-    $p_NomeAnimal = "Zezinho";
-    $p_DesObservacao = "Pet tranquilo, super docil";
-    $p_IdadeAnimal = "3";
-    $p_PorteAnimal = "1";
-    $p_Sexo = "M";
-    $p_Instituicao = "1";
-    $p_Especie = "1";
-    $p_IndCastrado = "T";
+    $p_NomeAnimal = $_POST['nome'];
+    $p_DesObservacao = $_POST['observacao'];
+    $p_IdadeAnimal = $_POST['idade'];
+    $p_PorteAnimal = '2';
+    $p_Sexo = $_POST['sexo'];
+    $p_Instituicao = '1';
+    $p_Especie = '1';
+    $p_IndCastrado = $_POST['castrado'];
+    
+    // $p_NomeAnimal = "Bruce";
+    // $p_DesObservacao = "tranquilo e carinhoso";
+    // $p_IdadeAnimal = "5";
+    // $p_PorteAnimal = "2";
+    // $p_Sexo = "M";
+    // $p_Instituicao = '1';
+    // $p_Especie = '1';
+    // $p_IndCastrado = "T";
     
     echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
@@ -42,6 +51,21 @@ if($acao == "EditarAnimal") {
     $p_IndCastrado = "F";
     
     echo json_encode($Animal->EditarAnimal($id, $p_NomeAnimal, $p_Observacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
+}
+
+if($acao == "BuscarTodos") {
+    echo json_encode($Animal->BuscarTodos());
+}
+
+if($acao == "BuscarPorId") {
+    $id = $_GET["id"];
+ 
+    echo json_encode($Animal->BuscarPorId($id));
+}
+
+if($acao == "BuscarAdotados") {
+    
+    echo json_encode($Animal->BuscarAdotados());
 }
 
 ?>

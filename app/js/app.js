@@ -21,6 +21,11 @@ app.config(function($routeProvider) {
             templateUrl: 'app/pages/gerencial/_cadastro_instituicao.html',
             controller: 'InstituicaoController'
         })
+        .when('/_cadastro-Usuario', {
+            templateUrl: 'app/pages/gerencial/_cadastro-Usuario.html',
+            controller: "CadUsuarioController"
+        })
+        
         .otherwise({
             redirectTo: '/'
         });

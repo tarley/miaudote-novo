@@ -422,4 +422,8 @@ var app = angular.module('miaudote.controller', [])
        
     .controller('InstituicaoController', function InstituicaoController($scope) {
 
+    })
+    
+    .controller('CadUsuarioController', function CadUsuarioController($scope) {
+
     });

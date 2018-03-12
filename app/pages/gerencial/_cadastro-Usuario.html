@@ -1,0 +1,81 @@
+<div class="divisao_logo"></div>
+
+
+<div class="row">
+    <div class="col s12">
+        <div class="col s2">
+            <div class="collection">
+                <li class="li">
+                    <a href="/#!/admin" id="color_op" class="collection-item ">MiAuDote - Administração</a>
+                    <a href="/#!/_cadastro-animal" id="color_op" class="collection-item">Cadastrar animal</a>
+                    <a href="/#!/_instituicao" id="color_op" class="collection-item ">Cadastrar ONG's/Protetor</a>
+                    <a href="/#!/_cadastro-Usuario" id="color_op" class="collection-item ">Cadastrar usuário</a>
+                    <a href="/" id="color_op" class="collection-item ">Voltar à página inicial</a>
+                </li>
+            </div>
+        </div>
+        <div class="col s1"></div>
+        <div class="col s8">
+            <div id="principal" class="section-adote col s8">
+
+                <h5 class="titulo_cad_pag">Cadastro de Usuários - MiAuDote</h5>
+
+                <div class="container">
+                    <p class="titulo_cad">Informe os dados do Usuário</p>
+
+                    <div class="row">
+                        <form class="col s12" method="post" action="api/Usuario.php?acao=CriarUsuario">
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <i class="material-icons prefix black-text">account_circle</i>
+                                    <input id="nome" class='validate' type='text' name='nomeUsuario' />
+                                    <label for='email'>Nome do Usuário</label>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <i class="material-icons prefix black-text">email</i>
+                                    <input id="email" class='validate' type='email' name='email' />
+                                    <label for='email'>Entre com o E-mail</label>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <i class="material-icons prefix black-text">lock</i>
+                                    <input id="senha" class='validate' type='password' name='senha' />
+                                    <label for='password'>Senha</label>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <i class="material-icons prefix black-text">lock</i>
+                                    <input id="confirmacaoSenha" class='validate' type='password' name='confirmacaoSenha' />
+                                    <label for='password'>Confirme a Senha</label>
+                                </div>
+                            </div>
+
+                            <center>
+
+                                <div>
+                                    <button type='reset' name='btn_reset' class='btn waves-effect waves-light black'>
+                                        Limpar<i class="material-icons right">delete_sweep</i>
+                                    </button>
+
+                                    <div class="col s1"></div>
+                                    <button type='submit' name='btn_login' class='btn waves-effect waves-light black'>
+                                        Salvar<i class="material-icons right">insert_comment</i>
+                                    </button>
+                                </div>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
