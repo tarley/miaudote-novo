@@ -143,9 +143,6 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
---Inserts básicos
-
---Limpa tabelas
 DELETE FROM `ESPECIE` WHERE 1;
 
 DELETE FROM `CIDADE` WHERE 1;
@@ -155,15 +152,15 @@ DELETE FROM `ESTADO` WHERE 1;
 DELETE FROM `INSTITUICAO` WHERE 1;
 			
 INSERT INTO ESTADO(NOM_ESTADO)
-VALUES ('Minas Gerais'), ('São Paulo'), ('Rio de Janeiro');
+VALUES ('Minas Gerais'), ('Sï¿½o Paulo'), ('Rio de Janeiro');
 
 INSERT INTO CIDADE(NOM_CIDADE, ESTADO_COD_ESTADO)
-VALUES ('Belo Horizonte', 1), ('Contagem', 1), ('Betim', 1), ('Lagoa Santa', 1), ('Ribeirão das Neves', 1),
-('São Paulo', 2), ('Rio de Janeiro', 3);
+VALUES ('Belo Horizonte', 1), ('Contagem', 1), ('Betim', 1), ('Lagoa Santa', 1), ('Ribeirï¿½o das Neves', 1),
+('Sï¿½o Paulo', 2), ('Rio de Janeiro', 3);
 
 INSERT INTO INSTITUICAO(NOM_INSTITUICAO, NUM_TELEFONE, IND_TIPO_INSTITUICAO, DES_EMAIL, CIDADE_COD_CIDADE)
 VALUES ('Proteger', '3333-3333', 1, 'contato@ongproteger.com.br', 1),
-('João Júnior', '9999-9999', 2, 'joaojunin@gmail.com', 1);
+('Joï¿½o Jï¿½nior', '9999-9999', 2, 'joaojunin@gmail.com', 1);
 
 INSERT INTO ESPECIE(DES_ESPECIE)
 VALUES ('Cachorro'), ('Gato');
