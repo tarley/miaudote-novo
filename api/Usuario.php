@@ -9,7 +9,7 @@ if($acao == "CriarUsuario"){
     $NomeUsuario = $_POST["nomeUsuario"];
     $Email = $_POST["email"];
     $Senha = $_POST["senha"];
-    $SenhaRepetida = $_POST["senha"];
+    $SenhaRepetida = $_POST["confirmacaoSenha"];
     $TipoUsuario = "C";
 
     // $NomeUsuario = "Henrique";
