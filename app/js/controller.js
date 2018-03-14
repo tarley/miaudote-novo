@@ -417,11 +417,29 @@ var app = angular.module('miaudote.controller', [])
     })
     
     .controller('LoginController', function LoginController($scope) {
+        
+        $scope.Autenticacao = function(){
+        var email = $scope.email;
+        var senha = $scope.senha;
 
+            $.ajax({
+              type: "POST",
+              url: "api/Auth.php?acao=CriarSessao",
+              data: "email="+email+"&senha="+senha,
+              success: function (e){
+                  if(e.sucesso){
+                       $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
+                       window.location = "/#!/admin";
+                  }else{
+                      $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+e.mensagem+"</div>");
+                  }
+              }
+            });
+        }
     })
        
     .controller('InstituicaoController', function InstituicaoController($scope) {
-
+    
     })
     
     .controller('CadUsuarioController', function CadUsuarioController($scope) {
