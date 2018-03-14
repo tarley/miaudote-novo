@@ -48,14 +48,14 @@ class Animal {
         
         
         try {
-            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_OBSERVACAO, DES_IDADE, IND_PORTE_ANIMAL, 
+            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_OBSERVACAO, IND_IDADE, IND_PORTE_ANIMAL, 
             IND_SEXO_ANIMAL, INSTITUICAO_COD_INSTITUICAO, ESPECIE_COD_ESPECIE, DAT_CADASTRO, IND_CASTRADO, DES_VACINA, DES_TEMPERAMENTO) 
-            VALUES (:nom_animal, :des_observacao, :des_idade, :ind_porte_animal, :ind_sexo_animal, :cod_instituicao, :cod_especie, now(), :ind_castrado, :vacina, :temperamento)");
+            VALUES (:nom_animal, :des_observacao, :ind_idade, :ind_porte_animal, :ind_sexo_animal, :cod_instituicao, :cod_especie, now(), :ind_castrado, :vacina, :temperamento)");
         
         
         $stmt->bindParam (':nom_animal', $p_NomeAnimal);
         $stmt->bindParam (':des_observacao', $p_DesObservacao);
-        $stmt->bindParam (':des_idade', $p_IdadeAnimal);
+        $stmt->bindParam (':ind_idade', $p_IdadeAnimal);
         $stmt->bindParam (':ind_porte_animal', $p_PorteAnimal);
         $stmt->bindParam (':ind_sexo_animal', $p_Sexo);
         $stmt->bindParam (':cod_instituicao', $p_Instituicao);
@@ -70,8 +70,10 @@ class Animal {
                         "sucesso" => true);
         
         } catch(PDOException $e){
-                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error,
+                   
+                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error.$e->getMessage(),
                           "sucesso" => false);
+                          
         }
        
        $conn = null;

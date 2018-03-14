@@ -8,27 +8,64 @@ $acao = $_GET["acao"];
 if($acao == "CadastrarAnimal") {
     $p_NomeAnimal = $_POST['nome'];
     $p_DesObservacao = $_POST['observacao'];
-    $p_IdadeAnimal = $_POST['idade'];
     $p_Vacina = $_POST['vacinas'];
     $p_Temperamento = $_POST['temperamento'];
     
+    //Tratando campo Idade
+    if($_POST['idade'] == '2') {
+        $p_IdadeAnimal = 'F';
+    }
+    elseif($_POST['idade'] == '3') {
+        $p_IdadeAnimal = 'A';
+    }
+    elseif($_POST['idade'] == '4') {
+        $p_IdadeAnimal = 'I';
+    }
+    
+    
     //Tratando campo Porte
-        $p_PorteAnimal = '2';
+    if($POST['porte'] == '2'){
+        $p_PorteAnimal = 'P';
+    } 
+    elseif($POST['porte'] == '3') {
+        $p_PorteAnimal = 'M';
+    }
+    elseif($POST['porte'] == '4') {
+       $p_PorteAnimal = 'G'; 
+    }
 
     //Tratando campo Sexo
-    $p_Sexo = $_POST['sexo'];
+    if($_POST['sexo'] == 'macho') {
+        $p_Sexo = 'M';
+    }
+    elseif($_POST['sexo'] == 'femea') {
+        $p_Sexo = 'F';  
+    }
+
     
     //Tratando campo Instituição
-    $p_Instituicao = '1';
+    if($_POST['instituicao'] == '2') {
+        $p_Instituicao = 'O';
+    }
+    elseif($_POST['instituicao'] == '3') {
+        $p_Instituicao = 'P';
+    }
+    
     
     //Tratando campo Espécie
-    $p_Especie = '1';
+    if($_POST['especie'] == 'cao') {
+        $p_Especie = 'C';
+    }
+    elseif($_POST['especie'] == 'gato'){
+        $p_Especie = 'G';    
+    }
+    
     
     //Tratando campo Castrado
-    if($_POST['castrado'] == 'Sim') {
+    if($_POST['castrado'] == 's') {
         $p_IndCastrado = 'T';
     }
-    else {
+    elseif($_POST['castrado'] == 'n') {
         $p_IndCastrado = 'F';
     }
     
