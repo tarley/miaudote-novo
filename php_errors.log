@@ -847,3 +847,9 @@ Stack trace:
 [14-Mar-2018 22:46:44 UTC] PHP Stack trace:
 [14-Mar-2018 22:46:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
 [14-Mar-2018 22:46:44 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:04:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_CASTRADO' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:246
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(246): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(57): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 246
