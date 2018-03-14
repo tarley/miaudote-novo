@@ -418,6 +418,13 @@ var app = angular.module('miaudote.controller', [])
     })
 
     .controller('CadAnimalController', function CadAnimalController($scope) {
+        
+        // $scopeCadastroAnimal = function(){
+        //     var nome = 
+        //     var sexo = 
+        //     var especie =
+            
+        // }
 
     })
 
