@@ -17,7 +17,7 @@
 
                         <div ng-repeat="p in listaPetsAleatorios" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
                             <div class="informacoes-animal">
-                                <div class="nome-animal">{{p.nome}}</div>
+                                <div class="nome-animal">{{p.NOM_ANIMAL}}</div>
                                 <div class="btn-adotar">
                                     <a ng-click="detalhes(p)">Adotar</a>
                                 </div>
@@ -40,7 +40,7 @@
                         </div>
                         <div ng-repeat="p in listaPets" class="col m3 s12 option-animal" style="background-image:url('{{p.imagem}}');">
                             <div class="informacoes-animal">
-                                <div class="nome-animal">{{p.nome}}</div>
+                                <div class="nome-animal">{{p.NOM_ANIMAL}}</div>
                                 <div class="btn-adotar">
                                     <a ng-click="detalhes(p)">Adotar</a>
                                 </div>
