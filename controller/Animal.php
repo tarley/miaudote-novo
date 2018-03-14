@@ -216,7 +216,7 @@ class Animal {
         
         if($retornarImagem == 'T') {
 
-            $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+            $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
                 A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.URL_IMAGEM, F.IND_FOTO_PRINCIPAL
                 FROM ANIMAL A
 				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
@@ -226,11 +226,12 @@ class Animal {
                 INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
                 WHERE A.IND_ADOTADO = 'F'
                 AND A.IND_EXCLUIDO = 'F'
+                AND F.IND_FOTO_PRINCIPAL = 'T'
                 ORDER BY A.NOM_ANIMAL");
 
         }
         else {
-                $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
                 A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO
                 FROM ANIMAL A 
                 INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
@@ -272,7 +273,7 @@ class Animal {
         
         if($retornarImagem == 'T') {
 
-            $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+            $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
                 A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.URL_IMAGEM, F.IND_FOTO_PRINCIPAL
                 FROM ANIMAL A
 				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
@@ -282,12 +283,13 @@ class Animal {
                 INNER JOIN ESTADO ES ON (C.ESTADO_COD_ESTADO = ES.COD_ESTADO)
                 WHERE A.IND_ADOTADO = 'F'
                 AND A.IND_EXCLUIDO = 'F'
+                AND F.IND_FOTO_PRINCIPAL = 'T'
                 AND A.COD_ANIMAL = :id
                 ORDER BY A.NOM_ANIMAL");
                 
         }
         else {
-                $stmt = $conn->prepare("SELECT A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
+                $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.DES_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
                 A.DES_OBSERVACAO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO
                 FROM ANIMAL A 
                 INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
@@ -356,6 +358,10 @@ class Animal {
                     "data"=>$animais);
         
         $conn = null;
+        
+    }
+    
+    public function BuscarImagens() {
         
     }
     
