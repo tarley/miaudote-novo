@@ -9,11 +9,28 @@ if($acao == "CadastrarAnimal") {
     $p_NomeAnimal = $_POST['nome'];
     $p_DesObservacao = $_POST['observacao'];
     $p_IdadeAnimal = $_POST['idade'];
-    $p_PorteAnimal = '2';
+    $p_Vacina = $_POST['vacinas'];
+    $p_Temperamento = $_POST['temperamento'];
+    
+    //Tratando campo Porte
+        $p_PorteAnimal = '2';
+
+    //Tratando campo Sexo
     $p_Sexo = $_POST['sexo'];
+    
+    //Tratando campo Instituição
     $p_Instituicao = '1';
+    
+    //Tratando campo Espécie
     $p_Especie = '1';
-    $p_IndCastrado = $_POST['castrado'];
+    
+    //Tratando campo Castrado
+    if($_POST['castrado'] == 'Sim') {
+        $p_IndCastrado = 'T';
+    }
+    else {
+        $p_IndCastrado = 'F';
+    }
     
     // $p_NomeAnimal = "Bruce";
     // $p_DesObservacao = "tranquilo e carinhoso";
@@ -24,7 +41,7 @@ if($acao == "CadastrarAnimal") {
     // $p_Especie = '1';
     // $p_IndCastrado = "T";
     
-    echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
+    echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Vacina, $p_Temperamento, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
 
 if($acao == "ExcluirAnimal") {

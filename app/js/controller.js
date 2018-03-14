@@ -1,17 +1,12 @@
 var app = angular.module('miaudote.controller', [])
 
-    .controller('MainController', function MainController($scope, $http) {
+    .controller('MainController', function MainController($scope) {
 
         $scope.init = function() {
             $scope.filtro = {};
             $scope.pet = {};
 
-            $http.get("api/Animal.php?acao=BuscarTodos")
-                .then(function(response) {
-                    $scope.listaPets = response.data.data;
-                });
-
-           
+            $scope.listaPets = listarPets();
             $scope.listaPetsAleatorios = listarPetsAleatorios();
         }
 
@@ -104,8 +99,8 @@ var app = angular.module('miaudote.controller', [])
                 $('#modal1').modal('open');
             });
         }
-
-        $scope.modal = function() {
+        
+         $scope.modal = function() {
             $(document).ready(function() {
                 $('#modal1').modal('open');
             });
@@ -420,7 +415,7 @@ var app = angular.module('miaudote.controller', [])
     .controller('CadAnimalController', function CadAnimalController($scope) {
 
     })
-
+    
     .controller('LoginController', function LoginController($scope) {
         
         $scope.Autenticacao = function(){
@@ -442,11 +437,11 @@ var app = angular.module('miaudote.controller', [])
             });
         }
     })
-
+       
     .controller('InstituicaoController', function InstituicaoController($scope) {
     
     })
-
+    
     .controller('CadUsuarioController', function CadUsuarioController($scope) {
 
     });
