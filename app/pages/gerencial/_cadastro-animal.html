@@ -1,84 +1,159 @@
 <div class="divisao_logo"></div>
-
-
 <div class="row">
     <div class="col s12">
         <div class="col s2">
-            <div class="collection">
-                <li class="li">
-                    <a href="/#!/admin" id="color_op" class="collection-item ">MiAuDote - Administração</a>
-                    <a href="/#!/_cadastro-animal" id="color_op" class="collection-item">Cadastrar animal</a>
-                    <a href="/#!/_instituicao" id="color_op" class="collection-item ">Cadastrar ONG's/Protetor</a>
-                    <a href="/#!/_cadastro-Usuario" id="color_op" class="collection-item ">Cadastrar usuário</a>
-                    <a href="/" id="color_op" class="collection-item ">Voltar à página inicial</a>
-                </li>
-            </div>
+            <div ng-include="'/app/pages/gerencial/_menu.html'"></div>
         </div>
         <div class="col s10">
             <div id="principal" class="section-adote col s8">
 
-                <h1 class="titulo_cad_pag">Cadastro de animal - MiauDote</h1>
+                <h1 class="titulo_cad_pag">Cadastro Pet's</h1>
 
                 <div class="container">
-                    <p class="titulo_cad">Informe os dados do Animal</p>
+                    <p class="titulo_cad">Informe os dados do Pet</p>
 
                     <div class="row">
 
-                        <form id="formAnimal" class="col s12" method="post" action="api/Animal.php?acao=CadastrarAnimal">
+                        <form action="#" id="formAnimal" class="col s12" method="post" action="api/Animal.php?acao=CadastrarAnimal">
+
                             <div class="row">
-                                <div class="input-field col s6">
+
+                                <div class="input-field col s12">
                                     <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="nome" type="text" class="validate">
+                                    <input id="nome_pet" name="nome" type="text" class="validate">
                                     <label for="last_name">Nome (Obrigatório)</label>
                                 </div>
-
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="sexo" type="text" class="validate">
-                                    <label for="last_name">Sexo</label>
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="col s1.5"><span>Sexo:</span></div>
+                                        <div class="col s5.25">
+                                            <input name="sexo" type="radio" id="test1" class="validate" />
+                                            <label for="test1">Macho</label>
+                                        </div>
+                                        <div class="col s5.25">
+                                            <input name="sexo" type="radio" id="test2" class="validate" />
+                                            <label for="test2">Fêmea</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="col s1.5"><span>Especie:</span></div>
+                                        <div class="col s2.5">
+                                            <input name="especie" type="radio" id="test3" class="validate" />
+                                            <label for="test3">Cão</label>
+                                        </div>
+                                        <div class="col s2.5">
+                                            <input name="especie" type="radio" id="test4" class="validate" />
+                                            <label for="test4">Gato</label>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="castrado" type="text" class="validate">
-                                    <label for="last_name">Castrado</label>
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="col s1.5"><span>Castrado:</span></div>
+                                        <div class="col s2.5">
+                                            <input name="castrado" type="radio" id="test5" class="validate" />
+                                            <label for="test5">Sim</label>
+                                        </div>
+                                        <div class="col s2.5">
+                                            <input name="castrado" type="radio" id="test6" class="validate" />
+                                            <label for="test6">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="input-field col s1">
+                                            <i class="material-icons prefix black-text">pets</i>
+                                        </div>
+                                        <div class="col s0.5"></div>
+                                        <div class="input-field col s10.5">
+                                            <select class="browser-default">
+                                                <option value="1">Informe a idade do Pet</option>
+                                                <option value="2">Até 1 ano (Filhote)</option>
+                                                <option value="3">1 a 8 anos (Adulto)</option>
+                                                <option value="4">Acima de 8 anos (Idoso)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="input-field col s1">
+                                            <i class="material-icons prefix black-text">pets</i>
+                                        </div>
+                                        <div class="col s0.5"></div>
+                                        <div class="input-field col s10.5">
+                                            <select class="browser-default">
+                                                <option value="1">Informe o porte do pet</option>
+                                                <option value="2">Pequeno</option>
+                                                <option value="3">Médio</option>
+                                                <option value="4">Grande</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="input-field col s1">
+                                            <i class="material-icons prefix black-text">book</i>
+                                        </div>
+                                        <div class="col s0.5"></div>
+                                        <div class="input-field col s10.5">
+                                            <select class="browser-default">
+                                                <option value="1">Informe o tipo de Instituição</option>
+                                                <option value="2">ONG</option>
+                                                <option value="3">Protetor</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-field col s3">
                                     <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="tamanho" type="text" class="validate">
-                                    <label for="last_name">Tamanho</label>
-                                </div>
-
-                                <div class="input-field col s3">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="idade" type="text" class="validate">
-                                    <label for="last_name">Idade</label>
-                                </div>
-
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="temperamento" type="text" class="validate">
+                                    <input id="temperamento_pet" name="temperamento" type="text" class="validate">
                                     <label for="last_name">Temperamento</label>
                                 </div>
 
-                                <div class="input-field col s6">
+                                <div class="input-field col s5">
                                     <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="vacinas" type="text" class="validate">
+                                    <input id="vacina_pet" name="vacinas" type="text" class="validate">
                                     <label for="last_name">Vacinas e vermífugos (Obrigatório)</label>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <div class="row">
+                                        <div class="file-field">
+                                            <div class="btn black input-field col s3">
+                                                <center>
+                                                    <span>Foto</span>
+                                                    <!--<i class="material-icons prefix black-text">add_a_photo</i>-->
+                                                    <input type="file" multiple>
+                                                </center>
+                                            </div>
+                                            <div class="col s0.5"></div>
+                                            <div class="input-field col s8.5">
+                                                <div class="file-path-wrapper black-text">
+                                                    <input class="file-path validate black-text" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" name="observacao" type="text" class="validate">
+                                    <input id="obs_pet" name="observacao" type="text" class="validate">
                                     <label for="last_name">Observações</label>
                                 </div>
-                                
+                            </div>
+                            <center>
                                 <div class="div-botoes" class="col 12">
-                                    <button class="btn waves-effect waves-light black" type="submit">
-                                        Excluir<i class="material-icons right">delete_forever</i>
-                                    </button>
-                                    <div class="col s1"></div>
                                     <button class="btn waves-effect waves-light black" type="reset">
                                         Limpar<i class="material-icons right">delete_sweep</i>
                                     </button>
@@ -87,7 +162,7 @@
                                         Concluir<i class="material-icons right">insert_comment</i>
                                     </button>
                                 </div>
-                            </div>
+                            </center>
                         </form>
                     </div>
                 </div>

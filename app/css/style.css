@@ -553,3 +553,17 @@ textarea.materialize-textarea:focus:not([readonly]) {
     padding: 32px 65px 0px 48px; 
     border: 1px solid #EEE;
 }
+
+.larguraCampo {
+    height: 50px;
+}
+
+fieldset label {
+	display:table;
+	width:100%;
+	height:20px;
+	clear:both;
+	background-color:transparent;
+	position:relative;
+	white-space: nowrap;
+}

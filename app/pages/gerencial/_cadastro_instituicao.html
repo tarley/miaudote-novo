@@ -4,76 +4,68 @@
 <div class="row">
     <div class="col s12">
         <div class="col s2">
-            <div class="collection">
-                <li class="li">
-                    <a href="/#!/admin" id="color_op" class="collection-item ">MiAuDote - Administração</a>
-                    <a href="/#!/_cadastro-animal" id="color_op" class="collection-item">Cadastrar animal</a>
-                    <a href="/#!/_instituicao" id="color_op" class="collection-item ">Cadastrar ONG's/Protetor</a>
-                    <a href="/#!/_cadastro-Usuario" id="color_op" class="collection-item ">Cadastrar usuário</a>
-                    <a href="/" id="color_op" class="collection-item ">Voltar à página inicial</a>
-                </li>
-            </div>
+            <div ng-include="'/app/pages/gerencial/_menu.html'"></div>
         </div>
         <div class="col s10">
             <div id="principal" class="section-adote col s8">
 
-                <h1 class="titulo_cad_pag">Cadastro ONG/Protetor - MiAuDote</h1>
+                <h1 class="titulo_cad_pag">Cadastro ONG/Protetor</h1>
 
                 <div class="container">
                     <p class="titulo_cad">Informe os dados da instituição</p>
-
                     <div class="row">
 
                         <form id="formInstituicao" class="col s12">
                             <div class="row">
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
+                                    <input id="first_name" type="text" class="validate">
                                     <label for="last_name">Nome (Obrigatório)</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
+                                    <i class="material-icons prefix black-text">email</i>
+                                    <input id="first_name" type="text" class="validate">
                                     <label for="last_name">E-mail (Obrigatório)</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix black-text">border_color</i>
-                                    <input placeholder="" id="first_name" type="text" class="validate">
+                                    <i class="material-icons prefix black-text">contact_phone</i>
+                                    <input id="first_name" type="text" class="validate">
                                     <label for="last_name">Telefone (Obrigatório)</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <select class="browser-default">
-                                        <option value="1">Informe o tipo de Instituição</option>
-                                        <option value="2">ONG</option>
-                                        <option value="3">Protetor</option>
-                                    </select>
+                                    <div class="row">
+                                        <div class="input-field col s1">
+                                          <i class="material-icons prefix black-text">book</i>
+                                        </div>
+                                        <div class="input-field col s11">
+                                         <select class="browser-default">
+                                            <option value="1">Informe o tipo de Instituição</option>
+                                            <option value="2">ONG</option>
+                                            <option value="3">Protetor</option>
+                                         </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="row">
-                                <!--<div id="div-botoes" class="col 12">-->
-                                    <button class="btn waves-effect waves-light black" type="submit">
-                                        Excluir<i class="material-icons right">delete_forever</i>
-                                    </button>
-                                    <div class="col s1"></div>
-                                    <button class="btn waves-effect waves-light black" type="reset">
-                                        Limpar<i class="material-icons right">delete_sweep</i>
-                                    </button>
-                                    <div class="col s1"></div>
-                                    <button class="btn waves-effect waves-light black" type="submit">
-                                        Concluir<i class="material-icons right">insert_comment</i>
-                                    </button>
-                                <!--</div>-->
-                            </div>
-                        </form>
                     </div>
+                    <center>
+                        <div class="row">
+                            <button class="btn waves-effect waves-light black" type="reset">
+                          Limpar<i class="material-icons right">delete_sweep</i>
+                        </button>
+                            <div class="col s1"></div>
+                            <button class="btn waves-effect waves-light black" type="submit">
+                          Concluir<i class="material-icons right">insert_comment</i>
+                        </button>
+                        </div>
+                    </center>
+                    </form>
                 </div>
             </div>
         </div>
-
     </div>
-
+</div>
 </div>
