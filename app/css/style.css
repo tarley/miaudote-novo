@@ -520,6 +520,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 .titulo_cad_pag {
+    font-family: Comic Sans MS;
     font-size: 2.64rem;
     line-height: 125%;
     margin-left: 12%;

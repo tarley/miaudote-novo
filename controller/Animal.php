@@ -60,7 +60,7 @@ class Animal {
         $stmt->bindParam (':ind_sexo_animal', $p_Sexo);
         $stmt->bindParam (':cod_instituicao', $p_Instituicao);
         $stmt->bindParam (':cod_especie', $p_Especie);
-        $stmt->bindParam ('ind_castrado', $p_IndCastrado);
+        $stmt->bindParam (':ind_castrado', $p_IndCastrado);
         
         $stmt->execute();
         

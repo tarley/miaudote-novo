@@ -9,10 +9,10 @@ if($acao == "CadastrarAnimal") {
     $p_NomeAnimal = $_POST['nome'];
     $p_DesObservacao = $_POST['observacao'];
     $p_IdadeAnimal = $_POST['idade'];
-    $p_PorteAnimal = '2';
+    $p_PorteAnimal = $_POST['porte'];
     $p_Sexo = $_POST['sexo'];
-    $p_Instituicao = '1';
-    $p_Especie = '1';
+    $p_Instituicao = $_POST['instituicao'];
+    $p_Especie = $_POST['especie'];
     $p_IndCastrado = $_POST['castrado'];
     
     // $p_NomeAnimal = "Bruce";
