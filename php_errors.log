@@ -847,9 +847,24 @@ Stack trace:
 [14-Mar-2018 22:46:44 UTC] PHP Stack trace:
 [14-Mar-2018 22:46:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
 [14-Mar-2018 22:46:44 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+<<<<<<< HEAD
 [14-Mar-2018 23:04:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_CASTRADO' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:246
 Stack trace:
 #0 /home/ubuntu/workspace/controller/Animal.php(246): PDOStatement->execute()
 #1 /home/ubuntu/workspace/api/Animal.php(57): Animal->BuscarTodos()
 #2 {main}
   thrown in /home/ubuntu/workspace/controller/Animal.php on line 246
+=======
+[14-Mar-2018 23:01:54 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:01:54 UTC] PHP Stack trace:
+[14-Mar-2018 23:01:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:01:54 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:02:43 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:02:43 UTC] PHP Stack trace:
+[14-Mar-2018 23:02:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:02:43 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:04:42 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 51
+[14-Mar-2018 23:04:42 UTC] PHP Stack trace:
+[14-Mar-2018 23:04:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:04:42 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:27
+>>>>>>> 4d6ae558a78c8bb4687e29a520e178876259986b
