@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS `miaudote`.`INSTITUICAO` (
   `NOM_INSTITUICAO` VARCHAR(100) NULL,
   `NUM_TELEFONE` INT NULL,
   `IND_TIPO_INSTITUICAO` CHAR(1) NULL,
+  `IND_EXCLUIDO` char(1) NULL DEFAULT 'F';,
   `DES_EMAIL` VARCHAR(100) NULL,
   `CIDADE_COD_CIDADE` INT NOT NULL,
   PRIMARY KEY (`COD_INSTITUICAO`),
@@ -161,8 +162,8 @@ VALUES ('Belo Horizonte', 1), ('Contagem', 1), ('Betim', 1), ('Lagoa Santa', 1),
 ('S�o Paulo', 2), ('Rio de Janeiro', 3);
 
 INSERT INTO INSTITUICAO(NOM_INSTITUICAO, NUM_TELEFONE, IND_TIPO_INSTITUICAO, DES_EMAIL, CIDADE_COD_CIDADE)
-VALUES ('Proteger', '3333-3333', 1, 'contato@ongproteger.com.br', 1),
-('Jo�o J�nior', '9999-9999', 2, 'joaojunin@gmail.com', 1);
+VALUES ('Proteger', '3333-3333', 'O', 'contato@ongproteger.com.br', 1),
+('Jo�o J�nior', '9999-9999',  'P' ,'joaojunin@gmail.com', 1);
 
 INSERT INTO ESPECIE(DES_ESPECIE)
 VALUES ('Cachorro'), ('Gato');
