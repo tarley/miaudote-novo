@@ -418,7 +418,7 @@ var app = angular.module('miaudote.controller', [])
     })
 
     .controller('CadAnimalController', function CadAnimalController($scope) {
-
+        
     })
 
     .controller('LoginController', function LoginController($scope) {
