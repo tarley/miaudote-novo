@@ -68,7 +68,9 @@ class Animal {
                         "sucesso" => true);
         
         } catch(PDOException $e){
-                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error,
+              echo "Error: " . $e->getMessage();
+            
+                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:" .$conn->error, 
                           "sucesso" => false);
         }
        
