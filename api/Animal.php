@@ -24,15 +24,16 @@ if($acao == "CadastrarAnimal") {
     
     
     //Tratando campo Porte
-    if($POST['porte'] == '2'){
+    if($_POST['porte'] == '2'){
         $p_PorteAnimal = 'P';
     } 
-    elseif($POST['porte'] == '3') {
+    elseif($_POST['porte'] == '3') {
         $p_PorteAnimal = 'M';
     }
-    elseif($POST['porte'] == '4') {
+    elseif($_POST['porte'] == '4') {
        $p_PorteAnimal = 'G'; 
     }
+    echo $p_PorteAnimal;
 
     //Tratando campo Sexo
     if($_POST['sexo'] == 'macho') {
