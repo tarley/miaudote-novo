@@ -419,30 +419,29 @@ var app = angular.module('miaudote.controller', [])
 
     .controller('CadAnimalController', function CadAnimalController($scope) {
         
-        // $scope.CadastrarAnimal = function(){
-        //     var nome        = $scope.nome;
-        //     // var sexo        = $scope.nome;
-        //     // var especie     = $scope.nome;
-        //     // var castrado    = $scope.nome;
-        //     // var idade       = $scope.nome;
-        //     // var porte       = $scope.nome;
-        //     // var instituicao = $scope.nome;
-        //     // var nome = $scope.nome;
+        $scope.CadastrarAnimal = function(){
+            var nome        = $scope.nome;
+            var sexo        = $scope.sexo;
+            var especie     = $scope.especie;
+            var castrado    = $scope.castrado;
+            var idade       = $scope.idade;
+            var porte       = $scope.porte;
+            var instituicao = $scope.instituicao;
             
-        //     $.ajax({
-        //         type: "POST",
-        //         url: "api/Animal.php?acao=CadastrarAnimal",
-        //         data: "nome="+nome+"&deve ser informado",
-        //         sucess: function(f){
-        //             if(f.sucesso){
-        //                  $("#").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+f.mensagem+"</div>");
-        //               window.location = "/#!/admin";
-        //             }else{
-        //                 $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+f.mensagem+"</div>");
-        //             }
-        //         }
-        //     });
-        // }
+            $.ajax({
+                type: "POST",
+                url: "api/Animal.php?acao=CadastrarAnimal",
+                data: "nome="+nome+"&sexo"+sexo+"&especie"+especie+"&castrado"+castrado+"&idade"+idade+"&porte"+porte+"&instituicao"+instituicao,
+                sucess: function(e){
+                    if(f.sucesso){
+                         $("#").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
+                      window.location = "/#!/admin";
+                    }else{
+                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+e.mensagem+"</div>");
+                    }
+                }
+            });
+        }
     })
 
     .controller('LoginController', function LoginController($scope) {

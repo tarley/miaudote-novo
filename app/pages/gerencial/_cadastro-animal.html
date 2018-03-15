@@ -14,24 +14,24 @@
 
                     <div class="row">
 
-                        <form id="formAnimal" class="col s12" method="post" action="api/Animal.php?acao=CadastrarAnimal">
-
+                        <form ng-submit="Autenticacao()" id="formAnimal" class="col s12" method="post">
+<!--action="api/Animal.php?acao=CadastrarAnimal"-->
                             <div class="row">
 
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix black-text">border_color</i>
-                                    <input id="nome_pet" name="nome" type="text" class="validate">
+                                    <input ng-model="nome" required id="nome" id="nome_pet" name="nome" type="text" class="validate"/>
                                     <label for="last_name">Nome (Obrigatório)</label>
                                 </div>
                                 <div class="input-field col s4">
                                     <div class="row">
                                         <div class="col s1.5"><span>Sexo:</span></div>
                                         <div class="col s5.25">
-                                            <input name="sexo" value="macho" type="radio" id="test1" class="validate" />
+                                            <input ng-model="sexo" required id="sexo" name="sexo" value="macho" type="radio" id="test1" class="validate" />
                                             <label for="test1">Macho</label>
                                         </div>
                                         <div class="col s5.25">
-                                            <input name="sexo" value="femea" type="radio" id="test2" class="validate" />
+                                            <input ng-model="sexo" required id="sexo" name="sexo" value="femea" type="radio" id="test2" class="validate" />
                                             <label for="test2">Fêmea</label>
                                         </div>
                                     </div>
@@ -72,10 +72,10 @@
                                         <div class="col s0.5"></div>
                                         <div class="input-field col s10.5">
                                             <select class="browser-default" name="idade">
-                                                <option value="1">Informe a idade do Pet</option>
-                                                <option value="2">Até 1 ano (Filhote)</option>
-                                                <option value="3">1 a 8 anos (Adulto)</option>
-                                                <option value="4">Acima de 8 anos (Idoso)</option>
+                                                <option >Informe a idade do Pet</option>
+                                                <option value="1">Até 1 ano (Filhote)</option>
+                                                <option value="2">1 a 8 anos (Adulto)</option>
+                                                <option value="3">Acima de 8 anos (Idoso)</option>
                                             </select>
                                         </div>
                                     </div>
@@ -89,10 +89,10 @@
                                         <div class="col s0.5"></div>
                                         <div class="input-field col s10.5">
                                             <select class="browser-default" name="porte">
-                                                <option value="1">Informe o porte do pet</option>
-                                                <option value="2">Pequeno</option>
-                                                <option value="3">Médio</option>
-                                                <option value="4">Grande</option>
+                                                <option >Informe o porte do pet</option>
+                                                <option value="1">Pequeno</option>
+                                                <option value="2">Médio</option>
+                                                <option value="3">Grande</option>
                                             </select>
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@
                                         <div class="col s0.5"></div>
                                         <div class="input-field col s10.5">
                                             <select class="browser-default" name="instituicao">
-                                                <option value="0">Informe o tipo de Instituição</option>
+                                                <option >Informe o tipo de Instituição</option>
                                                 <option value="1">ONG</option>
                                                 <option value="2">Protetor</option>
                                             </select>
