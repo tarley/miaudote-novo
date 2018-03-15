@@ -12,8 +12,17 @@ if($acao == "CadastrarAnimal") {
     $p_PorteAnimal = $_POST['porte'];
     $p_Sexo = $_POST['sexo'];
     $p_Instituicao = $_POST['instituicao'];
-    $p_Especie = $_POST['especie'];
+    $p_Especie = '1';
     $p_IndCastrado = $_POST['castrado'];
+    
+    // $p_NomeAnimal = $_POST['nome'];
+    // $p_DesObservacao = $_POST['observacao'];
+    // $p_IdadeAnimal = $_POST['idade'];
+    // $p_PorteAnimal = $_POST['porte'];
+    // $p_Sexo = $_POST['sexo'];
+    // $p_Instituicao = $_POST['instituicao'];
+    // $p_Especie = $_POST['especie'];
+    // $p_IndCastrado = $_POST['castrado'];
     
     // $p_NomeAnimal = "Bruce";
     // $p_DesObservacao = "tranquilo e carinhoso";

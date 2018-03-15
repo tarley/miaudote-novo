@@ -419,11 +419,29 @@ var app = angular.module('miaudote.controller', [])
 
     .controller('CadAnimalController', function CadAnimalController($scope) {
         
-
-        // $scopeCadastroAnimal = function(){
-        //     var nome = 
-        //     var sexo = 
-        //     var especie =
+        // $scope.CadastrarAnimal = function(){
+        //     var nome        = $scope.nome;
+        //     // var sexo        = $scope.nome;
+        //     // var especie     = $scope.nome;
+        //     // var castrado    = $scope.nome;
+        //     // var idade       = $scope.nome;
+        //     // var porte       = $scope.nome;
+        //     // var instituicao = $scope.nome;
+        //     // var nome = $scope.nome;
+            
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "api/Animal.php?acao=CadastrarAnimal",
+        //         data: "nome="+nome+"&deve ser informado",
+        //         sucess: function(f){
+        //             if(f.sucesso){
+        //                  $("#").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
+        //               window.location = "/#!/admin";
+        //             }else{
+        //                 $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+e.mensagem+"</div>");
+        //             }
+        //         }
+        //     })
             
         // }
 
@@ -441,7 +459,7 @@ var app = angular.module('miaudote.controller', [])
               data: "email="+email+"&senha="+senha,
               success: function (e){
                   if(e.sucesso){
-                       $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
+                       $("#").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
                        window.location = "/#!/admin";
                   }else{
                       $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+e.mensagem+"</div>");
