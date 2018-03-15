@@ -847,6 +847,157 @@ Stack trace:
 [14-Mar-2018 22:46:44 UTC] PHP Stack trace:
 [14-Mar-2018 22:46:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
 [14-Mar-2018 22:46:44 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+<<<<<<< HEAD
 [14-Mar-2018 23:11:13 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/controller/Animal.php on line 64
 [14-Mar-2018 23:11:13 UTC] PHP Stack trace:
 [14-Mar-2018 23:11:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+=======
+[14-Mar-2018 23:01:54 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:01:54 UTC] PHP Stack trace:
+[14-Mar-2018 23:01:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:01:54 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:02:43 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:02:43 UTC] PHP Stack trace:
+[14-Mar-2018 23:02:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:02:43 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:04:42 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 51
+[14-Mar-2018 23:04:42 UTC] PHP Stack trace:
+[14-Mar-2018 23:04:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:04:42 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:27
+[14-Mar-2018 23:39:06 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:39:06 UTC] PHP Stack trace:
+[14-Mar-2018 23:39:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:39:06 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:49:36 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:49:36 UTC] PHP Stack trace:
+[14-Mar-2018 23:49:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:49:36 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:49:57 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:49:57 UTC] PHP Stack trace:
+[14-Mar-2018 23:49:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:49:57 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:50:39 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:50:39 UTC] PHP Stack trace:
+[14-Mar-2018 23:50:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:50:39 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:51:13 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:51:13 UTC] PHP Stack trace:
+[14-Mar-2018 23:51:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:51:13 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:51:39 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:51:39 UTC] PHP Stack trace:
+[14-Mar-2018 23:51:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:51:39 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:51:41 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:51:41 UTC] PHP Stack trace:
+[14-Mar-2018 23:51:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:51:41 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:51:43 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:51:43 UTC] PHP Stack trace:
+[14-Mar-2018 23:51:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:51:43 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:51:58 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:51:58 UTC] PHP Stack trace:
+[14-Mar-2018 23:51:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:51:58 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:52:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:52:52 UTC] PHP Stack trace:
+[14-Mar-2018 23:52:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:52:52 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:52:55 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:52:55 UTC] PHP Stack trace:
+[14-Mar-2018 23:52:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:52:55 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:53:56 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 234
+[14-Mar-2018 23:53:56 UTC] PHP Stack trace:
+[14-Mar-2018 23:53:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[14-Mar-2018 23:53:56 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:57
+[14-Mar-2018 23:54:05 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:54:05 UTC] PHP Stack trace:
+[14-Mar-2018 23:54:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:54:05 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:54:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:54:08 UTC] PHP Stack trace:
+[14-Mar-2018 23:54:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:54:08 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[14-Mar-2018 23:54:41 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[14-Mar-2018 23:54:41 UTC] PHP Stack trace:
+[14-Mar-2018 23:54:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[14-Mar-2018 23:54:41 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:01:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:01:46 UTC] PHP Stack trace:
+[15-Mar-2018 00:01:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:01:46 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:01:47 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:01:47 UTC] PHP Stack trace:
+[15-Mar-2018 00:01:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:01:47 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:01:48 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:01:48 UTC] PHP Stack trace:
+[15-Mar-2018 00:01:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:01:48 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:01:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:01:49 UTC] PHP Stack trace:
+[15-Mar-2018 00:01:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:01:49 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:00 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:00 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:00 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:01 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:01 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:01 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:01 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:01 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:01 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:01 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:01 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:01 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:02 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:02 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:02 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:02 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:02 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:02 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:02 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:02 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:03 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:03 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:03 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:03 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:03 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:03 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:03 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:03 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:08 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:08 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:02:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Auth.php on line 10
+[15-Mar-2018 00:02:08 UTC] PHP Stack trace:
+[15-Mar-2018 00:02:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Auth.php:0
+[15-Mar-2018 00:02:08 UTC] PHP   2. Auth->CriarSessao() /home/ubuntu/workspace/api/Auth.php:12
+[15-Mar-2018 00:04:09 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 51
+[15-Mar-2018 00:04:09 UTC] PHP Stack trace:
+[15-Mar-2018 00:04:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[15-Mar-2018 00:04:09 UTC] PHP   2. Animal->cadastrarAnimal() /home/ubuntu/workspace/api/Animal.php:27
+>>>>>>> 2d3aad7b4c18acd7ddc026f426290aa6a16afb51
