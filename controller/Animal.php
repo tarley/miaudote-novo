@@ -5,7 +5,7 @@ header("Content-type: application/json");
 
 class Animal {
 
-    public function cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado ) {
+    public function cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Vacina, $p_Temperamento, $p_Instituicao, $p_Especie, $p_IndCastrado ) {
        require_once "Conexao.php";
        
        $Animal = new Animal();
@@ -48,19 +48,21 @@ class Animal {
         
         
         try {
-            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_OBSERVACAO, DES_IDADE, IND_PORTE_ANIMAL, 
-            IND_SEXO_ANIMAL, INSTITUICAO_COD_INSTITUICAO, ESPECIE_COD_ESPECIE, DAT_CADASTRO, IND_CASTRADO) 
-            VALUES (:nom_animal, :des_observacao, :des_idade, :ind_porte_animal, :ind_sexo_animal, :cod_instituicao, :cod_especie, now(), :ind_castrado)");
+            $stmt = $conn->prepare("INSERT INTO ANIMAL(NOM_ANIMAL, DES_OBSERVACAO, IND_IDADE, IND_PORTE_ANIMAL, 
+            IND_SEXO_ANIMAL, INSTITUICAO_COD_INSTITUICAO, ESPECIE_COD_ESPECIE, DAT_CADASTRO, IND_CASTRADO, DES_VACINA, DES_TEMPERAMENTO) 
+            VALUES (:nom_animal, :des_observacao, :ind_idade, :ind_porte_animal, :ind_sexo_animal, :cod_instituicao, :cod_especie, now(), :ind_castrado, :vacina, :temperamento)");
         
         
         $stmt->bindParam (':nom_animal', $p_NomeAnimal);
         $stmt->bindParam (':des_observacao', $p_DesObservacao);
-        $stmt->bindParam (':des_idade', $p_IdadeAnimal);
+        $stmt->bindParam (':ind_idade', $p_IdadeAnimal);
         $stmt->bindParam (':ind_porte_animal', $p_PorteAnimal);
         $stmt->bindParam (':ind_sexo_animal', $p_Sexo);
         $stmt->bindParam (':cod_instituicao', $p_Instituicao);
         $stmt->bindParam (':cod_especie', $p_Especie);
         $stmt->bindParam (':ind_castrado', $p_IndCastrado);
+        $stmt->bindParam (':vacina', $p_Vacina);
+        $stmt->bindParam (':temperamento', $p_Temperamento);
         
         $stmt->execute();
         
@@ -68,10 +70,16 @@ class Animal {
                         "sucesso" => true);
         
         } catch(PDOException $e){
+<<<<<<< HEAD
+                   
+                        return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:".$conn->error.$e->getMessage(),
+=======
               echo "Error: " . $e->getMessage();
             
                         return array("mensagem" => ERRO_ANIMAL_CRIADO."Erro:" .$conn->error, 
+>>>>>>> 2d3aad7b4c18acd7ddc026f426290aa6a16afb51
                           "sucesso" => false);
+                          
         }
        
        $conn = null;

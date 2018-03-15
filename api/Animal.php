@@ -8,12 +8,67 @@ $acao = $_GET["acao"];
 if($acao == "CadastrarAnimal") {
     $p_NomeAnimal = $_POST['nome'];
     $p_DesObservacao = $_POST['observacao'];
-    $p_IdadeAnimal = $_POST['idade'];
-    $p_PorteAnimal = $_POST['porte'];
-    $p_Sexo = $_POST['sexo'];
-    $p_Instituicao = $_POST['instituicao'];
-    $p_Especie = $_POST['especie'];
-    $p_IndCastrado = $_POST['castrado'];
+    $p_Vacina = $_POST['vacinas'];
+    $p_Temperamento = $_POST['temperamento'];
+    
+    //Tratando campo Idade
+    if($_POST['idade'] == '2') {
+        $p_IdadeAnimal = 'F';
+    }
+    elseif($_POST['idade'] == '3') {
+        $p_IdadeAnimal = 'A';
+    }
+    elseif($_POST['idade'] == '4') {
+        $p_IdadeAnimal = 'I';
+    }
+    
+    
+    //Tratando campo Porte
+    if($_POST['porte'] == '2'){
+        $p_PorteAnimal = 'P';
+    } 
+    elseif($_POST['porte'] == '3') {
+        $p_PorteAnimal = 'M';
+    }
+    elseif($_POST['porte'] == '4') {
+       $p_PorteAnimal = 'G'; 
+    }
+    echo $p_PorteAnimal;
+
+    //Tratando campo Sexo
+    if($_POST['sexo'] == 'macho') {
+        $p_Sexo = 'M';
+    }
+    elseif($_POST['sexo'] == 'femea') {
+        $p_Sexo = 'F';  
+    }
+
+    
+    //Tratando campo Instituição
+    if($_POST['instituicao'] == '2') {
+        $p_Instituicao = 'O';
+    }
+    elseif($_POST['instituicao'] == '3') {
+        $p_Instituicao = 'P';
+    }
+    
+    
+    //Tratando campo Espécie
+    if($_POST['especie'] == 'cao') {
+        $p_Especie = 'C';
+    }
+    elseif($_POST['especie'] == 'gato'){
+        $p_Especie = 'G';    
+    }
+    
+    
+    //Tratando campo Castrado
+    if($_POST['castrado'] == 's') {
+        $p_IndCastrado = 'T';
+    }
+    elseif($_POST['castrado'] == 'n') {
+        $p_IndCastrado = 'F';
+    }
     
     // $p_NomeAnimal = "Bruce";
     // $p_DesObservacao = "tranquilo e carinhoso";
@@ -24,7 +79,7 @@ if($acao == "CadastrarAnimal") {
     // $p_Especie = '1';
     // $p_IndCastrado = "T";
     
-    echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
+    echo json_encode($Animal->cadastrarAnimal($p_NomeAnimal, $p_DesObservacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Vacina, $p_Temperamento, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
 
 if($acao == "ExcluirAnimal") {
