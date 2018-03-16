@@ -30,7 +30,7 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
         $novoNome = uniqid ( time () ) . '.' . $extensao;
  
         // Concatena a pasta com o nome
-        $destino = '/testeImagem' . $novoNome;
+        $destino = 'testeImagem/' . $novoNome;
  
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
