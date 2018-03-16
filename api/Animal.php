@@ -27,22 +27,22 @@ if($acao == "CadastrarAnimal") {
     
     //Tratando campo Porte
     if($_POST['porte'] == '1'){
-        $p_PorteAnimal = '1';
+        $p_PorteAnimal = 'P';
     } 
     elseif($_POST['porte'] == '2') {
-        $p_PorteAnimal = '2';
+        $p_PorteAnimal = 'M';
     }
     elseif($_POST['porte'] == '3') {
-       $p_PorteAnimal = '3'; 
+       $p_PorteAnimal = 'G'; 
     }
     echo $p_PorteAnimal;
 
     //Tratando campo Sexo
     if($_POST['sexo'] == 'macho') {
-        $p_Sexo = '1';
+        $p_Sexo = 'M';
     }
     elseif($_POST['sexo'] == 'femea') {
-        $p_Sexo = '2';  
+        $p_Sexo = 'F';  
     }
 
     
@@ -50,8 +50,8 @@ if($acao == "CadastrarAnimal") {
     if($_POST['instituicao'] == '1') {
         $p_Instituicao = '1';
     }
-    elseif($_POST['instituicao'] == '4') {
-        $p_Instituicao = '4';
+    elseif($_POST['instituicao'] == '2') {
+        $p_Instituicao = '2';
     }
 
     //Tratando campo Castrado
