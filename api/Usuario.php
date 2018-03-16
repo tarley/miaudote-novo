@@ -6,17 +6,17 @@ $Usuario = new Usuario();
 
 $acao = $_GET["acao"];
 if($acao == "CriarUsuario"){
-    // $NomeUsuario = $_POST["nomeUsuario"];
-    // $Email = $_POST["email"];
-    // $Senha = $_POST["senha"];
-    // $SenhaRepetida = $_POST["confirmacaoSenha"];
-    // $TipoUsuario = "C";
+    $NomeUsuario = $_POST["nomeUsuario"];
+    $Email = $_POST["email"];
+    $Senha = $_POST["senha"];
+    $SenhaRepetida = $_POST["confirmacaoSenha"];
+    $TipoUsuario = "C";
 
-    $NomeUsuario = "Henrique";
-    $Email = "henrique@gmail.com";
-    $Senha = "123";
-    $SenhaRepetida = "123";
-    $TipoUsuario = "A";
+    // $NomeUsuario = "Henrique";
+    // $Email = "henrique@gmail.com";
+    // $Senha = "123";
+    // $SenhaRepetida = "123";
+    // $TipoUsuario = "A";
 
     echo json_encode($Usuario->CriarUsuario($NomeUsuario, $Email, $TipoUsuario, $Senha, $SenhaRepetida));
 }
