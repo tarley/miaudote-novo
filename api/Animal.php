@@ -10,27 +10,29 @@ if($acao == "CadastrarAnimal") {
     $p_DesObservacao = $_POST['observacao'];
     $p_Vacina = $_POST['vacinas'];
     $p_Temperamento = $_POST['temperamento'];
+    $p_Especie = $_POST['especie'];
+    
     
     //Tratando campo Idade
-    if($_POST['idade'] == '2') {
+    if($_POST['idade'] == '1') {
         $p_IdadeAnimal = 'F';
     }
-    elseif($_POST['idade'] == '3') {
+    elseif($_POST['idade'] == '2') {
         $p_IdadeAnimal = 'A';
     }
-    elseif($_POST['idade'] == '4') {
+    elseif($_POST['idade'] == '3') {
         $p_IdadeAnimal = 'I';
     }
     
     
     //Tratando campo Porte
-    if($_POST['porte'] == '2'){
+    if($_POST['porte'] == '1'){
         $p_PorteAnimal = 'P';
     } 
-    elseif($_POST['porte'] == '3') {
+    elseif($_POST['porte'] == '2') {
         $p_PorteAnimal = 'M';
     }
-    elseif($_POST['porte'] == '4') {
+    elseif($_POST['porte'] == '3') {
        $p_PorteAnimal = 'G'; 
     }
     echo $p_PorteAnimal;
@@ -45,23 +47,13 @@ if($acao == "CadastrarAnimal") {
 
     
     //Tratando campo Instituição
-    if($_POST['instituicao'] == '2') {
-        $p_Instituicao = 'O';
+    if($_POST['instituicao'] == '1') {
+        $p_Instituicao = '1';
     }
-    elseif($_POST['instituicao'] == '3') {
-        $p_Instituicao = 'P';
+    elseif($_POST['instituicao'] == '2') {
+        $p_Instituicao = '2';
     }
-    
-    
-    //Tratando campo Espécie
-    if($_POST['especie'] == 'cao') {
-        $p_Especie = 'C';
-    }
-    elseif($_POST['especie'] == 'gato'){
-        $p_Especie = 'G';    
-    }
-    
-    
+
     //Tratando campo Castrado
     if($_POST['castrado'] == 's') {
         $p_IndCastrado = 'T';
@@ -105,7 +97,7 @@ if($acao == "EditarAnimal") {
     $p_Especie = "1";
     $p_IndCastrado = "F";
     
-    echo json_encode($Animal->EditarAnimal($id, $p_NomeAnimal, $p_Observacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Instituicao, $p_Especie, $p_IndCastrado));
+    echo json_encode($Animal->EditarAnimal($id, $p_NomeAnimal, $p_Observacao, $p_IdadeAnimal, $p_PorteAnimal, $p_Sexo, $p_Vacina, $p_Temperamento, $p_Instituicao, $p_Especie, $p_IndCastrado));
 }
 
 if($acao == "BuscarTodos") {

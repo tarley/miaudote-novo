@@ -28,7 +28,7 @@ class Instituicao{
         
         try{
             $excluida = InstituicaoNaoExcluida;
-            $stmt = $conn->prepare("INSERT INTO `miaudote`.`INSTITUICAO` (`NOM_INSTITUICAO`, `NUM_TELEFONE`, `DES_TIPO_INSTITUICAO`, `DES_EMAIL`, `IND_EXCLUIDO`) VALUES (:nome, :telefone, :tipo, :email, :excluido)");
+            $stmt = $conn->prepare("INSERT INTO `miaudote`.`INSTITUICAO` (`NOM_INSTITUICAO`, `NUM_TELEFONE`, `IND_TIPO_INSTITUICAO`, `DES_EMAIL`, `IND_EXCLUIDO`) VALUES (:nome, :telefone, :tipo, :email, :excluido)");
             $stmt->bindParam(':nome', $p_NomeInstituicao);
             $stmt->bindParam(':telefone', $p_Telefone);
             $stmt->bindParam(':tipo', $p_TipoInstituicao);
@@ -98,7 +98,7 @@ class Instituicao{
             $stmt = $conn->prepare("
             UPDATE `miaudote`.`INSTITUICAO` SET `NOM_INSTITUICAO` = :nome,
             `NUM_TELEFONE` = :telefone,
-            `DES_TIPO_INSTITUICAO` = :tipo,
+            `IND_TIPO_INSTITUICAO` = :tipo,
             `DES_EMAIL` = :email 
             WHERE `INSTITUICAO`.`COD_INSTITUICAO` = :CodInstituicao");
             
@@ -138,7 +138,7 @@ class Instituicao{
         
         $inicio = ($QTD_Exibida*$p_Pagina)-$QTD_Exibida; 
         $excluido = InstituicaoNaoExcluida;
-        $stmt = $conn->prepare("SELECT NOM_INSTITUICAO, NUM_TELEFONE, DES_TIPO_INSTITUICAO, DES_EMAIL FROM INSTITUICAO WHERE IND_EXCLUIDO=:excluido ORDER BY COD_INSTITUICAO DESC LIMIT :inicio, :QtdExibida"); 
+        $stmt = $conn->prepare("SELECT COD_INSTITUICAO, NOM_INSTITUICAO, NUM_TELEFONE, IND_TIPO_INSTITUICAO, DES_EMAIL FROM INSTITUICAO WHERE IND_EXCLUIDO=:excluido ORDER BY COD_INSTITUICAO DESC LIMIT :inicio, :QtdExibida"); 
         $stmt->bindParam(':excluido', $excluido);
         $stmt->bindValue(':inicio', (int) $inicio, PDO::PARAM_INT);
         $stmt->bindValue(':QtdExibida', (int) $QTD_Exibida, PDO::PARAM_INT);
