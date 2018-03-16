@@ -523,7 +523,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     font-family: Comic Sans MS;
     font-size: 2.64rem;
     line-height: 125%;
-    margin-left: 12%;
+    text-align: left;
 }
 
 .titulo_cad {
@@ -568,3 +568,8 @@ fieldset label {
 	position:relative;
 	white-space: nowrap;
 }
+
+#responsiva{
+    width:100%;
+}
+
