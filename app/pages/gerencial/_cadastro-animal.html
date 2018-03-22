@@ -30,8 +30,7 @@
                                                 <div class="btn black input-field col m2">
                                                     <center>
                                                         <span>Foto</span>
-                                                        <!--<i class="material-icons prefix black-text">add_a_photo</i>-->
-                                                        <input type="file" multiple>
+                                                        <input type="file" accept="image/*" >
                                                     </center>
                                                 </div>
                                                 <div class="col m0.5"></div>
@@ -128,48 +127,69 @@
                                                 <select ng-model="instituicao" class="browser-default" name="instituicao">
                                                 <option value="">Informe a Instituição</option>
                                                 <option value="1">ONG Proteger</option>
-                                                <option value="2">Joao Junior</option>
+                                                <option value="2">João Junior</option>
                                             </select>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="input-field col m3">
-                                        <i class="material-icons prefix black-text">border_color</i>
-                                        <input ng-model="temperamento" id="temperamento_pet" name="temperamento" type="text" class="validate">
-                                        <label for="last_name">Temperamento</label>
+                                        <div class="row">
+                                            <div class="input-field col m1">
+                                                <i class="material-icons prefix black-text">border_color</i>
+                                            </div>
+                                            <div class="col m0.5"></div>
+                                            <div class="input-field col m10.5">
+                                                <select id="vacina_pet" class="browser-default" name="vacinas" ng-model="vacinas">
+                                                <option value="">Vacinas e vermífugos</option>
+                                                <option value="1">Dócil</option>
+                                                <option value="2"></option>
+                                                <option value="3"></option>
+                                            </select>
+                                            </div>
+                                        </div>
                                     </div>
-
                                     <div class="input-field col m5">
-                                        <i class="material-icons prefix black-text">border_color</i>
-                                        <input id="vacina_pet" name="vacinas" type="text" class="validate">
-                                        <label for="last_name">Vacinas e vermífugos (Obrigatório)</label>
-                                    </div>
-
-                                    <div class="input-field col m12">
-                                        <i class="material-icons prefix black-text">border_color</i>
-                                        <input required ng-model="observacao" id="obs_pet" name="observacao" type="text" class="validate">
-                                        <label for="last_name">Observações</label>
+                                        <div class="row">
+                                            <div class="input-field col m1">
+                                                <i class="material-icons prefix black-text">border_color</i>
+                                            </div>
+                                            <div class="col m0.5"></div>
+                                            <div class="input-field col m10.5">
+                                                <select id="temperamento_pet" class="browser-default" name="temperamento" ng-model="temperamento">
+                                                <option value="">Informe o temperamento do Pet</option>
+                                                <option value="1">Dócil</option>
+                                                <option value="2"></option>
+                                                <option value="3">Agressivo</option>
+                                            </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <center>
-                                    <div class="div-botoes" class="col m12">
-                                        <button class="btn waves-effect waves-light black" type="reset">
+
+                                <div class="input-field col m12">
+                                    <i class="material-icons prefix black-text">border_color</i>
+                                    <input required ng-model="observacao" id="obs_pet" name="observacao" type="text" class="validate">
+                                    <label for="last_name">Observações</label>
+                                </div>
+                        </div>
+                        <center>
+                            <div class="div-botoes" class="col m12">
+                                <button class="btn waves-effect waves-light black" type="reset">
                                         Limpar<i class="material-icons right">delete_sweep</i>
                                     </button>
-                                        <div class="col m1"></div>
+                                <div class="col m1"></div>
 
-                                        <button type="submit" name="btn_salvar" class="btn waves-effect waves-light black">
+                                <button type="submit" name="btn_salvar" class="btn waves-effect waves-light black">
                                         Concluir<i class="material-icons right">insert_comment</i>
                                     </button>
-                                    </div>
-                                </center>
-                            </form>
-                        </div>
+                            </div>
+                        </center>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 </div>

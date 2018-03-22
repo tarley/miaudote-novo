@@ -31,11 +31,8 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
  
         // Concatena a pasta com o nome
         $destino = 'testeImagem/' . $novoNome;
-<<<<<<< HEAD
  
-=======
         
->>>>>>> 545720728dbc46e9a8f3f2c9f4ca6dccdc1d5cde
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
             echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
