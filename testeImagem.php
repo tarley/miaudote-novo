@@ -2,6 +2,7 @@
 /******
  * Upload de imagens
  ******/
+ require_once "extensions/thumbnail.inc.php";
  header('Content-Type: text/html; charset=utf-8');
  
 // verifica se foi enviado um arquivo
@@ -34,6 +35,10 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
         
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
+            $thumb = new Thumbnail($destino);
+            $thumb->resize(500,500);
+            $thumb->save($destino,80);
+            
             echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
             echo ' < img src = "' . $destino . '" />';
         }
