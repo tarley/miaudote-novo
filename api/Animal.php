@@ -115,4 +115,10 @@ if($acao == "BuscarAdotados") {
     echo json_encode($Animal->BuscarAdotados());
 }
 
+if($acao == "BuscarImagens") {
+    $id = $_GET["id"];
+    
+    echo json_encode($Animal->BuscarImagens($id));
+}
+
 ?>

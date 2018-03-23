@@ -22,5 +22,7 @@
     
     define("SUCESSO_ANIMAL_ALTERADO", "As alterações foram concluídas com sucesso.");
     define("ERRO_ANIMAL_ALTERADO", "Erro ao salvar as alterações.");
+    
+    define("ERRO_ANIMAL_FOTO", "Nenhuma foto encontrada.");
 
 ?>
