@@ -712,3 +712,39 @@ Stack trace:
 #1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
 #2 {main}
   thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[22-Mar-2018 23:20:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_IDADE' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[22-Mar-2018 23:20:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_IDADE' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[22-Mar-2018 23:25:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_IDADE' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[22-Mar-2018 23:25:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_IDADE' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[22-Mar-2018 23:25:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_IDADE' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[22-Mar-2018 23:27:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A.IND_IDADE' in 'field list'' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
