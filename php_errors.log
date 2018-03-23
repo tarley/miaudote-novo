@@ -762,3 +762,9 @@ Stack trace:
 #1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
 #2 {main}
   thrown in /home/ubuntu/workspace/controller/Animal.php on line 254
+[23-Mar-2018 00:31:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'miaudote.ANIMAL' doesn't exist' in /home/ubuntu/workspace/controller/Animal.php:254
+Stack trace:
+#0 /home/ubuntu/workspace/controller/Animal.php(254): PDOStatement->execute()
+#1 /home/ubuntu/workspace/api/Animal.php(104): Animal->BuscarTodos()
+#2 {main}
+  thrown in /home/ubuntu/workspace/controller/Animal.php on line 254

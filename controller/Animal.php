@@ -319,7 +319,7 @@ class Animal {
         
         while($row = $stmt->fetch(PDO::FETCH_OBJ)){
              $animais[] = $row;
-      }
+      }  
 
         if(empty($animais)){
             return array("sucesso"=>false,
