@@ -5,15 +5,15 @@ var app = angular.module('miaudote.controller', [])
         $scope.init = function() {
             $scope.filtro = {};
             $scope.pet = {};
-            
-             $.ajax({
-              type: "GET",
-              url: "api/Animal.php?acao=BuscarTodos",
-              success: function (e){
-                  $scope.listaPets = e.data;
-              }
+
+            $.ajax({
+                type: "GET",
+                url: "api/Animal.php?acao=BuscarTodos",
+                success: function(e) {
+                    $scope.listaPets = e.data;
+                }
             });
-            
+
 
             $scope.listaPetsAleatorios = listarPetsAleatorios();
         }
@@ -107,8 +107,8 @@ var app = angular.module('miaudote.controller', [])
                 $('#modal1').modal('open');
             });
         }
-        
-         $scope.modal = function() {
+
+        $scope.modal = function() {
             $(document).ready(function() {
                 $('#modal1').modal('open');
             });
@@ -195,60 +195,71 @@ var app = angular.module('miaudote.controller', [])
     })
 
     .controller('CadAnimalController', function CadAnimalController($scope) {
-        
-        $scope.CadastrarAnimal = function(){
-            var nome         = $scope.nome;
-            var sexo         = $scope.sexo;
-            var especie      = $scope.especie;
-            var castrado     = $scope.castrado;
-            var idade        = $scope.idade;
-            var porte        = $scope.porte;
-            var instituicao  = $scope.instituicao
-            var observacao   = $scope.observacao;
+
+        $scope.CadastrarAnimal = function() {
+            var nome = $scope.nome;
+            var sexo = $scope.sexo;
+            var especie = $scope.especie;
+            var castrado = $scope.castrado;
+            var idade = $scope.idade;
+            var porte = $scope.porte;
+            var instituicao = $scope.instituicao
+            var observacao = $scope.observacao;
             var temperamento = $scope.temperamento;
-            
+
             $.ajax({
                 type: "POST",
                 url: "api/Animal.php?acao=CadastrarAnimal",
-                data: "nome="+nome+"&sexo="+sexo+"&especie="+especie+"&castrado="+castrado+"&idade="+idade+"&porte="+porte+"&instituicao="+instituicao+"&observacao="+observacao+"&temperamento="+temperamento,
-                sucess: function(e){
-                    if(e.sucesso){
-                         $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
-                      window.location = "/#!/admin";
-                    }else{
-                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+e.mensagem+"</div>");
+                data: "nome=" + nome + "&sexo=" + sexo + "&especie=" + especie + "&castrado=" + castrado + "&idade=" + idade + "&porte=" + porte + "&instituicao=" + instituicao + "&observacao=" + observacao + "&temperamento=" + temperamento,
+                sucess: function(e) {
+                    if (e.sucesso) {
+                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">" + e.mensagem + "</div>");
+                        window.location = "/#!/admin";
+                    }
+                    else {
+                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">" + e.mensagem + "</div>");
                     }
                 }
             });
         }
     })
-    
+
     .controller('LoginController', function LoginController($scope) {
-        
-        $scope.Autenticacao = function(){
-        var email = $scope.email;
-        var senha = $scope.senha;
+
+        $scope.Autenticacao = function() {
+            var email = $scope.email;
+            var senha = $scope.senha;
 
             $.ajax({
-              type: "POST",
-              url: "api/Auth.php?acao=CriarSessao",
-              data: "email="+email+"&senha="+senha,
-              success: function (e){
-                  if(e.sucesso){
-                       $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">"+e.mensagem+"</div>");
-                       window.location = "/#!/admin";
-                  }else{
-                      $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">"+e.mensagem+"</div>");
-                  }
-              }
+                type: "POST",
+                url: "api/Auth.php?acao=CriarSessao",
+                data: "email=" + email + "&senha=" + senha,
+                success: function(e) {
+                    if (e.sucesso) {
+                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">" + e.mensagem + "</div>");
+                        window.location = "/#!/admin";
+                    }
+                    else {
+                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">" + e.mensagem + "</div>");
+                    }
+                }
             });
         }
     })
-       
+
     .controller('InstituicaoController', function InstituicaoController($scope) {
-    
+
     })
-    
+
     .controller('CadUsuarioController', function CadUsuarioController($scope) {
+
+        $scope.CadastrarUsuario = function() {
+            var nomeUsuario = $scope.nomeUsuario;
+            var email = $scope.email;
+            var senha = $scope.senha;
+            var confirmarSenha = $scope.confirmacaoSenha;
+            
+            
+        }
 
     });
