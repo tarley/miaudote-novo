@@ -225,7 +225,7 @@ class Animal {
         if($retornarImagem == 'T') {
 
             $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.IND_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
-                A.DES_OBSERVACAO, A.DES_VACINA, A.DES_TEMPERAMENTO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.URL_IMAGEM, F.IND_FOTO_PRINCIPAL
+                A.DES_OBSERVACAO, A.DES_VACINA, A.DES_TEMPERAMENTO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.NOM_FOTO, F.IND_FOTO_PRINCIPAL, F.TIP_FOTO, F.BIN_FOTO
                 FROM ANIMAL A
 				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
                 INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
@@ -236,6 +236,23 @@ class Animal {
                 AND A.IND_EXCLUIDO = 'F'
                 AND F.IND_FOTO_PRINCIPAL = 'T'
                 ORDER BY A.NOM_ANIMAL");
+                
+                $stmt->execute();
+        
+                $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+                foreach($lista as $key => $value) {
+                    $lista[$key]['BIN_FOTO'] = "data:image/" . $value['TIP_FOTO'] . 
+                        ";base64, " . base64_encode($value['BIN_FOTO']);
+                }
+                
+                if(empty($lista)){
+                    return array("sucesso"=>false,
+                    "mensagem"=>ERRO_NENHUM_ANIMAL."Erro:".$conn->error,);
+                }
+        
+                return array("sucesso"=>true,
+                    "data"=>$lista);
 
         }
         else {
@@ -249,24 +266,26 @@ class Animal {
                 WHERE A.IND_ADOTADO = 'F'
                 AND A.IND_EXCLUIDO = 'F'
                 ORDER BY A.NOM_ANIMAL");
-
-        }
-        $stmt->execute();
+                
+                $stmt->execute();
+                
+                $animais = array();
         
-        $animais = array();
+                while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+                    $animais[] = $row;
+                }
+                
+                if(empty($animais)){
+                    return array("sucesso"=>false,
+                    "mensagem"=>ERRO_NENHUM_ANIMAL."Erro:".$conn->error,);
+                }
         
-        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
-             $animais[] = $row;
-      }
-
-        if(empty($animais)){
-            return array("sucesso"=>false,
-            "mensagem"=>ERRO_NENHUM_ANIMAL);
-        }
-        
-        return array("sucesso"=>true,
+                return array("sucesso"=>true,
                     "data"=>$animais);
-        
+
+        }
+
+
         $conn = null;
     }
     
@@ -282,7 +301,7 @@ class Animal {
         if($retornarImagem == 'T') {
 
             $stmt = $conn->prepare("SELECT A.COD_ANIMAL, A.NOM_ANIMAL, A.IND_IDADE, A.IND_PORTE_ANIMAL, A.IND_SEXO_ANIMAL, A.IND_CASTRADO, A.DAT_CADASTRO, 
-                A.DES_OBSERVACAO, A.DES_VACINA, A.DES_TEMPERAMENTO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.URL_IMAGEM, F.IND_FOTO_PRINCIPAL
+                A.DES_OBSERVACAO, A.DES_VACINA, A.DES_TEMPERAMENTO, I.NOM_INSTITUICAO, E.DES_ESPECIE, C.NOM_CIDADE, ES.NOM_ESTADO, F.NOM_FOTO, F.IND_FOTO_PRINCIPAL, F.TIP_FOTO, F.BIN_FOTO
                 FROM ANIMAL A
 				INNER JOIN FOTO F ON (A.COD_ANIMAL = F.ANIMAL_COD_ANIMAL)
                 INNER JOIN INSTITUICAO I ON  (A.INSTITUICAO_COD_INSTITUICAO = I.COD_INSTITUICAO)
@@ -294,6 +313,25 @@ class Animal {
                 AND F.IND_FOTO_PRINCIPAL = 'T'
                 AND A.COD_ANIMAL = :id
                 ORDER BY A.NOM_ANIMAL");
+                
+                $stmt->bindParam(':id',$id);
+                
+                $stmt->execute();
+        
+                $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+                foreach($lista as $key => $value) {
+                    $lista[$key]['BIN_FOTO'] = "data:image/" . $value['TIP_FOTO'] . 
+                        ";base64, " . base64_encode($value['BIN_FOTO']);
+                }
+                
+                if(empty($lista)){
+                    return array("sucesso"=>false,
+                    "mensagem"=>ERRO_NENHUM_ANIMAL."Erro:".$conn->error,);
+                }
+        
+                return array("sucesso"=>true,
+                    "data"=>$lista);
                 
         }
         else {
@@ -308,26 +346,27 @@ class Animal {
                 AND A.IND_EXCLUIDO = 'F'
                 AND A.COD_ANIMAL = :id
                 ORDER BY A.NOM_ANIMAL");
-
-        }
+                
+                $stmt->bindParam(':id',$id);
+                
+                $stmt->execute();
+                
+                $animais = array();
         
-        $stmt->bindParam(':id',$id);
+                while($row = $stmt->fetch(PDO::FETCH_OBJ)){
+                    $animais[] = $row;
+                }
+                
+                if(empty($animais)){
+                    return array("sucesso"=>false,
+                    "mensagem"=>ERRO_NENHUM_ANIMAL."Erro:".$conn->error,);
+                }
         
-        $stmt->execute();
-        
-        $animais = array();
-        
-        while($row = $stmt->fetch(PDO::FETCH_OBJ)){
-             $animais[] = $row;
-      }  
-
-        if(empty($animais)){
-            return array("sucesso"=>false,
-            "mensagem"=>ERRO_NENHUM_ANIMAL);
-        }
-        
-        return array("sucesso"=>true,
+                return array("sucesso"=>true,
                     "data"=>$animais);
+
+        }
+        
         
         $conn = null;
         
