@@ -157,15 +157,15 @@ DELETE FROM `ESTADO` WHERE 1;
 DELETE FROM `INSTITUICAO` WHERE 1;
 			
 INSERT INTO ESTADO(NOM_ESTADO)
-VALUES ('Minas Gerais'), ('S�o Paulo'), ('Rio de Janeiro');
+VALUES ('Minas Gerais'), ('Sao Paulo'), ('Rio de Janeiro');
 
 INSERT INTO CIDADE(NOM_CIDADE, ESTADO_COD_ESTADO)
-VALUES ('Belo Horizonte', 1), ('Contagem', 1), ('Betim', 1), ('Lagoa Santa', 1), ('Ribeir�o das Neves', 1),
-('S�o Paulo', 2), ('Rio de Janeiro', 3);
+VALUES ('Belo Horizonte', 1), ('Contagem', 1), ('Betim', 1), ('Lagoa Santa', 1), ('Ribeirao das Neves', 1),
+('Sao Paulo', 2), ('Rio de Janeiro', 3);
 
 INSERT INTO INSTITUICAO(NOM_INSTITUICAO, NUM_TELEFONE, IND_TIPO_INSTITUICAO, DES_EMAIL, CIDADE_COD_CIDADE)
 VALUES ('Proteger', '3333-3333', 'O', 'contato@ongproteger.com.br', 1),
-('Jo�o J�nior', '9999-9999',  'P' ,'joaojunin@gmail.com', 1);
+('Joao Junior', '9999-9999',  'P' ,'joaojunin@gmail.com', 1);
 
 INSERT INTO ESPECIE(DES_ESPECIE)
 VALUES ('Cachorro'), ('Gato');
