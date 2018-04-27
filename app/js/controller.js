@@ -1,5 +1,22 @@
 var app = angular.module('miaudote.controller', [])
 
+    .directive('fileModel', ['$parse', function ($parse) {
+            return {
+               restrict: 'A',
+               link: function(scope, element, attrs) {
+                  var model = $parse(attrs.fileModel);
+                  var modelSetter = model.assign;
+                  
+                  element.bind('change', function(){
+                     scope.$apply(function(){
+                        modelSetter(scope, element[0].files[0]);
+                     });
+                  });
+               }
+            };
+         }])
+
+
     .controller('MainController', function MainController($scope) {
 
         $scope.init = function() {
@@ -194,33 +211,49 @@ var app = angular.module('miaudote.controller', [])
 
     })
 
-    .controller('CadAnimalController', function CadAnimalController($scope) {
+    .controller('CadAnimalController', function CadAnimalController($scope, $http) {
 
         $scope.CadastrarAnimal = function() {
-            var nome = $scope.nome;
-            var sexo = $scope.sexo;
-            var especie = $scope.especie;
-            var castrado = $scope.castrado;
-            var idade = $scope.idade;
-            var porte = $scope.porte;
-            var instituicao = $scope.instituicao
-            var observacao = $scope.observacao;
-            var temperamento = $scope.temperamento;
 
+            var fd = new FormData();
+            
+            fd.append('nome', $scope.nome);
+            fd.append('sexo', $scope.sexo);
+            fd.append('especie', $scope.especie);
+            fd.append('castrado', $scope.castrado);
+            fd.append('idade', $scope.idade);
+            fd.append('porte', $scope.porte);
+            fd.append('instituicao', $scope.instituicao);
+            fd.append('observacao', $scope.observacao);
+            fd.append('temperamento', $scope.temperamento);
+            fd.append('file', file);
+            
+               $http.post('api/Animal.php?acao=CadastrarAnimal', fd)
+            
+               .success(function(){
+                   $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">" + e.mensagem + "</div>");
+                        window.location = "/#!/admin";
+               })
+            
+               .error(function(){
+                   $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">" + e.mensagem + "</div>");
+               });
+           
+           /*
             $.ajax({
                 type: "POST",
                 url: "api/Animal.php?acao=CadastrarAnimal",
                 data: "nome=" + nome + "&sexo=" + sexo + "&especie=" + especie + "&castrado=" + castrado + "&idade=" + idade + "&porte=" + porte + "&instituicao=" + instituicao + "&observacao=" + observacao + "&temperamento=" + temperamento,
                 sucess: function(e) {
                     if (e.sucesso) {
-                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #b3e096; background-color:#a2db7f; border-radius:4px;\">" + e.mensagem + "</div>");
-                        window.location = "/#!/admin";
+                        
                     }
                     else {
-                        $("#mensagem").html("<div class=\"col-md-12\" style=\"border:1px solid #efa39b; background-color:#f7ded7; border-radius:4px;\">" + e.mensagem + "</div>");
+                        
                     }
                 }
             });
+            */
         }
     })
 
