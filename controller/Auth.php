@@ -10,7 +10,7 @@ class Auth{
         $stmt = $conn->prepare("SELECT DES_SENHA, DES_TIPO_USUARIO FROM USUARIO WHERE DES_EMAIL= :Email");
         $stmt->bindParam(':Email', $p_Email);
         $stmt->execute();
-        
+        $senha = "";
         while($row = $stmt->fetch(PDO::FETCH_OBJ)){
              $senha = $row->DES_SENHA;
              $tipo = $row->DES_TIPO_USUARIO;

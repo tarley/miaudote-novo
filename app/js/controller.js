@@ -19,6 +19,15 @@ var app = angular.module('miaudote.controller', [])
 
     .controller('MainController', function MainController($scope) {
 
+	$scope.OpenComoAdotar = function(){
+		$('#modal-como-adotar').modal('open');
+	}
+	
+	$scope.OpenQuemSomos = function(){
+		$('#modal-quem-somos').modal('open');
+	}
+	
+	
         $scope.init = function() {
             $scope.filtro = {};
             $scope.pet = {};
