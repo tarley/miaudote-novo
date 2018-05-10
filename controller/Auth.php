@@ -36,8 +36,8 @@ class Auth{
         require_once "Conexao.php";
         
         session_start();
-        $email = $_SESSION["email"];
-        $senha = $_SESSION["senha"];
+        @$email = $_SESSION["email"];
+        @$senha = $_SESSION["senha"];
         
         if(empty($email) || empty($senha)){
             return array("sucesso"=>false,

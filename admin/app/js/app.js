@@ -2,11 +2,11 @@ var app = angular.module("miaudote_admin", ['ngRoute', 'miaudote.controller']);
 app.config(function($routeProvider) {
     $routeProvider
 		.when('/', {
-            templateUrl: 'app/pages/home/_login.html',
+            templateUrl: 'app/pages/Home/_login.html',
             controller: 'LoginController'
         })
         .when('/home', {
-            templateUrl: 'app/pages/home/_admin.html',
+            templateUrl: 'app/pages/Home/_admin.html',
             controller: 'AdminController'
         })
 		
