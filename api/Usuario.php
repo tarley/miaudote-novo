@@ -12,11 +12,11 @@ if($acao == "CriarUsuario"){
     $SenhaRepetida = $_POST["confirmacaoSenha"];
     $TipoUsuario = "C";
 
-    // $NomeUsuario = "Henrique";
-    // $Email = "henrique@gmail.com";
-    // $Senha = "123";
-    // $SenhaRepetida = "123";
-    // $TipoUsuario = "A";
+    //  $NomeUsuario = "Henrique";
+    //  $Email = "henrique@gmail.com";
+    //  $Senha = "123";
+    //  $SenhaRepetida = "123";
+    //  $TipoUsuario = "A";
 
     echo json_encode($Usuario->CriarUsuario($NomeUsuario, $Email, $TipoUsuario, $Senha, $SenhaRepetida));
 }

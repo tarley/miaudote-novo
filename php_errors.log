@@ -771,3 +771,7 @@ Stack trace:
 [25-Mar-2018 19:44:01 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/controller/Animal.php on line 245
 [25-Mar-2018 19:44:01 UTC] PHP Stack trace:
 [25-Mar-2018 19:44:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[10-May-2018 23:04:53 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/controller/Animal.php on line 259
+[10-May-2018 23:04:53 UTC] PHP Stack trace:
+[10-May-2018 23:04:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/api/Animal.php:0
+[10-May-2018 23:04:53 UTC] PHP   2. Animal->BuscarTodos() /home/ubuntu/workspace/api/Animal.php:104
