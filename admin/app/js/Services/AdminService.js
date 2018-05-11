@@ -28,17 +28,25 @@ angular.module("miaudote.controller").service("Menu", function(){
 })
 
 .service("CheckSession", function(){
-	$.ajax({
-		type: "POST",
-		url: "../api/Auth.php?acao=ChecarSessao",
-		success: function(e) {
-			if (e.sucesso) {
-				
+	EncerrarSessao();
+	setInterval(function(){
+		EncerrarSessao();
+	}, 5000);
+	
+	function EncerrarSessao(){
+			$.ajax({
+			type: "POST",
+			url: "../api/Auth.php?acao=ChecarSessao",
+			success: function(e) {
+				if (e.sucesso) {
+					
+				}
+				else {
+					window.location = "/admin";
+					toastr["error"](e.mensagem);
+				}
 			}
-			else {
-				window.location = "/admin";
-				toastr["error"](e.mensagem);
-			}
-		}
-	});
+		});
+	}
+	
 });
