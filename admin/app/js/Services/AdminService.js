@@ -25,5 +25,20 @@ angular.module("miaudote.controller").service("Menu", function(){
 		}
 		toastr[tipo](mensagem);
 	 }
-});
+})
 
+.service("CheckSession", function(){
+	$.ajax({
+		type: "POST",
+		url: "../api/Auth.php?acao=ChecarSessao",
+		success: function(e) {
+			if (e.sucesso) {
+				
+			}
+			else {
+				window.location = "/admin";
+				toastr["error"](e.mensagem);
+			}
+		}
+	});
+});
