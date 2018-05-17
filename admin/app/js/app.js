@@ -5,31 +5,31 @@ app.config(function($routeProvider) {
             templateUrl: 'app/pages/Home/_login.html',
             controller: 'LoginController'
         })
+        
         .when('/home', {
             templateUrl: 'app/pages/Home/_admin.html',
             controller: 'AdminController'
         })
-		
-		
+
         .when('/Animal/CadastroAnimal', {
             templateUrl: 'app/pages/Animal/_cadastro_animal.html',
             controller: 'AnimalController'
         })
+        
 		.when('/Animal', {
             templateUrl: 'app/pages/Animal/_listagem_animal.html',
             controller: 'AnimalController'
         })
 		
-		
         .when('/Instituicao/CadastroInstituicao', {
             templateUrl: 'app/pages/Instituicao/_cadastro_instituicao.html',
             controller: 'InstituicaoController'
         })
+        
 		 .when('/Instituicao', {
             templateUrl: 'app/pages/Instituicao/_listagem_instituicao.html',
             controller: 'InstituicaoController'
         })
-		
 		
         .when('/Usuario/CadastroUsuario', {
             templateUrl: 'app/pages/Usuario/_cadastro_usuario.html',
@@ -45,10 +45,7 @@ app.config(function($routeProvider) {
             templateUrl: 'app/pages/MinhaConta/_minha_conta.html',
             controller: "MinhaContaController"
         })
-		
-		
-        
-		
+
         .otherwise({
             redirectTo: '/home'
         });
