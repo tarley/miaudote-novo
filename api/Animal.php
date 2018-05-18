@@ -7,7 +7,7 @@ $Animal = new Animal();
 $acao = $_GET["acao"];
 if($acao == "CadastrarAnimal") {
     $p_NomeAnimal = $_POST['nome'];
-    $p_DesObservacao = $_POST['observacao'];
+    $p_DesObservacao = $_POST[' '];
     $p_Vacina = $_POST['vacinas'];
     $p_Temperamento = $_POST['temperamento'];
     $p_Especie = $_POST['especie'];
@@ -16,7 +16,8 @@ if($acao == "CadastrarAnimal") {
     //Tratando campo Idade
     if($_POST['idade'] == '1') {
         $p_IdadeAnimal = 'F';
-    }
+    }.
+    
     elseif($_POST['idade'] == '2') {
         $p_IdadeAnimal = 'A';
     }
